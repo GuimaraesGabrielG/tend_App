@@ -1,2 +1,2 @@
-# tend_App
+# Tend App
 Tend App
