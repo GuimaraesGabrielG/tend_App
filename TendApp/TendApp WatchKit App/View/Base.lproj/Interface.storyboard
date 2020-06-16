@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zxo-4p-zLI">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-84" y="598"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="766"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="440"/>
+        </scene>
+        <!--Alongamento-->
+        <scene sceneID="ykQ-mL-Id6">
+            <objects>
+                <controller title="Alongamento" id="5Jj-93-4Lh"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="123"/>
+        </scene>
+        <!--Horário-->
+        <scene sceneID="46c-TL-mIj">
+            <objects>
+                <controller title="Horário" id="k0s-Pn-3FB"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-269"/>
+        </scene>
+        <!--Inicial-->
+        <scene sceneID="dVd-Tp-Q40">
+            <objects>
+                <controller title="Inicial" id="Zxo-4p-zLI" customClass="InterfaceController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
+                            <connections>
+                                <segue destination="5Jj-93-4Lh" kind="push" id="xDB-jw-iif"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <segue destination="k0s-Pn-3FB" kind="relationship" relationship="nextPage" id="HNQ-cL-7xk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-269"/>
+        </scene>
+    </scenes>
+</document>
