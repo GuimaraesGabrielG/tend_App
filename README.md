@@ -1,2 +1,2 @@
 # Tend App
-Tend App
+App Tend - Apple Watch
