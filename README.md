@@ -1,2 +1,2 @@
 # tend_App
-Tend APP
+Tend App
