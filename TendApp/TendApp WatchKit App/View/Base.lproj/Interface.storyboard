@@ -40,7 +40,17 @@
         <!--Alongamento-->
         <scene sceneID="ykQ-mL-Id6">
             <objects>
-                <controller title="Alongamento" id="5Jj-93-4Lh"/>
+                <controller title="Alongamento" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
+                    <items>
+                        <timer width="71" alignment="center" verticalAlignment="center" textAlignment="center" previewedSeconds="0" id="QmH-ub-XTe">
+                            <fontDescription key="font" type="system" pointSize="50"/>
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                    </items>
+                    <connections>
+                        <outlet property="timerBeforeStartStretching" destination="QmH-ub-XTe" id="ge6-5J-roX"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="-84" y="123"/>
         </scene>

@@ -16,6 +16,7 @@
 		6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4DDC2499769A002E980E /* NotificationController.swift */; };
 		6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4DDE2499769A002E980E /* ComplicationController.swift */; };
 		6E4D4DE12499769C002E980E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D4DE02499769C002E980E /* Assets.xcassets */; };
+		EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		6E4D4DE02499769C002E980E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4D4DE22499769C002E980E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D4DE32499769C002E980E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4D4DD82499769A002E980E /* InterfaceController.swift */,
+				EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
+				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
 				6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */,
 				6E4D4DDB2499769A002E980E /* ExtensionDelegate.swift in Sources */,
 				6E4D4DD92499769A002E980E /* InterfaceController.swift in Sources */,
