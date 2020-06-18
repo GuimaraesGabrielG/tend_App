@@ -10,15 +10,20 @@ import UIKit
 import WatchKit
 class StretchingController: WKInterfaceController {
 
-    @IBOutlet weak var timerBeforeStartStretching: WKInterfaceLabel!
-    public var myTimer: Timer!
-    public var count = 5
+    //MARK:-   Váriaveis
+    //  Timer que faz a contagem antes de começar o alongamento
+    public var timerBeforeStartStretching: Timer!
+    //  Mostra o valor atual do timer.
+    @IBOutlet weak var labelTimerBeforeStartStretching: WKInterfaceLabel!
+    //  Utilizada para representar o timer, sempre a função do mesmo é chamada
+    public var count = 3
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         WKInterfaceDevice.current().play(.start)
-        timerBeforeStartStretching.setText("\(count)")
-        myTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: teste(myTimer:))
+        labelTimerBeforeStartStretching.setText("\(count)")
+        timerBeforeStartStretching = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: countTimerBeforeStretching(myTimer:))
 
         
         
@@ -28,15 +33,15 @@ class StretchingController: WKInterfaceController {
     override func willActivate() {
         
     }
-    
-    func teste(myTimer: Timer) {
+    //  Essa função é chamada até que o timer que aparece antes da realização do exercício chegue a 0
+    func countTimerBeforeStretching(myTimer: Timer) {
         if count > 0 {
             count-=1
-            timerBeforeStartStretching.setText("\(count)")
+            labelTimerBeforeStartStretching.setText("\(count)")
+        } else {
+            myTimer.invalidate()
+            labelTimerBeforeStartStretching.setHidden(true)
         }
-        print(count)
-        
-        
     }
     
     

@@ -47,7 +47,7 @@
                         </label>
                     </items>
                     <connections>
-                        <outlet property="timerBeforeStartStretching" destination="teL-ch-vlW" id="A3U-CN-oCw"/>
+                        <outlet property="labelTimerBeforeStartStretching" destination="teL-ch-vlW" id="hdb-wc-OTY"/>
                     </connections>
                 </controller>
             </objects>
