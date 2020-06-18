@@ -42,13 +42,12 @@
             <objects>
                 <controller title="Alongamento" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
                     <items>
-                        <timer width="71" alignment="center" verticalAlignment="center" textAlignment="center" previewedSeconds="0" id="QmH-ub-XTe">
-                            <fontDescription key="font" type="system" pointSize="50"/>
-                            <calendarUnit key="units" second="YES"/>
-                        </timer>
+                        <label width="100" height="82" alignment="center" verticalAlignment="center" text="5" textAlignment="center" id="teL-ch-vlW">
+                            <fontDescription key="font" type="system" pointSize="45"/>
+                        </label>
                     </items>
                     <connections>
-                        <outlet property="timerBeforeStartStretching" destination="QmH-ub-XTe" id="ge6-5J-roX"/>
+                        <outlet property="timerBeforeStartStretching" destination="teL-ch-vlW" id="A3U-CN-oCw"/>
                     </connections>
                 </controller>
             </objects>
