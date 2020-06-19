@@ -42,16 +42,18 @@
             <objects>
                 <controller title="Alongamento" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
                     <items>
-                        <label width="100" height="82" alignment="center" verticalAlignment="center" text="5" textAlignment="center" id="teL-ch-vlW">
+                        <imageView width="109" height="101" alignment="center" verticalAlignment="center" animationDuration="1" id="xQb-nq-wQZ"/>
+                        <label width="100" height="82" alignment="center" verticalAlignment="center" hidden="YES" text="5" textAlignment="center" id="teL-ch-vlW">
                             <fontDescription key="font" type="system" pointSize="45"/>
                         </label>
                     </items>
                     <connections>
+                        <outlet property="animatedImage" destination="xQb-nq-wQZ" id="kw9-Dg-0ha"/>
                         <outlet property="labelTimerBeforeStartStretching" destination="teL-ch-vlW" id="hdb-wc-OTY"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-84" y="123"/>
+            <point key="canvasLocation" x="-84" y="141"/>
         </scene>
         <!--Inicial-->
         <scene sceneID="dVd-Tp-Q40">
