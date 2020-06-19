@@ -5,3 +5,24 @@
   Created by Mateus Augusto M Ferreira on 19/06/20.
   Copyright © 2020 Mateus Augusto M Ferreira. All rights reserved.
 */
+
+//Dias da Semana
+"Segunda-Feira" = "Segunda-Feira";
+"Terca-Feira" = "Terça-Feira";
+"Quarta-Feira" = "Quarta-Feira";
+"Quinta-Feira" = "Quinta-Feira";
+"Sexta-Feira" = "Sexta-Feira";
+"Sabado" = "Sábado";
+"Domingo" = "Domingo";
+
+//Horas e Minutos
+"Hr" = "Horas";
+"Min" = "Minutos";
+
+//Dia e Horario
+"Dia" = "Day";
+"Horario" = "Horário";
+
+//Titulos das Views
+"TEND" = "TEND";
+"Configuracoes" = "Configurações";

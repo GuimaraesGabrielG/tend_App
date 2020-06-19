@@ -12,19 +12,22 @@ import Foundation
 
 class SetDateInterfaceController: WKInterfaceController {
     @IBOutlet var tableDiaSemana: WKInterfaceTable!
+    
+    override init() {
+        super.init()
+        self.setTitle(NSLocalizedString("Dia", comment: ""))
+    }
        
        /// Array com todos os dias da semana
        var arrayInfo = {
            return [
-               
-               ["title": "Toda segunda-feira" , "ID": "nQuick"],
-               ["title": "Toda terça-feira" , "ID": "nQuick"],
-               ["title": "Toda quarta-feira" , "ID": "nQuick"],
-               ["title": "Toda quinta-feira" , "ID": "nQuick"],
-               ["title": "Toda sexta-feira" , "ID": "nQuick"],
-               ["title": "Todo sabado" , "ID": "nQuick"],
-               ["title": "Todo domingo" , "ID": "nQuick"],
-
+               ["title": NSLocalizedString("Segunda-Feira", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Terca-Feira", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Quarta-Feira", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Quinta-Feira", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Sexta-Feira", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Sabado", comment: "") , "ID": "nQuick"],
+               ["title": NSLocalizedString("Domingo", comment: "") , "ID": "nQuick"],
              ]
        }()
        

@@ -12,8 +12,12 @@ import Foundation
 
 class SetTimeInterfaceController: WKInterfaceController {
     @IBOutlet var horas: WKInterfacePicker!
-       
        @IBOutlet var min: WKInterfacePicker!
+    
+    override init() {
+        super.init()
+        self.setTitle(NSLocalizedString("Horario", comment: ""))
+    }
        
        /// Preenche o numeros das horas
        lazy var numhoras: [WKPickerItem] = {
@@ -22,13 +26,14 @@ class SetTimeInterfaceController: WKInterfaceController {
            for i in 0...23{
                let num = WKPickerItem()
                num.title = String(format: "%02d", i)
-               num.caption = "horas"
+               num.caption = (NSLocalizedString("Hr", comment: ""))
                numArray.append(num)
            
            }
            
            return numArray
        }()
+    
        /// Preenche o numeros do min
        lazy var numMin: [WKPickerItem] = {
            var numArray = [WKPickerItem]()
@@ -36,7 +41,7 @@ class SetTimeInterfaceController: WKInterfaceController {
            for i in 0...59{
                let num = WKPickerItem()
                num.title = String(format: "%02d", i)
-               num.caption = "minutos"
+               num.caption = (NSLocalizedString("Min", comment: ""))
                numArray.append(num)
            
            }

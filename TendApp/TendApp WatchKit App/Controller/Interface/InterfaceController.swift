@@ -11,11 +11,15 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    override init() {
+        super.init()
+        self.setTitle(NSLocalizedString("TEND", comment: ""))
+    }
 
     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
         // Configure interface objects here.
+        super.awake(withContext: context)
     }
     
     override func willActivate() {
@@ -27,5 +31,4 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }
