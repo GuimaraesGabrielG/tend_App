@@ -19,6 +19,11 @@
 		6EFC0DA2249D18280045BBC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA4249D18280045BBC0 /* Localizable.strings */; };
 		6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA8249D1D480045BBC0 /* PersistentData.swift */; };
 		EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */; };
+		F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */; };
+		F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */; };
+		F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */; };
+		F64FDCAF249D235800E33FE3 /* SetDateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */; };
+		F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,11 @@
 		6EFC0DA6249D182D0045BBC0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6EFC0DA8249D1D480045BBC0 /* PersistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentData.swift; sourceTree = "<group>"; };
 		EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingController.swift; sourceTree = "<group>"; };
+		F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSemana.swift; sourceTree = "<group>"; };
+		F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleItens.swift; sourceTree = "<group>"; };
+		F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeInterfaceController.swift; sourceTree = "<group>"; };
+		F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateInterfaceController.swift; sourceTree = "<group>"; };
+		F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,7 @@
 		6E4D4DF1249976D3002E980E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F64FDCAB249D231700E33FE3 /* ConfiguracaoController */,
 				6E4D4DF4249976F3002E980E /* Interface */,
 				6E4D4DF3249976EB002E980E /* Notification */,
 				6E4D4DF2249976E6002E980E /* Complication */,
@@ -186,6 +197,7 @@
 			children = (
 				6EFC0DA7249D1D0C0045BBC0 /* UserDefaults */,
 				6EFC0D9F249D17DB0045BBC0 /* Languages */,
+				F64FDCA6249D228200E33FE3 /* Configuracao */,
 				6E4D4DF724997735002E980E /* Delegates */,
 			);
 			path = Model;
@@ -213,6 +225,25 @@
 				6EFC0DA8249D1D480045BBC0 /* PersistentData.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		F64FDCA6249D228200E33FE3 /* Configuracao */ = {
+			isa = PBXGroup;
+			children = (
+				F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */,
+				F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */,
+			);
+			path = Configuracao;
+			sourceTree = "<group>";
+		};
+		F64FDCAB249D231700E33FE3 /* ConfiguracaoController */ = {
+			isa = PBXGroup;
+			children = (
+				F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */,
+				F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */,
+				F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */,
+			);
+			path = ConfiguracaoController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,11 +377,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */,
+				F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */,
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
+				F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */,
 				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
 				6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */,
+				F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */,
 				6E4D4DDB2499769A002E980E /* ExtensionDelegate.swift in Sources */,
+				F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */,
 				6E4D4DD92499769A002E980E /* InterfaceController.swift in Sources */,
+				F64FDCAF249D235800E33FE3 /* SetDateInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
