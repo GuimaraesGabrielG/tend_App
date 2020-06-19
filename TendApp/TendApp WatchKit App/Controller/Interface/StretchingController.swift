@@ -33,10 +33,6 @@ class StretchingController: WKInterfaceController {
         
         labelTimerBeforeStartStretching.setText("\(count)")
         timerBeforeStartStretching = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: countTimerBeforeStretching(myTimer:))
-
-        
-        self.stretchingEnforcer.runStretching(stretchingStrategy: StretchingHand(), finalLabel: self.finalLabel, instructionLabel: self.instructionLabel, ringImage: self.ringImage)
-        
         
     }
     
@@ -49,6 +45,9 @@ class StretchingController: WKInterfaceController {
             count-=1
             labelTimerBeforeStartStretching.setText("\(count)")
         } else {
+            // animaçao alongamento (na pasta model em StrenchingStrategy)
+            self.stretchingEnforcer.runStretching(stretchingStrategy: StretchingHand(), finalLabel: self.finalLabel, instructionLabel: self.instructionLabel, ringImage: self.ringImage, stretchingImage: stretchingImage)
+            //
             WKInterfaceDevice.current().play(.start)
             myTimer.invalidate()
             labelTimerBeforeStartStretching.setHidden(true)

@@ -10,9 +10,9 @@ import Foundation
 import WatchKit
 
 /// Classe que define a estratégia de alongamento da mão
-class StretchingHand: Animation, StretchingStrategy{
+class StretchingHand: StretchingStrategy{
     
-    func performStretching(finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage) {
+    func performStretching(finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage) {
         ringImage.setHidden(false)
         instructionLabel.setHidden(false)
         ringImage.setImageNamed("single")

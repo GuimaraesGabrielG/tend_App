@@ -11,7 +11,7 @@ import WatchKit
 
 /**
  Protocolo com o método do alongamento, onde cada classe fica responsável por definir a estratégia de alongamento
- - note: Ao herdar essa classe recomendo herdar juntamente a classe 'Animation' para usar as funçoes de animaçao
+ - note: Ao herdar esse protocolo voce obtém juntamente as funçoes de animaçao (configuradas na extensao)
 */
 protocol StretchingStrategy{
     /**
@@ -20,14 +20,14 @@ protocol StretchingStrategy{
      - parameter instructionLabel: label com a instruçao do alongamento
      - parameter ringImage: imagem do circulo
     */
-    func performStretching (finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage)
+    func performStretching (finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage)
 }
 
 /**
- Classe com as funções de animação
- - note: Essa classe contém as funçoes necessarias para criar animaçoes com completion
+ Extensao com as funções de animação
+ - note: Essa extensao contém as funçoes necessarias para criar animaçoes com completion
 */
-class Animation: WKInterfaceController {
+extension StretchingStrategy {
     
     /**
      Método que que executa um delay antes da próxima funçao
@@ -45,9 +45,7 @@ class Animation: WKInterfaceController {
      
     */
     func animateWithDuration(duration: TimeInterval, animations: @escaping () -> Void, completion: @escaping () -> Void){
-        animate(withDuration: duration) {
             animations()
-        }
         delay(duration: duration) {
             completion()
         }
@@ -63,8 +61,8 @@ class StretchingEnforcer {
      - parameter instructionLabel: label com a instruçao do alongamento
      - parameter ringImage: imagem do circulo
     */
-    func runStretching(stretchingStrategy: StretchingStrategy, finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage) {
-        stretchingStrategy.performStretching(finalLabel: finalLabel, instructionLabel: instructionLabel, ringImage: ringImage)
+    func runStretching(stretchingStrategy: StretchingStrategy, finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage) {
+        stretchingStrategy.performStretching(finalLabel: finalLabel, instructionLabel: instructionLabel, ringImage: ringImage, stretchingImage: stretchingImage)
     }
     
 }
