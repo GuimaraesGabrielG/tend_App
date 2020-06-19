@@ -31,7 +31,6 @@ class StretchingController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        WKInterfaceDevice.current().play(.start)
         labelTimerBeforeStartStretching.setText("\(count)")
         timerBeforeStartStretching = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: countTimerBeforeStretching(myTimer:))
 
@@ -50,6 +49,7 @@ class StretchingController: WKInterfaceController {
             count-=1
             labelTimerBeforeStartStretching.setText("\(count)")
         } else {
+            WKInterfaceDevice.current().play(.start)
             myTimer.invalidate()
             labelTimerBeforeStartStretching.setHidden(true)
         }
