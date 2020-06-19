@@ -100,7 +100,6 @@
                                 <action selector="send" destination="Zxo-4p-zLI" id="8K0-Ma-JpT"/>
                             </connections>
                         </button>
-                        <label alignment="center" text="Previna pequenas lesões fazendo alongamento" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ"/>
                     </items>
                     <connections>
                         <segue destination="n2o-Bu-oRe" kind="relationship" relationship="nextPage" id="ZRo-6E-FDa"/>
