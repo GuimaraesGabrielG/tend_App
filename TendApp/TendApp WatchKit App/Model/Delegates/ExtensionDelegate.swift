@@ -9,14 +9,18 @@
 import WatchKit
 import UserNotifications
 class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
+    static let notificationCenter = UNUserNotificationCenter.current()
     
     
     func applicationDidFinishLaunching() {
-        print("Inicia o APP")
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.sound,.alert]) { (granted, error) in
-            if granted {
-                print("User gave permissions for local notifications")
+        ExtensionDelegate.notificationCenter.delegate = self
+        
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        
+        ExtensionDelegate.notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("User has declined notifications")
             }
         }
         
@@ -65,39 +69,15 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        // Update the app interface directly.
         
         print("willPresentNotification")
-        //////
-        //        var categories = Set<UNNotificationCategory>()
-        //        let IKonw = UNNotificationAction(identifier: "KonwID", title: "I Konw", options: [.foreground])
-        //        let DontCare = UNNotificationAction(identifier: "NotCareID", title: "Don't Care", options: [.foreground])
-        //
-        //        let myCategory = UNNotificationCategory(identifier: "myCategory", actions: [IKonw, DontCare], intentIdentifiers: [], options: []) //set up the actions here
-        //        categories.insert(myCategory)
-        ////        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
-        //
-        //        let ola = UNNotificationRequest(identifier: "myCategory", content: notification.request.content, trigger: trigger)
-        //
-        //        center.add(ola) { (error) in
-        //            if error != nil {
-        //                print("Error = \(error?.localizedDescription ?? "error local notification")")
-        //            }
-        //////        }
-        //        center.setNotificationCategories(categories)
-        // Play a sound.
+        
         completionHandler([UNNotificationPresentationOptions.sound])
-        
-        
-        //        func setCategories(){
-        //            let snoozeAction = UNNotificationAction(identifier: "snooze", title: "Snooze 5 Sec", options: [])
-        //             let commentAction = UNTextInputNotificationAction(identifier: "comment", title: "Add Comment", options: [], textInputButtonTitle: "Add", textInputPlaceholder: "Add Comment Here")
-        //            let alarmCategory = UNNotificationCategory(identifier: "alarm.category",actions: [snoozeAction,commentAction],intentIdentifiers: [], options: [])
-        //            UNUserNotificationCenter.current().setNotificationCategories([alarmCategory])
-        //        }
         
     }
     
+    
+    /// Método que chma as respostas das action
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("Entrou aqui??")
         handleNotificationResponse(response: response)
@@ -105,19 +85,18 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         
     }
     
+    /// Método para responder o que o usuário clica nas action
+    /// - Parameter response: notificação solicitada ao userNotificationCenter(didReceive)
     func handleNotificationResponse(response: UNNotificationResponse) {
-        // CustomCategory
         if response.notification.request.content.categoryIdentifier == "myCategory" {
-            // 根据Action的ID区分
-            if response.actionIdentifier == "KonwID" {
-                print("Konw Action")
+            
+            if response.actionIdentifier == "adiar" {
+                print("Adiou")
                 print("PQ???????")
-            } else if response.actionIdentifier == "NotCareID" {
-                print("Don't Care Action")
-            } else if response.actionIdentifier == "NotPushID" {
-                print("Don't Push Action")
+            } else if response.actionIdentifier == "vamos" {
+                print("Iniciar O app")
             } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
-                print("Default Action: Did Not Specify Custom ActionID")
+                print("Não especificou a action")
             } else if response.actionIdentifier == UNNotificationDismissActionIdentifier {
                 print("Dismiss Action: Specify A Dismiss Action")
             } else {
@@ -129,7 +108,26 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         }
     }
     
-    func handle(_ userActivity: NSUserActivity) {
-        print("Abriu o app")
+    /// Criaçào da notificação
+    static func scheduleNotification() {
+        
+        let content = UNMutableNotificationContent() // Содержимое уведомления
+        
+        content.title = "Ola!! Hora de realizar seu alongamento!"
+        content.body = "Descanse um pouco da sua atividade e venha fazer conosco!!!"
+        content.sound = UNNotificationSound.default
+        content.categoryIdentifier = "myCategory"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        ExtensionDelegate.notificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
+
     }
+    
 }

@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import UserNotifications
 
 class InterfaceController: WKInterfaceController {
     
@@ -31,4 +31,13 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    /// Criação na notificação. fica no appDelegate
+    @IBAction func send() {
+
+        ExtensionDelegate.scheduleNotification()
+        
+        
+    }
 }
+

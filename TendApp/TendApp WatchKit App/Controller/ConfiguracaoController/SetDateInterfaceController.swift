@@ -42,13 +42,14 @@ class SetDateInterfaceController: WKInterfaceController {
                cell.titleSemana.setText(j["title"])
            }
        }
+    
        override func awake(withContext context: Any?) {
            super.awake(withContext: context)
            
        }
        
-       /// Montra em qual celula está quando o usuário clica
-       ///O usuário vai poder selecionar os dias da semana
+    /// Montra em qual celula está quando o usuário clica
+    /// O usuário vai poder selecionar os dias da semana
        override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
 
            if(arrayInfo[rowIndex]["ID"] == "nQuick"){
