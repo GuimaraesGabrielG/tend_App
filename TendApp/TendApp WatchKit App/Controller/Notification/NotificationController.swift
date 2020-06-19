@@ -29,10 +29,39 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    /// Antes de chamar essa função ele chama o notification center wiilreceive, no app delegate
+    /// - Parameters:
+    ///   - notification: chama a função PushNotificationPayload.anp
+    ///   - completionHandler: Diz se a notificação é estática ou dinâmica -> custom = dinamica
+//    override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+//              performNotificationDefaultAction()
+//
+//                print(notification)
+//
+//        completionHandler(.custom)
+//
+//
+//    }
+    
     override func didReceive(_ notification: UNNotification) {
-        // This method is called when a notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
+        
+        print(notification)
+         
+         let IKonw = UNNotificationAction(identifier: "KonwID", title: "I Konw", options: [.foreground])
+         let DontCare = UNNotificationAction(identifier: "NotCareID", title: "Don't Care", options: [])
+         let DontPush = UNNotificationAction(identifier: "NotPushID", title: "Don't Push", options: [])
+
+         notificationActions = [IKonw, DontCare, DontPush]
     }
+
+//    override func didReceive(_ notification: UNNotification) {
+//        performNotificationDefaultAction()
+//
+//        print("notification: \(notification)")
+//           lbAlert.setText(notification.request.content.title)
+//           lbBody.setText(notification.request.content.body)
+//
+//        completionHandler(.custom)
+//    }
 }
