@@ -10,6 +10,14 @@ import UIKit
 import WatchKit
 class StretchingController: WKInterfaceController {
 
+    /// label que aparecera ao final de cada parte do alongamento
+    @IBOutlet weak var finalLabel: WKInterfaceLabel!
+    /// label com a instruçao do alongamento
+    @IBOutlet weak var instructionLabel: WKInterfaceLabel!
+    /// imagem do anel animado
+    @IBOutlet weak var ringImage: WKInterfaceImage!
+    /// imagem do alongamento
+    @IBOutlet weak var stretchingImage: WKInterfaceImage!
     //MARK:-   Váriaveis
     //  Timer que faz a contagem antes de começar o alongamento
     public var timerBeforeStartStretching: Timer!
@@ -23,7 +31,8 @@ class StretchingController: WKInterfaceController {
     @IBOutlet weak var animatedImage: WKInterfaceImage!
     
     public var timerShowAnimation: Timer!
-    
+    /// Classe que controla qual alongamento será executado
+    let stretchingEnforcer = StretchingEnforcer()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -50,6 +59,9 @@ class StretchingController: WKInterfaceController {
         labelTimerBeforeStartStretching.setText("\(countTimerBeforeStretching)")
         //  Verifica se o timer chegou a 0, e caso tenha chegado, ele some para que o usuário possa começar o seu alongamento.
         if countTimerBeforeStretching <= 0 {
+            // animaçao alongamento (na pasta model em StrenchingStrategy)
+            self.stretchingEnforcer.runStretching(stretchingStrategy: StretchingHand(), finalLabel: self.finalLabel, instructionLabel: self.instructionLabel, ringImage: self.ringImage, stretchingImage: stretchingImage)
+            //
             WKInterfaceDevice.current().play(.start)
             myTimer.invalidate()
             labelTimerBeforeStartStretching.setHidden(true)
