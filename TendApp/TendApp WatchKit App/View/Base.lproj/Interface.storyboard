@@ -53,14 +53,30 @@
         <!--Alongamento-->
         <scene sceneID="ykQ-mL-Id6">
             <objects>
-                <controller title="Alongamento" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
+                <controller title="Alongamento" fullScreen="YES" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
                     <items>
-                        <label width="100" height="82" alignment="center" verticalAlignment="center" text="5" textAlignment="center" id="teL-ch-vlW">
-                            <fontDescription key="font" type="system" pointSize="45"/>
-                        </label>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="overlap" id="4v8-SM-KP8">
+                            <items>
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" id="lDH-sw-2ZC"/>
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" contentMode="scaleAspectFit" id="h7p-OP-4xR"/>
+                                <label width="100" height="82" alignment="center" verticalAlignment="center" text="5" textAlignment="center" id="teL-ch-vlW">
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                </label>
+                                <label width="1" alignment="center" verticalAlignment="bottom" hidden="YES" text="Repita o alongamento" textAlignment="center" numberOfLines="2" id="ndC-b1-LiL">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Agora faça com a outra māo" textAlignment="center" numberOfLines="2" id="R4L-tj-LXR">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="finalLabel" destination="R4L-tj-LXR" id="qIJ-w0-iPz"/>
+                        <outlet property="instructionLabel" destination="ndC-b1-LiL" id="JFV-4X-Q0X"/>
                         <outlet property="labelTimerBeforeStartStretching" destination="teL-ch-vlW" id="hdb-wc-OTY"/>
+                        <outlet property="ringImage" destination="h7p-OP-4xR" id="29x-kJ-jzP"/>
+                        <outlet property="stretchingImage" destination="lDH-sw-2ZC" id="AXf-aO-HtR"/>
                     </connections>
                 </controller>
             </objects>
