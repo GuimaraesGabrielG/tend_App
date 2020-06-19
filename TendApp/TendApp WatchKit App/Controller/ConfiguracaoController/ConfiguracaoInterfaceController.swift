@@ -20,11 +20,8 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
     /// quando clicar na celula
      let arrayInfo = {
            return [
-               
                ["title": "Dia" , "ID": "setDia"],
                ["title": "Hora" , "ID": "setHora"],
-              
-
              ]
        }()
     
@@ -47,9 +44,7 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
     /// O Usuário vai para tela quando clicar na celula correspondente
 
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        
-                pushController(withName: arrayInfo[rowIndex]["ID"]!, context: arrayInfo[rowIndex])
-
+        pushController(withName: arrayInfo[rowIndex]["ID"]!, context: arrayInfo[rowIndex])
     }
 
     

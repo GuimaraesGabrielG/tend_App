@@ -8,10 +8,10 @@
 
 import WatchKit
 import Foundation
-
+import UserNotifications
 
 class InterfaceController: WKInterfaceController {
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -27,5 +27,13 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    /// Criação na notificação. fica no appDelegate
+    @IBAction func send() {
 
+        ExtensionDelegate.scheduleNotification()
+        
+        
+    }
 }
+

@@ -12,56 +12,35 @@ import UserNotifications
 
 
 class NotificationController: WKUserNotificationInterfaceController {
-
+    //Atributos para customizar o alert dinamico
+    @IBOutlet var alertTitle: WKInterfaceLabel!
+    @IBOutlet var body: WKInterfaceLabel!
+    
     override init() {
-        // Initialize variables here.
         super.init()
         
-        // Configure interface objects here.
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    /// Antes de chamar essa função ele chama o notification center wiilreceive, no app delegate
-    /// - Parameters:
-    ///   - notification: chama a função PushNotificationPayload.anp
-    ///   - completionHandler: Diz se a notificação é estática ou dinâmica -> custom = dinamica
-//    override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
-//              performNotificationDefaultAction()
-//
-//                print(notification)
-//
-//        completionHandler(.custom)
-//
-//
-//    }
-    
+ 
+    /// - Parameter notification: chama a notificação
     override func didReceive(_ notification: UNNotification) {
         
-        print(notification)
-         
-         let IKonw = UNNotificationAction(identifier: "KonwID", title: "I Konw", options: [.foreground])
-         let DontCare = UNNotificationAction(identifier: "NotCareID", title: "Don't Care", options: [])
-         let DontPush = UNNotificationAction(identifier: "NotPushID", title: "Don't Push", options: [])
+        //Customizando as labels da notificação dinamica
+        self.alertTitle.setText(notification.request.content.title)
+        
+        self.body.setText(notification.request.content.body)
+        
+         //Criação das actions
+        let adiar = UNNotificationAction(identifier: "adiar", title: "Adiar Notificação", options: [])
+         let vamos = UNNotificationAction(identifier: "vamos", title: "Vamos lá!", options: [.foreground])
 
-         notificationActions = [IKonw, DontCare, DontPush]
+         notificationActions = [adiar, vamos]
     }
-
-//    override func didReceive(_ notification: UNNotification) {
-//        performNotificationDefaultAction()
-//
-//        print("notification: \(notification)")
-//           lbAlert.setText(notification.request.content.title)
-//           lbBody.setText(notification.request.content.body)
-//
-//        completionHandler(.custom)
-//    }
 }

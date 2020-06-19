@@ -57,8 +57,8 @@ class SetTimeInterfaceController: WKInterfaceController {
            print(numMin[value].title!)
 
        }
+    
        /// - Parameter value: Mostra em qual celula o usuário parou
-
        @IBAction func valueHoras(_ value: Int) {
            print(numhoras[value].title!)
        }

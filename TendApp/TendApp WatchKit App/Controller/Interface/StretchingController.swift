@@ -24,10 +24,6 @@ class StretchingController: WKInterfaceController {
         WKInterfaceDevice.current().play(.start)
         labelTimerBeforeStartStretching.setText("\(count)")
         timerBeforeStartStretching = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: countTimerBeforeStretching(myTimer:))
-
-        
-        
-        
     }
     
     override func willActivate() {
