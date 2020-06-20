@@ -44,3 +44,7 @@
 "Recomendar" = "Se recomienda descansar durante un período de su actividad.";
 "Adiar" = "Después";
 "Executar" = "Hacer";
+
+//Alertas
+"TituloFinal" = "¡Ejercicio terminado!";
+"MensagemFinal" = "\nLe notificaremos cuando haya un nuevo ejercicio disponible.";

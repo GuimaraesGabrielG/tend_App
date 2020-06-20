@@ -44,3 +44,8 @@
 "Recomendar" = "It is recommended to rest for a period of your activity.";
 "Adiar" = "After";
 "Executar" = "Do";
+
+//Alertas
+"TituloFinal" = "Exercise finished!";
+"MensagemFinal" = "\nWe will notify you when a new exercise is available.";
+

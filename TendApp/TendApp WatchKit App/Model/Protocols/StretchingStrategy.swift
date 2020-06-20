@@ -16,12 +16,9 @@ import WatchKit
 protocol StretchingStrategy{
     /**
      Método que executa a animaçao de alongamento
-     - parameter finalLabel: label a ser mostrada após o exercício
-     - parameter instructionLabel: label com a instruçao do alongamento
-     - parameter ringImage: imagem do circulo
-     - parameter stretchingImage: imagem do alongamento
+     - parameter stretchingController: Interface controller do alongamento
     */
-    func performStretching (finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage)
+    func performStretching (stretchingController: StretchingController)
 }
 
 /**
@@ -58,13 +55,10 @@ class StretchingEnforcer {
     /**
      Método que que executa a estratégia de alongamento
      - parameter stretchingStrategy: classe com a estratégia de alongamento
-     - parameter finalLabel: label a ser mostrada após o exercício
-     - parameter instructionLabel: label com a instruçao do alongamento
-     - parameter ringImage: imagem do circulo
-     - parameter stretchingImage: imagem do alongamento
+     - parameter stretchingController: Interface controller do alongamento
     */
-    func runStretching(stretchingStrategy: StretchingStrategy, finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage) {
-        stretchingStrategy.performStretching(finalLabel: finalLabel, instructionLabel: instructionLabel, ringImage: ringImage, stretchingImage: stretchingImage)
+    func runStretching(stretchingStrategy: StretchingStrategy, stretchingController: StretchingController) {
+        stretchingStrategy.performStretching(stretchingController: stretchingController)
     }
     
 }

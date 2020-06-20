@@ -32,12 +32,6 @@ class StretchingController: WKInterfaceController {
     //  Mostra a animação que ensina o usuário a fazer o alongamento.
     @IBOutlet weak var animatedImage: WKInterfaceImage!
     
-    override init() {
-        super.init()
-        self.finalLabel.setText(NSLocalizedString("Outra", comment: ""))
-        self.instructionLabel.setText(NSLocalizedString("Instrucao", comment: ""))
-    }
-    
     public var timerShowAnimation: Timer!
     /// Classe que controla qual alongamento será executado
     let stretchingEnforcer = StretchingEnforcer()
@@ -68,7 +62,7 @@ class StretchingController: WKInterfaceController {
         //  Verifica se o timer chegou a 0, e caso tenha chegado, ele some para que o usuário possa começar o seu alongamento.
         if countTimerBeforeStretching <= 0 {
             // animaçao alongamento (na pasta model em StrenchingStrategy)
-            self.stretchingEnforcer.runStretching(stretchingStrategy: StretchingHand(), finalLabel: self.finalLabel, instructionLabel: self.instructionLabel, ringImage: self.ringImage, stretchingImage: stretchingImage)
+            self.stretchingEnforcer.runStretching(stretchingStrategy: StretchingHand(), stretchingController: self)
             //
             WKInterfaceDevice.current().play(.start)
             myTimer.invalidate()

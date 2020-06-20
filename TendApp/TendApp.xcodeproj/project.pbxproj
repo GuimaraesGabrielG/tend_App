@@ -20,6 +20,7 @@
 		6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA8249D1D480045BBC0 /* PersistentData.swift */; };
 		7F1B0E97249D37D000E17D04 /* StretchingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B0E96249D37D000E17D04 /* StretchingStrategy.swift */; };
 		7F1B0E9A249D382400E17D04 /* StretchingHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B0E99249D382400E17D04 /* StretchingHand.swift */; };
+		7F4D4A8F249ECD2B00A7312C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA4249D18280045BBC0 /* Localizable.strings */; };
 		EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */; };
 		F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */; };
 		F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */; };
@@ -396,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4D4DE12499769C002E980E /* Assets.xcassets in Resources */,
+				7F4D4A8F249ECD2B00A7312C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
