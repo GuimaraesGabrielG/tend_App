@@ -19,6 +19,7 @@ protocol StretchingStrategy{
      - parameter finalLabel: label a ser mostrada após o exercício
      - parameter instructionLabel: label com a instruçao do alongamento
      - parameter ringImage: imagem do circulo
+     - parameter stretchingImage: imagem do alongamento
     */
     func performStretching (finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage)
 }
@@ -60,6 +61,7 @@ class StretchingEnforcer {
      - parameter finalLabel: label a ser mostrada após o exercício
      - parameter instructionLabel: label com a instruçao do alongamento
      - parameter ringImage: imagem do circulo
+     - parameter stretchingImage: imagem do alongamento
     */
     func runStretching(stretchingStrategy: StretchingStrategy, finalLabel: WKInterfaceLabel, instructionLabel: WKInterfaceLabel, ringImage: WKInterfaceImage, stretchingImage: WKInterfaceImage) {
         stretchingStrategy.performStretching(finalLabel: finalLabel, instructionLabel: instructionLabel, ringImage: ringImage, stretchingImage: stretchingImage)

@@ -22,6 +22,20 @@ class StretchingHand: StretchingStrategy{
             ringImage.setHidden(true)
             instructionLabel.setHidden(true)
             finalLabel.setHidden(false)
+            self.animateWithDuration(duration: 3, animations: {
+            }, completion: {
+                ringImage.setHidden(false)
+                instructionLabel.setHidden(false)
+                finalLabel.setHidden(true)
+                self.animateWithDuration(duration: 15, animations: {
+                    ringImage.startAnimatingWithImages(in: NSRange(location: 0, length: 200), duration: 14, repeatCount: 1)
+                }, completion: {
+                    ringImage.setHidden(true)
+                    instructionLabel.setHidden(true)
+                    finalLabel.setText("Exercício finalizado!😃 \n\n Nós avisaremos quando um novo exercício estiver disponível")
+                    finalLabel.setHidden(false)
+                })
+            })
         })
     }
     

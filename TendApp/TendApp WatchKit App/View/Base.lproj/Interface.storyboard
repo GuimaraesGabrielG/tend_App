@@ -50,11 +50,14 @@
             </objects>
             <point key="canvasLocation" x="266" y="440"/>
         </scene>
-        <!--Alongamento-->
+        <!--Stretching Controller-->
         <scene sceneID="ykQ-mL-Id6">
             <objects>
-                <controller title="Alongamento" fullScreen="YES" id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
+                <controller id="5Jj-93-4Lh" customClass="StretchingController" customModule="TendApp_WatchKit_Extension">
                     <items>
+                        <label width="1" alignment="center" verticalAlignment="bottom" hidden="YES" text="Repita o alongamento" textAlignment="center" numberOfLines="2" id="ndC-b1-LiL">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                         <group width="1" height="1" alignment="center" verticalAlignment="center" layout="overlap" id="4v8-SM-KP8">
                             <items>
                                 <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" id="lDH-sw-2ZC"/>
@@ -62,10 +65,7 @@
                                 <label width="100" height="82" alignment="center" verticalAlignment="center" hidden="YES" text="5" textAlignment="center" id="teL-ch-vlW">
                                     <fontDescription key="font" type="system" pointSize="45"/>
                                 </label>
-                                <label width="1" alignment="center" verticalAlignment="bottom" hidden="YES" text="Repita o alongamento" textAlignment="center" numberOfLines="2" id="ndC-b1-LiL">
-                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                </label>
-                                <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Agora faça com a outra māo" textAlignment="center" numberOfLines="2" id="R4L-tj-LXR">
+                                <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Agora faça com a outra māo" textAlignment="center" numberOfLines="5" id="R4L-tj-LXR">
                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                 </label>
                                 <imageView width="108" height="106" alignment="center" verticalAlignment="center" id="bsi-Ou-mTz"/>
