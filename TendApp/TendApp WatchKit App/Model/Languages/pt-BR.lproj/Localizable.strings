@@ -16,8 +16,8 @@
 "Domingo" = "Domingo";
 
 //Horas e Minutos
-"Hr" = "Horas";
-"Min" = "Minutos";
+"Horas" = "Horas";
+"Minutos" = "Minutos";
 
 //Dia e Horario
 "Dia" = "Day";
@@ -26,3 +26,17 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Configurações";
+"Finalizado" = "Exercício finalizado! \n\n Nós avisaremos quando um novo exercício estiver disponível.";
+
+//Mensagem das Views
+"Mensagem" = "Previna-se de lesões nas mãos e nos dedos com o TEND!";
+
+//Label Botao
+"Notificar" = "Notificar";
+"Comecar" = "Começar";
+
+//Notifications
+"Realizar" =  "Hora de realizar o seu alongamento!";
+"Recomendar" = "É recomendável o descanso por um período de sua atividade.";
+"Adiar" = "Depois";
+"Executar" = "Fazer";

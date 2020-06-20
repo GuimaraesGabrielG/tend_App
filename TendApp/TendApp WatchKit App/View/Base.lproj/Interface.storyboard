@@ -102,6 +102,9 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="message" destination="IdQ-5w-7GQ" id="ESG-bN-JWx"/>
+                        <outlet property="notifyButton" destination="xMB-hB-v21" id="ysq-sB-jB7"/>
+                        <outlet property="startButton" destination="j2N-3w-V6P" id="uTg-GB-Q6M"/>
                         <segue destination="n2o-Bu-oRe" kind="relationship" relationship="nextPage" id="ZRo-6E-FDa"/>
                     </connections>
                 </controller>

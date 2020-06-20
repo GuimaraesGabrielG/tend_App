@@ -45,7 +45,6 @@ class SetDateInterfaceController: WKInterfaceController {
     
        override func awake(withContext context: Any?) {
            super.awake(withContext: context)
-           
        }
        
     /// Montra em qual celula está quando o usuário clica
@@ -64,7 +63,5 @@ class SetDateInterfaceController: WKInterfaceController {
                arrayInfo[rowIndex]["ID"] = "nQuick"
                print(arrayInfo[rowIndex])
            }
-
        }
-       
 }

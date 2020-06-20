@@ -88,6 +88,4 @@ class StretchingController: WKInterfaceController {
             startTimerBeforeStretching()
         }
     }
-    
-    
 }

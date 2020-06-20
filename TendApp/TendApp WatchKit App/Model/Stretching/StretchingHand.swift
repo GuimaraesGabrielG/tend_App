@@ -32,7 +32,7 @@ class StretchingHand: StretchingStrategy{
                 }, completion: {
                     ringImage.setHidden(true)
                     instructionLabel.setHidden(true)
-                    finalLabel.setText("Exercício finalizado!😃 \n\n Nós avisaremos quando um novo exercício estiver disponível")
+                    finalLabel.setText(NSLocalizedString("Finalizado", comment: ""))
                     finalLabel.setHidden(false)
                 })
             })

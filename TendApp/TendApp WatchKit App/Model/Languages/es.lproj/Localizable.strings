@@ -17,8 +17,8 @@
 "Domingo" = "Domingo";
 
 //Horas e Minutos
-"Hr" = "Horas";
-"Min" = "Minutos";
+"Horas" = "Horas";
+"Minutos" = "Minutos";
 
 //Dia e Horario
 "Dia" = "Día";
@@ -27,3 +27,18 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Ajustes";
+"Finalizado" = "¡Ejercicio terminado! \n\n Le notificaremos cuando haya un nuevo ejercicio disponible.";
+
+//Mensagem das Views
+"Mensagem" = "¡Prevenga lesiones de manos y dedos con TEND!";
+
+//Label Botao
+"Notificar" = "Notificar";
+"Comecar" = "Empezar";
+
+
+//Notifications
+"Realizar" =  "Hora de hacer tu estiramiento!";
+"Recomendar" = "Se recomienda descansar durante un período de su actividad.";
+"Adiar" = "Después";
+"Executar" = "Hacer";

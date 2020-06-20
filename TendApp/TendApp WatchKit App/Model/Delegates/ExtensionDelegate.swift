@@ -14,18 +14,14 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     
     func applicationDidFinishLaunching() {
         ExtensionDelegate.notificationCenter.delegate = self
-        
         let options: UNAuthorizationOptions = [.alert, .sound]
-        
         ExtensionDelegate.notificationCenter.requestAuthorization(options: options) {
             (didAllow, error) in
             if !didAllow {
                 print("User has declined notifications")
             }
         }
-        
     }
-    
     
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -73,9 +69,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         print("willPresentNotification")
         
         completionHandler([UNNotificationPresentationOptions.sound])
-        
     }
-    
     
     /// Método que chma as respostas das action
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -99,8 +93,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
                 print("Não especificou a action")
             } else if response.actionIdentifier == UNNotificationDismissActionIdentifier {
                 print("Dismiss Action: Specify A Dismiss Action")
-            } else {
-                
             }
         } else if response.notification.request.content.categoryIdentifier.isEmpty {
             print("Deu ruim")
@@ -110,16 +102,15 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     
     /// Criaçào da notificação
     static func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Realizar", comment: "")
+        content.body = NSLocalizedString("Recomendar", comment: "")
         
-        let content = UNMutableNotificationContent() // Содержимое уведомления
-        
-        content.title = "Ola!! Hora de realizar seu alongamento!"
-        content.body = "Descanse um pouco da sua atividade e venha fazer conosco!!!"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "myCategory"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
+        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
         ExtensionDelegate.notificationCenter.add(request) { (error) in
@@ -127,7 +118,5 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
                 print("Error \(error.localizedDescription)")
             }
         }
-
     }
-    
 }

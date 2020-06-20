@@ -38,9 +38,8 @@ class NotificationController: WKUserNotificationInterfaceController {
         self.body.setText(notification.request.content.body)
         
          //Criação das actions
-        let adiar = UNNotificationAction(identifier: "adiar", title: "Adiar Notificação", options: [])
-         let vamos = UNNotificationAction(identifier: "vamos", title: "Vamos lá!", options: [.foreground])
-
+        let adiar = UNNotificationAction(identifier: "adiar", title: NSLocalizedString("Adiar", comment: ""), options: [])
+         let vamos = UNNotificationAction(identifier: "vamos", title: NSLocalizedString("Executar", comment: ""), options: [.foreground])
          notificationActions = [adiar, vamos]
     }
 }

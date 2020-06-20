@@ -12,9 +12,16 @@ import UserNotifications
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet weak var message: WKInterfaceLabel!
+    @IBOutlet weak var notifyButton: WKInterfaceButton!
+    @IBOutlet weak var startButton: WKInterfaceButton!
+    
     override init() {
         super.init()
         self.setTitle(NSLocalizedString("TEND", comment: ""))
+        self.message.setText(NSLocalizedString("Mensagem", comment: ""))
+        self.notifyButton.setTitle(NSLocalizedString("Notificar", comment: ""))
+        self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
     }
 
     override func awake(withContext context: Any?) {
@@ -34,10 +41,7 @@ class InterfaceController: WKInterfaceController {
     
     /// Criação na notificação. fica no appDelegate
     @IBAction func send() {
-
         ExtensionDelegate.scheduleNotification()
-        
-        
     }
 }
 

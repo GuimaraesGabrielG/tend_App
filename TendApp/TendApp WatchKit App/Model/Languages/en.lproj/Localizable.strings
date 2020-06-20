@@ -16,11 +16,9 @@
 "Sabado" = "Saturday";
 "Domingo" = "Sunday";
 
-
-
 //Horas e Minutos
-"Hr" = "Hours";
-"Min" = "Minutes";
+"Horas" = "Hours";
+"Minutos" = "Minutes";
 
 //Dia e Horario
 "Dia" = "Day";
@@ -29,3 +27,18 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Settings";
+"Finalizado" = "Exercise finished! \n\n We will notify you when a new exercise is available.";
+
+
+//Mensagem das Views
+"Mensagem" = "Prevent hand and finger injuries with TEND!";
+
+//Label Botao
+"Notificar" = "Notify";
+"Comecar" = "Start";
+
+//Notifications
+"Realizar" =  "Time to do your stretch!";
+"Recomendar" = "It is recommended to rest for a period of your activity.";
+"Adiar" = "After";
+"Executar" = "Do";

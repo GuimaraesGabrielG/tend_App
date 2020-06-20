@@ -23,10 +23,10 @@ class SetTimeInterfaceController: WKInterfaceController {
        lazy var numhoras: [WKPickerItem] = {
            var numArray = [WKPickerItem]()
            
-           for i in 0...23{
+           for i in 0...24{
                let num = WKPickerItem()
                num.title = String(format: "%02d", i)
-               num.caption = (NSLocalizedString("Hr", comment: ""))
+               num.caption = NSString.localizedUserNotificationString(forKey: "Horas", arguments: [])
                numArray.append(num)
            
            }
@@ -38,10 +38,10 @@ class SetTimeInterfaceController: WKInterfaceController {
        lazy var numMin: [WKPickerItem] = {
            var numArray = [WKPickerItem]()
            
-           for i in 0...59{
+           for i in 0...24{
                let num = WKPickerItem()
                num.title = String(format: "%02d", i)
-               num.caption = (NSLocalizedString("Min", comment: ""))
+               num.caption = NSString.localizedUserNotificationString(forKey: "Horas", arguments: [])
                numArray.append(num)
            
            }
