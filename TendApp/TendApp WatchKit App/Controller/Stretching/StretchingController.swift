@@ -10,6 +10,8 @@ import UIKit
 import WatchKit
 class StretchingController: WKInterfaceController {
 
+    
+    
     /// label que aparecera ao final de cada parte do alongamento
     @IBOutlet weak var finalLabel: WKInterfaceLabel!
     /// label com a instruçao do alongamento
@@ -29,6 +31,12 @@ class StretchingController: WKInterfaceController {
     private var countAnimationDuration = Int()
     //  Mostra a animação que ensina o usuário a fazer o alongamento.
     @IBOutlet weak var animatedImage: WKInterfaceImage!
+    
+    override init() {
+        super.init()
+        self.finalLabel.setText(NSLocalizedString("Outra", comment: ""))
+        self.instructionLabel.setText(NSLocalizedString("Instrucao", comment: ""))
+    }
     
     public var timerShowAnimation: Timer!
     /// Classe que controla qual alongamento será executado

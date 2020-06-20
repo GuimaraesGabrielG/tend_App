@@ -111,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E312105249E8FDA00AA066C /* Stretching */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */,
+			);
+			path = Stretching;
+			sourceTree = "<group>";
+		};
 		6E4D4DB924997698002E980E = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +163,8 @@
 		6E4D4DF1249976D3002E980E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F64FDCAB249D231700E33FE3 /* ConfiguracaoController */,
+				6E312105249E8FDA00AA066C /* Stretching */,
+				F64FDCAB249D231700E33FE3 /* Settings */,
 				6E4D4DF4249976F3002E980E /* Interface */,
 				6E4D4DF3249976EB002E980E /* Notification */,
 				6E4D4DF2249976E6002E980E /* Complication */,
@@ -183,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				6E4D4DD82499769A002E980E /* InterfaceController.swift */,
-				EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -258,14 +266,14 @@
 			path = Configuracao;
 			sourceTree = "<group>";
 		};
-		F64FDCAB249D231700E33FE3 /* ConfiguracaoController */ = {
+		F64FDCAB249D231700E33FE3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */,
 				F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */,
 				F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */,
 			);
-			path = ConfiguracaoController;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

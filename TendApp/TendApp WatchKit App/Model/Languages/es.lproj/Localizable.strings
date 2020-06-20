@@ -31,6 +31,8 @@
 
 //Mensagem das Views
 "Mensagem" = "¡Prevenga lesiones de manos y dedos con TEND!";
+"Instrucao" = "Observar y Repetir.";
+"Outra" = "Ahora, hazlo con tu otra mano.";
 
 //Label Botao
 "Notificar" = "Notificar";
