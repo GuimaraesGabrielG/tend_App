@@ -14,12 +14,12 @@ import WatchKit
 public class PersistentData {
     //MARK: - Attributes
     static let persistentData = PersistentData()
-    private var _days = UserDefaults.standard
-    
-
+    private var _days: [Bool] = []
+    private var _firstTime = UserDefaults.standard
+    var week = UserDefaults.standard
     
     //MARK: - Getters and Setters
-    var days: UserDefaults{
+    var days: [Bool]{
         get{
             return self._days
         }
@@ -27,16 +27,22 @@ public class PersistentData {
             self._days = newValue
         }
     }
-    
-    func retrieveDays() -> Bool{
-        return days.bool(forKey: "daysWeek")
+
+    var firsTime: UserDefaults{
+        get{
+            return self._firstTime
+        }
+        set(newValue){
+            self._firstTime = newValue
+        }
+    }
+
+    func retrieveFirstTime() -> Bool{
+        return self.firsTime.bool(forKey: "firstTime")
     }
     
-    func setDaysOn(){
-        self.days.set(true, forKey: "daysWeek")
+    func firstTime(){
+        self.firsTime.set(true, forKey: "firstTime")
     }
     
-    func setDaysOff(){
-        self.days.set(false, forKey: "daysWeek")
-    }
 }

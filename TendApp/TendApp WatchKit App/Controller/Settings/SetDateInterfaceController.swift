@@ -10,9 +10,11 @@ import WatchKit
 import Foundation
 
 
+
 class SetDateInterfaceController: WKInterfaceController {
     @IBOutlet var tableDiaSemana: WKInterfaceTable!
-    var selectedRows: [Int] = []
+    var days = [true,true,true,true,true,false,false]
+    
     
     /// Array com todos os dias da semana
     var arrayInfo = {
@@ -27,23 +29,31 @@ class SetDateInterfaceController: WKInterfaceController {
         ]
     }()
     
-    
     override init() {
         super.init()
         self.setTitle(NSLocalizedString("Dia", comment: ""))
-        print(returnSelected())
     }
-    
-    
+
     /// Configuração para que as celulas da table view tenha as informações corretas
     override func willActivate() {
+    
+        if(!UserDefaults.standard.bool(forKey: "initial")){
+            UserDefaults.standard.set(true, forKey: "initial")
+            PersistentData.persistentData.week.set(days, forKey: "week")
+            
+        }else{
+            days = UserDefaults.standard.array(forKey: "week") as? [Bool] ?? []
+        }
+        
         //Numero de linhas
         tableDiaSemana.setNumberOfRows(arrayInfo.count, withRowType: "ItensSemana")
-        
         //Preenchimento com as informações
         for (i,j) in arrayInfo.enumerated(){
             let cell = tableDiaSemana.rowController(at: i) as! TitleSemana
             cell.titleSemana.setText(j["title"])
+            if(days[i] == true){
+                cell.iconCheck.setHidden(false)
+            }
         }
     }
     
@@ -54,25 +64,10 @@ class SetDateInterfaceController: WKInterfaceController {
     /// Montra em qual celula está quando o usuário clica
     /// O usuário vai poder selecionar os dias da semana
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        
-        
-        if(arrayInfo[rowIndex]["ID"] == "nQuick"){
-            let cell = tableDiaSemana.rowController(at: rowIndex) as! TitleSemana
-            cell.iconCheck.setHidden(false)
-            arrayInfo[rowIndex]["ID"] = "Quick"
-            self.selectedRows.append(rowIndex)
-            UserDefaults.standard.set(selectedRows, forKey: "selectedRows")
-        }else{
-            let cell = tableDiaSemana.rowController(at: rowIndex) as! TitleSemana
-            cell.iconCheck.setHidden(true)
-            arrayInfo[rowIndex]["ID"] = "nQuick"
-            print("Apareceu e Clicou aqui:",arrayInfo[rowIndex])
-        }
-    }
-    
-    func returnSelected(){
-        if let fetchArray = UserDefaults.standard.array(forKey: "selectedRows") as? [Int] {
-            print("Array: ",fetchArray)
-        }
+        let cell = tableDiaSemana.rowController(at: rowIndex) as! TitleSemana
+        arrayInfo[rowIndex]["ID"] = "Quick"
+        days[rowIndex] = !days[rowIndex]
+        cell.iconCheck.setHidden(!days[rowIndex])
+        PersistentData.persistentData.week.set(days, forKey: "week")
     }
 }

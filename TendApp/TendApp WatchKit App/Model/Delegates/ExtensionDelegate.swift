@@ -62,12 +62,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         }
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                willPresent notification: UNNotification,
-                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        print("willPresentNotification")
-        
+    func userNotificationCenter(_ center: UNUserNotificationCenter,willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([UNNotificationPresentationOptions.sound])
     }
     
@@ -96,7 +91,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
             }
         } else if response.notification.request.content.categoryIdentifier.isEmpty {
             print("Deu ruim")
-            // Default Category
         }
     }
     
@@ -105,14 +99,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         let content = UNMutableNotificationContent()
         content.title = NSLocalizedString("Realizar", comment: "")
         content.body = NSLocalizedString("Recomendar", comment: "")
-        
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "myCategory"
-        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
         ExtensionDelegate.notificationCenter.add(request) { (error) in
             if let error = error {
                 print("Error \(error.localizedDescription)")

@@ -24,7 +24,6 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
     /// quando clicar na celula
     let arrayInfo = {
         return [
-            
             ["title": NSLocalizedString("Dia", comment: "") , "ID": "setDia"],
             ["title": NSLocalizedString("Horario", comment: "") , "ID": "setHora"],
         ]
@@ -33,7 +32,6 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
     /// Configuração da tableview colocando o nome na celulas e a quantidade de celulas
     override func willActivate() {
         configHoraDia.setNumberOfRows(arrayInfo.count, withRowType: "ItensTitle")
-        
         for (i,j) in arrayInfo.enumerated(){
             let cell = configHoraDia.rowController(at: i) as! TitleItens
             cell.titleName.setText(j["title"])
