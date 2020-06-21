@@ -930,7 +930,6 @@
 				6E4D4DC824997698002E980E /* TendApp WatchKit App */,
 				6E4D4DD72499769A002E980E /* TendApp WatchKit Extension */,
 				6E4D4DC124997698002E980E /* Products */,
-				7F224F84249FD8BB00007A03 /* RingImage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -947,6 +946,7 @@
 		6E4D4DC824997698002E980E /* TendApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				7F224F84249FD8BB00007A03 /* RingImage */,
 				6E4D4DF62499772F002E980E /* Model */,
 				6E4D4DF524997722002E980E /* View */,
 				6E4D4DF1249976D3002E980E /* Controller */,
