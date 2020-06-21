@@ -15,7 +15,6 @@ class SetDateInterfaceController: WKInterfaceController {
     @IBOutlet var tableDiaSemana: WKInterfaceTable!
     var days = [true,true,true,true,true,false,false]
     
-    
     /// Array com todos os dias da semana
     var arrayInfo = {
         return [
@@ -37,10 +36,10 @@ class SetDateInterfaceController: WKInterfaceController {
     /// Configuração para que as celulas da table view tenha as informações corretas
     override func willActivate() {
     
+        //Verificar se e a primeira vez que o usuario entrou no App
         if(!UserDefaults.standard.bool(forKey: "initial")){
             UserDefaults.standard.set(true, forKey: "initial")
             PersistentData.persistentData.week.set(days, forKey: "week")
-            
         }else{
             days = UserDefaults.standard.array(forKey: "week") as? [Bool] ?? []
         }

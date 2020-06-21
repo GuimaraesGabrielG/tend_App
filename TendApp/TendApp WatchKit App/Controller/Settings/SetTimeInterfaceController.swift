@@ -29,24 +29,19 @@ class SetTimeInterfaceController: WKInterfaceController {
             num.title = String(format: "%02d", i)
             num.caption = NSString.localizedUserNotificationString(forKey: "Horas", arguments: [])
             numArray.append(num)
-            
         }
-        
         return numArray
     }()
     
     /// Preenche o numeros do min
     lazy var numMin: [WKPickerItem] = {
         var numArray = [WKPickerItem]()
-        
         for i in 0...24{
             let num = WKPickerItem()
             num.title = String(format: "%02d", i)
             num.caption = NSString.localizedUserNotificationString(forKey: "Horas", arguments: [])
             numArray.append(num)
-            
         }
-        
         return numArray
     }()
     
