@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class SetTimeInterfaceController: WKInterfaceController {
+public class SetTimeInterfaceController: WKInterfaceController {
     @IBOutlet var horas: WKInterfacePicker!
     @IBOutlet var min: WKInterfacePicker!
     var persistentData = PersistentData()
@@ -46,7 +46,7 @@ class SetTimeInterfaceController: WKInterfaceController {
     }()
     
     /// Configuração das horas e minutos no pickerView
-    override func awake(withContext context: Any?) {
+    public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         horas.setItems(numhoras)
         min.setItems(numMin)

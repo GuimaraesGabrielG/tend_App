@@ -10,7 +10,7 @@ import Foundation
 import WatchKit
 
 /// Classe que define a estratégia de alongamento da mão
-class StretchingHand: StretchingStrategy{
+public class StretchingHand: StretchingStrategy{
     
     func performStretching(stretchingController: StretchingController) {
         stretchingController.finalLabel.setText(NSLocalizedString("Outra", comment: ""))

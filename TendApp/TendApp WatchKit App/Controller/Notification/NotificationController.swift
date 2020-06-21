@@ -11,7 +11,7 @@ import Foundation
 import UserNotifications
 
 
-class NotificationController: WKUserNotificationInterfaceController {
+public class NotificationController: WKUserNotificationInterfaceController {
     //Atributos para customizar o alert dinamico
     @IBOutlet var alertTitle: WKInterfaceLabel!
     @IBOutlet var body: WKInterfaceLabel!
@@ -21,16 +21,16 @@ class NotificationController: WKUserNotificationInterfaceController {
         
     }
 
-    override func willActivate() {
+    public override func willActivate() {
         super.willActivate()
     }
 
-    override func didDeactivate() {
+    public override func didDeactivate() {
         super.didDeactivate()
     }
  
     /// - Parameter notification: chama a notificação
-    override func didReceive(_ notification: UNNotification) {
+    public override func didReceive(_ notification: UNNotification) {
         
         //Customizando as labels da notificação dinamica
         self.alertTitle.setText(notification.request.content.title)
