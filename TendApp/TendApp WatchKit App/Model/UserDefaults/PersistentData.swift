@@ -14,7 +14,29 @@ import WatchKit
 public class PersistentData {
     //MARK: - Attributes
     static let persistentData = PersistentData()
+    private var _days = UserDefaults.standard
+    
+
     
     //MARK: - Getters and Setters
+    var days: UserDefaults{
+        get{
+            return self._days
+        }
+        set(newValue){
+            self._days = newValue
+        }
+    }
     
+    func retrieveDays() -> Bool{
+        return days.bool(forKey: "daysWeek")
+    }
+    
+    func setDaysOn(){
+        self.days.set(true, forKey: "daysWeek")
+    }
+    
+    func setDaysOff(){
+        self.days.set(false, forKey: "daysWeek")
+    }
 }
