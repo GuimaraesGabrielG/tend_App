@@ -39,7 +39,8 @@ class StretchingController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         //  Chama a função que mostra a animação de como fazer o alongamento
-        startAnimationStretching()
+//        startAnimationStretching()
+        startTimerBeforeStretching()
 
     }
     
