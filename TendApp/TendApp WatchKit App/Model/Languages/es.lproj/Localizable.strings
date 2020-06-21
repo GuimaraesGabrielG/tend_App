@@ -27,15 +27,14 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Ajustes";
-"Finalizado" = "¡Ejercicio terminado! \n\n Le notificaremos cuando haya un nuevo ejercicio disponible.";
+"Finalizado" = "¡Ejercicio terminado! \n\n Le notificaremos para el próximo ejercicio.";
 
 //Mensagem das Views
-"Mensagem" = "¡Prevenga lesiones de manos y dedos con TEND!";
+"Mensagem" = "\n¡Prevenga lesiones de manos y dedos con TEND!\n\n";
 "Instrucao" = "Observar y Repetir.";
-"Outra" = "Ahora, hazlo con tu otra mano.";
+"Outra" = "Ahora, Hazlo con tu otra mano.";
 
 //Label Botao
-"Notificar" = "Notificar";
 "Comecar" = "Empezar";
 
 
@@ -47,4 +46,4 @@
 
 //Alertas
 "TituloFinal" = "¡Ejercicio terminado!";
-"MensagemFinal" = "\nLe notificaremos cuando haya un nuevo ejercicio disponible.";
+"MensagemFinal" = "\nLe notificaremos cuando haya un nuevo ejercicio \ndisponible.";
