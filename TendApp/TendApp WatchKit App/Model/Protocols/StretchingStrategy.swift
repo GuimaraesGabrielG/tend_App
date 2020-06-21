@@ -28,7 +28,7 @@ protocol StretchingStrategy{
 extension StretchingStrategy {
     
     /**
-     Método que que executa um delay antes da próxima funçao
+     Método que executa um delay antes da próxima funçao
      - parameter duration: duraçao do delay
      - parameter closure: funçao a ser executada após o delay
     */
@@ -36,7 +36,7 @@ extension StretchingStrategy {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration, execute: closure)
     }
     /**
-     Método que que executa uma animaçao com um completion
+     Método que executa uma animaçao com um completion
      - parameter duration: duraçao da animaçao
      - parameter animation: animaçao a ser executada
      - parameter completion: código a ser executado após a animaçao
@@ -47,6 +47,26 @@ extension StretchingStrategy {
         delay(duration: duration) {
             completion()
         }
+    }
+    
+    /**
+     Método que cria uma array de imagens fora do cache
+     - parameter total: total de imagens do array
+     - parameter imagePrefix: nome da imagem sem os numeros
+     - returns: array de imagens
+     
+    */
+    func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
+        var imageArray: [UIImage] = []
+        for imageCount in 0..<total {
+            let imageName = "\(imagePrefix)\(imageCount)"
+            if let imagePath = Bundle.main.path(forResource: imageName,
+                ofType: "png"),
+              let image = UIImage(contentsOfFile: imagePath) {
+                  imageArray.append(image)
+            }
+        }
+        return imageArray
     }
 }
 

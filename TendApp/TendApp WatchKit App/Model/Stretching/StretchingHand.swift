@@ -19,7 +19,9 @@ class StretchingHand: StretchingStrategy{
         stretchingController.stretchingImage.setImageNamed("alongamento_1")
         stretchingController.ringImage.setHidden(false)
         stretchingController.instructionLabel.setHidden(false)
-        stretchingController.ringImage.setImageNamed("single")
+        var imageArray = createImageArray(total: 200, imagePrefix: "single")
+        stretchingController.ringImage.setImage(UIImage.animatedImage(with: imageArray, duration: 15))
+        imageArray = []
         self.animateWithDuration(duration: 15, animations: {
             stretchingController.ringImage.startAnimatingWithImages(in: NSRange(location: 0, length: 200), duration: 14, repeatCount: 1)
         }, completion: {
