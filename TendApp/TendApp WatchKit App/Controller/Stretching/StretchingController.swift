@@ -39,8 +39,8 @@ class StretchingController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         //  Chama a função que mostra a animação de como fazer o alongamento
-//        startAnimationStretching()
-        startTimerBeforeStretching()
+        startAnimationStretching()
+//        startTimerBeforeStretching()
 
     }
     
@@ -74,10 +74,10 @@ class StretchingController: WKInterfaceController {
     //  Inicializa a animação do alongamento
     func startAnimationStretching() {
         //  Busca todas as imagens que possuem o nome passado nos Assets(O número inteiro no nome dos assets é ignorado e adicionado de acordo com o range da função seguinte).
-        animatedImage.setImageNamed("animatedImage")
+        animatedImage.setImageNamed("alongamento_")
         //  Traz as imagens em sequência, que estiverem dentro do Range passado com o nome dado anteriormente.
         //  location define qual imagem será buscada primeiro(0 = primeira imagem, 1 = segunda imagem...) e o length é a quantidade de imagens.
-        animatedImage.startAnimatingWithImages(in: NSRange(location: 0, length: 5), duration: 2, repeatCount: 2)
+        animatedImage.startAnimatingWithImages(in: NSRange(location: 0, length: 1), duration: 2, repeatCount: 2)
         countAnimationDuration = 5
         
         timerShowAnimation = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: checkAnimationStretchingFinished(myTimer:))
