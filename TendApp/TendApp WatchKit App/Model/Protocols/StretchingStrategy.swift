@@ -50,23 +50,27 @@ extension StretchingStrategy {
     }
     
     /**
-     Método que cria uma array de imagens fora do cache
-     - parameter total: total de imagens do array
+     Método que cria uma animaçao de imagens em sequencia sem aumentar o consumo de memória
+     - parameter image: imagem a ser animada
+     - parameter total: total de imagens
      - parameter imagePrefix: nome da imagem sem os numeros
-     - returns: array de imagens
+     - parameter count: numero da primeira imagem
+     - parameter duration: suraçao da animaçao
      
     */
-    func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
-        var imageArray: [UIImage] = []
-        for imageCount in 0..<total {
-            let imageName = "\(imagePrefix)\(imageCount)"
+    func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval){
+        animateWithDuration(duration: duration/Double(total), animations: {
+            let imageName = "\(imagePrefix)\(count)"
             if let imagePath = Bundle.main.path(forResource: imageName,
-                ofType: "png"),
-              let image = UIImage(contentsOfFile: imagePath) {
-                  imageArray.append(image)
+                ofType: "png"){
+                image.setImage(UIImage(contentsOfFile: imagePath))
             }
-        }
-        return imageArray
+        }, completion: {
+            if count < 199{
+                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: count+1, duration: duration)
+            }
+        })
+
     }
 }
 
