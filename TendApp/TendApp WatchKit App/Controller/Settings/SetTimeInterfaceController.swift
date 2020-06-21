@@ -13,12 +13,12 @@ import Foundation
 public class SetTimeInterfaceController: WKInterfaceController {
     @IBOutlet var horas: WKInterfacePicker!
     @IBOutlet var min: WKInterfacePicker!
-    var persistentData = PersistentData()
     
     override init() {
         super.init()
         self.setTitle(NSLocalizedString("Horario", comment: ""))
     }
+
     
     /// Preenche o numeros das horas
     lazy var numhoras: [WKPickerItem] = {
