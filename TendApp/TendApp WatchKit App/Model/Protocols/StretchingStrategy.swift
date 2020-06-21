@@ -46,6 +46,30 @@ extension StretchingStrategy {
             completion()
         }
     }
+    
+    /**
+     Método que cria uma animaçao de imagens em sequencia sem aumentar o consumo de memória
+     - parameter image: imagem a ser animada
+     - parameter total: total de imagens
+     - parameter imagePrefix: nome da imagem sem os numeros
+     - parameter count: numero da primeira imagem
+     - parameter duration: suraçao da animaçao
+     
+    */
+    func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval){
+        animateWithDuration(duration: duration/Double(total), animations: {
+            let imageName = "\(imagePrefix)\(count)"
+            if let imagePath = Bundle.main.path(forResource: imageName,
+                ofType: "png"){
+                image.setImage(UIImage(contentsOfFile: imagePath))
+            }
+        }, completion: {
+            if count < 199{
+                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: count+1, duration: duration)
+            }
+        })
+
+    }
 }
 
 /// Classe que controla qual alongamento será executado.
