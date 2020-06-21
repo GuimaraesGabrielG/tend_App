@@ -9,9 +9,7 @@
 import Foundation
 import WatchKit
 
-/// Esta Classe que preeenche informação da do ConfiguracaoVIewController(), com o nome das celulas
+/// Classe que preeenche informação da do ConfiguracaoVIewController(), com o nome das celulas.
 public class TitleItens: NSObject {
-    
     @IBOutlet var titleName: WKInterfaceLabel!
-    
 }

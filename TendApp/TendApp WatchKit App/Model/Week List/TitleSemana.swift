@@ -9,11 +9,8 @@
 import Foundation
 import WatchKit
 
-
-/// Classe que preeenche informação da table do SetDateViewController()
-//Esta classe possui um titulo e um icone
+/// Classe que preeenche informações da table do SetDateViewController()
 public class TitleSemana: NSObject {
     @IBOutlet var titleSemana: WKInterfaceLabel!
-    
     @IBOutlet var iconCheck: WKInterfaceImage!
 }

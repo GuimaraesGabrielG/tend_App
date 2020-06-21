@@ -212,7 +212,7 @@
 				7F1B0E95249D379600E17D04 /* Protocols */,
 				6EFC0DA7249D1D0C0045BBC0 /* UserDefaults */,
 				6EFC0D9F249D17DB0045BBC0 /* Languages */,
-				F64FDCA6249D228200E33FE3 /* Configuracao */,
+				F64FDCA6249D228200E33FE3 /* Week List */,
 				6E4D4DF724997735002E980E /* Delegates */,
 			);
 			path = Model;
@@ -258,13 +258,13 @@
 			path = Stretching;
 			sourceTree = "<group>";
 		};
-		F64FDCA6249D228200E33FE3 /* Configuracao */ = {
+		F64FDCA6249D228200E33FE3 /* Week List */ = {
 			isa = PBXGroup;
 			children = (
 				F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */,
 				F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */,
 			);
-			path = Configuracao;
+			path = "Week List";
 			sourceTree = "<group>";
 		};
 		F64FDCAB249D231700E33FE3 /* Settings */ = {

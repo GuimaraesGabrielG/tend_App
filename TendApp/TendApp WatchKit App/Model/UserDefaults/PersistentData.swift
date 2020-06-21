@@ -11,7 +11,10 @@ import UIKit
 import ClockKit
 import WatchKit
 
+
+/// Classe de que utiliza UserDefaults como persistência de dados.
 public class PersistentData {
+    
     //MARK: - Attributes
     static let persistentData = PersistentData()
     private var _days: [Bool] = []

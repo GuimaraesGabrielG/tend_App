@@ -8,10 +8,14 @@
 
 import WatchKit
 import UserNotifications
+
+
+/// Uma coleção de métodos que gerenciam o comportamento no nível do aplicativo de uma extensão do WatchKit.
 class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
     static let notificationCenter = UNUserNotificationCenter.current()
     
     
+    /// Função que gera permissão de envio de notificações
     func applicationDidFinishLaunching() {
         ExtensionDelegate.notificationCenter.delegate = self
         let options: UNAuthorizationOptions = [.alert, .sound]
@@ -23,15 +27,20 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         }
     }
     
+    /// Função que reinicia qualquer tarefa, após a interrupção da aplicação.
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
     
+    /// Função que envia quando a aplicação está prestes de mudar o estado de inativo para ativo.
     func applicationWillResignActive() {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, etc.
     }
     
+    
+    /// Função que envia quando o sistema necessita iniciar a aplicação em segundo plano para processar tarefas.
+    /// - Parameter backgroundTasks: Conjunto de tarefas.
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
         for task in backgroundTasks {
@@ -62,20 +71,29 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         }
     }
     
+    /// Função que pergunta ao delegate como lidar com uma notificação que chegou enquanto o aplicativo estava sendo executado em primeiro plano.
+    /// - Parameters:
+    ///   - center: O objeto do centro de notificação do usuário compartilhado que recebeu a notificação.
+    ///   - notification: Utilizado para usar as informações para atualizar a interface do aplicativo.
+    ///   - completionHandler: O bloco a ser executado com a opção de apresentação da notificação.
     func userNotificationCenter(_ center: UNUserNotificationCenter,willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([UNNotificationPresentationOptions.sound])
     }
     
-    /// Método que chma as respostas das action
+
+    /// Solicita ao delegado que processe a resposta do usuário a uma notificação entregue.
+    /// - Parameters:
+    ///   - center: O objeto do centro de notificação do usuário compartilhado que recebeu a notificação.
+    ///   - response: A resposta do usuário à notificação.
+    ///   - completionHandler: O bloco a ser executado quando você terminar de processar a resposta do usuário.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("Entrou aqui??")
         handleNotificationResponse(response: response)
         completionHandler()
-        
     }
+
     
-    /// Método para responder o que o usuário clica nas action
-    /// - Parameter response: notificação solicitada ao userNotificationCenter(didReceive)
+    /// Função para responder a escolha dos usuários nas actions.
+    /// - Parameter response: Resposta da escolha do usuário.
     func handleNotificationResponse(response: UNNotificationResponse) {
         if response.notification.request.content.categoryIdentifier == "myCategory" {
             
@@ -94,7 +112,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         }
     }
     
-    /// Criaçào da notificação
+   
+    /// Função que efetivamente cria a notificação.
     static func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = NSLocalizedString("Realizar", comment: "")
