@@ -51,7 +51,7 @@ extension StretchingStrategy {
 }
 
 /// Classe que controla qual alongamento será executado
-class StretchingEnforcer {
+public class StretchingEnforcer {
     /**
      Método que que executa a estratégia de alongamento
      - parameter stretchingStrategy: classe com a estratégia de alongamento

@@ -15,10 +15,18 @@ public class PersistentData {
     //MARK: - Attributes
     static let persistentData = PersistentData()
     private var _days: [Bool] = []
-    private var _firstTime = UserDefaults.standard
-    var week = UserDefaults.standard
+    private var _week = UserDefaults.standard
     
     //MARK: - Getters and Setters
+    var week: UserDefaults{
+        get{
+            return self._week
+        }
+        set(newValue){
+            self._week = newValue
+        }
+    }
+    
     var days: [Bool]{
         get{
             return self._days
@@ -27,22 +35,4 @@ public class PersistentData {
             self._days = newValue
         }
     }
-
-    var firsTime: UserDefaults{
-        get{
-            return self._firstTime
-        }
-        set(newValue){
-            self._firstTime = newValue
-        }
-    }
-
-    func retrieveFirstTime() -> Bool{
-        return self.firsTime.bool(forKey: "firstTime")
-    }
-    
-    func firstTime(){
-        self.firsTime.set(true, forKey: "firstTime")
-    }
-    
 }

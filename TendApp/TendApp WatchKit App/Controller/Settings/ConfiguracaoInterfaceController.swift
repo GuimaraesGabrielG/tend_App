@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class ConfiguracaoInterfaceController: WKInterfaceController {
+public class ConfiguracaoInterfaceController: WKInterfaceController {
     
     
     @IBOutlet var configHoraDia: WKInterfaceTable!
@@ -30,7 +30,7 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
     }()
     
     /// Configuração da tableview colocando o nome na celulas e a quantidade de celulas
-    override func willActivate() {
+    public override func willActivate() {
         configHoraDia.setNumberOfRows(arrayInfo.count, withRowType: "ItensTitle")
         for (i,j) in arrayInfo.enumerated(){
             let cell = configHoraDia.rowController(at: i) as! TitleItens
@@ -39,13 +39,13 @@ class ConfiguracaoInterfaceController: WKInterfaceController {
         
     }
     
-    override func awake(withContext context: Any?) {
+    public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
     }
     
     /// O Usuário vai para tela quando clicar na celula correspondente
-    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+    public override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         pushController(withName: arrayInfo[rowIndex]["ID"]!, context: arrayInfo[rowIndex])
     }
 }

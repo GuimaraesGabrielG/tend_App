@@ -11,7 +11,7 @@ import Foundation
 
 
 
-class SetDateInterfaceController: WKInterfaceController {
+public class SetDateInterfaceController: WKInterfaceController {
     @IBOutlet var tableDiaSemana: WKInterfaceTable!
     var days = [true,true,true,true,true,false,false]
     
@@ -34,7 +34,7 @@ class SetDateInterfaceController: WKInterfaceController {
     }
 
     /// Configuração para que as celulas da table view tenha as informações corretas
-    override func willActivate() {
+    public override func willActivate() {
     
         //Verificar se e a primeira vez que o usuario entrou no App
         if(!UserDefaults.standard.bool(forKey: "initial")){
@@ -56,13 +56,13 @@ class SetDateInterfaceController: WKInterfaceController {
         }
     }
     
-    override func awake(withContext context: Any?) {
+    public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
     
     /// Montra em qual celula está quando o usuário clica
     /// O usuário vai poder selecionar os dias da semana
-    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+    public override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let cell = tableDiaSemana.rowController(at: rowIndex) as! TitleSemana
         arrayInfo[rowIndex]["ID"] = "Quick"
         days[rowIndex] = !days[rowIndex]

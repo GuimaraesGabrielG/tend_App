@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 import UserNotifications
 
-class InterfaceController: WKInterfaceController {
+public class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var message: WKInterfaceLabel!
     @IBOutlet weak var startButton: WKInterfaceButton!
@@ -22,17 +22,17 @@ class InterfaceController: WKInterfaceController {
         self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
     }
 
-    override func awake(withContext context: Any?) {
+    public override func awake(withContext context: Any?) {
         // Configure interface objects here.
         super.awake(withContext: context)
     }
     
-    override func willActivate() {
+    public override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
-    override func didDeactivate() {
+    public override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 import WatchKit
-class StretchingController: WKInterfaceController {
+public class StretchingController: WKInterfaceController {
 
     
     
@@ -36,7 +36,7 @@ class StretchingController: WKInterfaceController {
     /// Classe que controla qual alongamento será executado
     let stretchingEnforcer = StretchingEnforcer()
     
-    override func awake(withContext context: Any?) {
+    public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         //  Chama a função que mostra a animação de como fazer o alongamento
 //        startAnimationStretching()
@@ -44,7 +44,7 @@ class StretchingController: WKInterfaceController {
 
     }
     
-    override func willActivate() {
+    public override func willActivate() {
         
     }
     //  Chamada para mostrar um timer que da um intervalo entre a animação do alongamento e o momento do usuário fazer esse mesmo alongamento.
