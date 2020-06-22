@@ -623,6 +623,8 @@
 		7F2252AC249FD96F00007A03 /* single163.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F225053249FD96E00007A03 /* single163.png */; };
 		7F2252AD249FD96F00007A03 /* single163.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F225053249FD96E00007A03 /* single163.png */; };
 		7F2252AE249FD96F00007A03 /* single163.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F225053249FD96E00007A03 /* single163.png */; };
+		7F2AF8DE24A17AF100FF17B3 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AF8DD24A17AF100FF17B3 /* Animation.swift */; };
+		7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AF8DF24A17B0700FF17B3 /* StretchingEnforcer.swift */; };
 		7F4D4A8F249ECD2B00A7312C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA4249D18280045BBC0 /* Localizable.strings */; };
 		EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */; };
 		F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */; };
@@ -897,6 +899,8 @@
 		7F225051249FD96E00007A03 /* single167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single167.png; sourceTree = "<group>"; };
 		7F225052249FD96E00007A03 /* single43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single43.png; sourceTree = "<group>"; };
 		7F225053249FD96E00007A03 /* single163.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single163.png; sourceTree = "<group>"; };
+		7F2AF8DD24A17AF100FF17B3 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		7F2AF8DF24A17B0700FF17B3 /* StretchingEnforcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingEnforcer.swift; sourceTree = "<group>"; };
 		EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingController.swift; sourceTree = "<group>"; };
 		F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSemana.swift; sourceTree = "<group>"; };
 		F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleItens.swift; sourceTree = "<group>"; };
@@ -1051,6 +1055,8 @@
 			isa = PBXGroup;
 			children = (
 				7F1B0E96249D37D000E17D04 /* StretchingStrategy.swift */,
+				7F2AF8DD24A17AF100FF17B3 /* Animation.swift */,
+				7F2AF8DF24A17B0700FF17B3 /* StretchingEnforcer.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2029,6 +2035,7 @@
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
 				F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */,
 				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
+				7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */,
 				6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */,
 				F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */,
 				7F1B0E9A249D382400E17D04 /* StretchingHand.swift in Sources */,
@@ -2036,6 +2043,7 @@
 				F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */,
 				7F1B0E97249D37D000E17D04 /* StretchingStrategy.swift in Sources */,
 				6E4D4DD92499769A002E980E /* InterfaceController.swift in Sources */,
+				7F2AF8DE24A17AF100FF17B3 /* Animation.swift in Sources */,
 				F64FDCAF249D235800E33FE3 /* SetDateInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

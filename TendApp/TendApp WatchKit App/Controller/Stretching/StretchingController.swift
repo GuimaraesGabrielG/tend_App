@@ -54,7 +54,6 @@ public class StretchingController: WKInterfaceController {
         stretchingImage = nil
         labelTimerBeforeStartStretching = nil
         animatedImage = nil
-        self.dismiss()
     }
     
     public override func willActivate() {

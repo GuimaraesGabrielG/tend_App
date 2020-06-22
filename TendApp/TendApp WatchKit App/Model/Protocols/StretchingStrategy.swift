@@ -11,93 +11,40 @@ import WatchKit
 
 /**
  Protocolo com o método do alongamento, onde cada classe fica responsável por definir a estratégia de alongamento.
- - note: Ao herdar esse protocolo voce obtém juntamente as funçoes de animaçao (configuradas na extensao).
 */
-
 protocol StretchingStrategy{
-    /// variavel que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param)
-    var stop: Bool {get set}
-    /// Método que executa a animação de alongamento.
+    
+    /// Método que executa a açao de alongamento.
     /// - Parameter stretchingController: Interface controller do alongamento.
     func performStretching (stretchingController: StretchingController)
 }
 
-/**
- Extensão com as funções de animação.
- - note: Essa extensao contém as funçoes necessarias para criar animaçoes com completion.
-*/
-extension StretchingStrategy {
-
-    /// Método que que executa um delay antes da próxima função.
-    /// - Parameters:
-    ///   - duration: Valor da duração do delay.
-    ///   - closure: Função a ser executada após o delay.
-    func delay(duration: TimeInterval, closure: @escaping () -> Void){
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration, execute: closure)
-    }
-
-    /// Método que que executa uma animaçao com um completion.
-    /// - Parameters:
-    ///   - duration: Valor da duração da animação.
-    ///   - animations: Animação a ser executada.
-    ///   - completion: Código a ser executado após a animação.
-    func animateWithDuration(duration: TimeInterval, animations: @escaping () -> Void, completion: @escaping () -> Void){
-        if !stop{
-           animations()
-        }
-        if !stop{
-            delay(duration: duration) {
-                if !self.stop{
-                   completion()
-                }
-            }
-        }
+/// Extensao que adiciona algumas funçoes de à estrategia de alongamento
+extension StretchingStrategy{
+    /**
+     Método que que deixa os objetos da tela de alongamento visiveis ou nao
+     - Parameters:
+        - ringHidden: imagem do circulo
+        - imageName: nome da imagem do alongamento
+        - stretchingController: controller da tela de alongamento
+    */
+    func exchangeObjects(ringHidden: Bool, imageName: String, stretchingController: StretchingController){
+        stretchingController.stretchingImage.setHidden(!ringHidden)
+        stretchingController.ringImage.setHidden(!ringHidden)
+        stretchingController.instructionLabel.setHidden(!ringHidden)
+        stretchingController.finalLabel.setHidden(ringHidden)
+        stretchingController.stretchingImage.setImageNamed(imageName)
     }
     
     /**
-     Método que cria uma animaçao de imagens em sequencia sem aumentar o consumo de memória
-     - parameter image: imagem a ser animada
-     - parameter total: total de imagens
-     - parameter imagePrefix: nome da imagem sem os numeros
-     - parameter count: numero da primeira imagem
-     - parameter duration: suraçao da animaçao
-     
+     Método que que mostra um alerta ao final do exercicio
+     - Parameters:
+        - stretchingController: controller da tela de alongamento
     */
-    func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval){
-        animateWithDuration(duration: duration/Double(total), animations: {
-            let imageName = "\(imagePrefix)\(count)"
-            if let imagePath = Bundle.main.path(forResource: imageName,
-                ofType: "png"){
-                image.setImage(UIImage(contentsOfFile: imagePath))
-            }
-        }, completion: {
-            if count < 199{
-                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: count+1, duration: duration)
-            }
-        })
-
-    }
-}
-
-/// Classe que controla qual alongamento será executado.
-public class StretchingEnforcer {
-    /// estrategia de alongamento atual
-    var currentStretchingStrategy: StretchingStrategy?
-    /// variavel que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param)
-    var stop: Bool = false{
-        didSet{
-            if stop{
-                currentStretchingStrategy?.stop = stop
-                currentStretchingStrategy = nil
-            }
+    func showAllert(stretchingController: StretchingController){
+        let finalAlertAction = WKAlertAction(title: "OK", style: .default) {
+            stretchingController.popToRootController()
         }
-    }
-    /// Método que que executa a estratégia de alongamento.
-    /// - Parameters:
-    ///   - stretchingStrategy: Objeto com a estratégia de alongamento.
-    ///   - stretchingController: Interface controller de alongamento.
-    func runStretching(stretchingStrategy: StretchingStrategy, stretchingController: StretchingController) {
-        currentStretchingStrategy = stretchingStrategy
-        currentStretchingStrategy?.performStretching(stretchingController: stretchingController)
+        stretchingController.presentAlert(withTitle: NSLocalizedString("TituloFinal", comment: ""), message: NSLocalizedString("MensagemFinal", comment: ""), preferredStyle: .alert, actions: [finalAlertAction])
     }
 }
