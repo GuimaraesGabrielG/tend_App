@@ -15,7 +15,8 @@ import WatchKit
 */
 
 protocol StretchingStrategy{
-    
+    /// variavel que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param)
+    var stop: Bool {get set}
     /// Método que executa a animação de alongamento.
     /// - Parameter stretchingController: Interface controller do alongamento.
     func performStretching (stretchingController: StretchingController)
@@ -41,9 +42,15 @@ extension StretchingStrategy {
     ///   - animations: Animação a ser executada.
     ///   - completion: Código a ser executado após a animação.
     func animateWithDuration(duration: TimeInterval, animations: @escaping () -> Void, completion: @escaping () -> Void){
-            animations()
-        delay(duration: duration) {
-            completion()
+        if !stop{
+           animations()
+        }
+        if !stop{
+            delay(duration: duration) {
+                if !self.stop{
+                   completion()
+                }
+            }
         }
     }
     
@@ -74,12 +81,23 @@ extension StretchingStrategy {
 
 /// Classe que controla qual alongamento será executado.
 public class StretchingEnforcer {
-    
+    /// estrategia de alongamento atual
+    var currentStretchingStrategy: StretchingStrategy?
+    /// variavel que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param)
+    var stop: Bool = false{
+        didSet{
+            if stop{
+                currentStretchingStrategy?.stop = stop
+                currentStretchingStrategy = nil
+            }
+        }
+    }
     /// Método que que executa a estratégia de alongamento.
     /// - Parameters:
     ///   - stretchingStrategy: Objeto com a estratégia de alongamento.
     ///   - stretchingController: Interface controller de alongamento.
     func runStretching(stretchingStrategy: StretchingStrategy, stretchingController: StretchingController) {
-        stretchingStrategy.performStretching(stretchingController: stretchingController)
+        currentStretchingStrategy = stretchingStrategy
+        currentStretchingStrategy?.performStretching(stretchingController: stretchingController)
     }
 }

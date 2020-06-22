@@ -14,8 +14,8 @@ import WatchKit
 ///Classe que define a estratégia de alongamento da mão.
 public class StretchingHand: StretchingStrategy{
     
-    /// Função que controla a instrução do alongamento de mão.
-    /// - Parameter stretchingController: Objeto do tipo StretchingController.
+    var stop: Bool = false
+    
     func performStretching(stretchingController: StretchingController) {
         stretchingController.finalLabel.setText(NSLocalizedString("Outra", comment: ""))
         stretchingController.instructionLabel.setText(NSLocalizedString("Instrucao", comment: ""))

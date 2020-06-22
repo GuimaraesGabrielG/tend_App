@@ -44,6 +44,10 @@ public class StretchingController: WKInterfaceController {
 
     }
     
+    public override func willDisappear() {
+        stretchingEnforcer.stop = true
+    }
+    
     public override func willActivate() {
         
     }
