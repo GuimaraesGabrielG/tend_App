@@ -46,6 +46,15 @@ public class StretchingController: WKInterfaceController {
     
     public override func willDisappear() {
         stretchingEnforcer.stop = true
+        timerBeforeStartStretching?.invalidate()
+        timerShowAnimation?.invalidate()
+        finalLabel = nil
+        instructionLabel = nil
+        ringImage = nil
+        stretchingImage = nil
+        labelTimerBeforeStartStretching = nil
+        animatedImage = nil
+        self.dismiss()
     }
     
     public override func willActivate() {
