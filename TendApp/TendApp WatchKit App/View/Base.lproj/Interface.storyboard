@@ -68,7 +68,7 @@
                                 <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Agora, faça com a outra mão." textAlignment="center" numberOfLines="5" id="R4L-tj-LXR">
                                     <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
-                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="bsi-Ou-mTz"/>
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" id="bsi-Ou-mTz"/>
                             </items>
                         </group>
                     </items>

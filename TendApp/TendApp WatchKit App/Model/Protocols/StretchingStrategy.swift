@@ -33,7 +33,11 @@ extension StretchingStrategy{
         stretchingController.ringImage.setHidden(!ringHidden)
         stretchingController.instructionLabel.setHidden(!ringHidden)
         stretchingController.finalLabel.setHidden(ringHidden)
-        stretchingController.stretchingImage.setImageNamed(imageName)
+        stretchingController.stretchingImage.setImage(nil)
+        if let imagePath = Bundle.main.path(forResource: imageName,
+            ofType: "png"){
+            stretchingController.stretchingImage.setImage(UIImage(contentsOfFile: imagePath))
+        }
     }
     
     /**

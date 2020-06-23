@@ -56,6 +56,7 @@ extension Animation{
     */
     func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval){
         animateWithDuration(duration: duration/Double(total), animations: {
+            image.setImage(nil)
             let imageName = "\(imagePrefix)\(count)"
             if let imagePath = Bundle.main.path(forResource: imageName,
                 ofType: "png"){
