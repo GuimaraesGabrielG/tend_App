@@ -34,7 +34,9 @@ public class PersistentData {
         get{
             return self._days
         }
+        
         set(newValue){
+            
             self._days = newValue
         }
     }

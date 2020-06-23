@@ -17,9 +17,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     
     /// Função que gera permissão de envio de notificações
     func applicationDidFinishLaunching() {
-        ExtensionDelegate.notificationCenter.delegate = self
+        LocalNotificationHandler.shared.center.delegate = self
         let options: UNAuthorizationOptions = [.alert, .sound]
-        ExtensionDelegate.notificationCenter.requestAuthorization(options: options) {
+        LocalNotificationHandler.shared.center.requestAuthorization(options: options) {
             (didAllow, error) in
             if !didAllow {
                 print("User has declined notifications")
@@ -87,45 +87,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     ///   - response: A resposta do usuário à notificação.
     ///   - completionHandler: O bloco a ser executado quando você terminar de processar a resposta do usuário.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        handleNotificationResponse(response: response)
+        LocalNotificationHandler.shared.handleNotificationResponse(response: response)
         completionHandler()
-    }
-
-    
-    /// Função para responder a escolha dos usuários nas actions.
-    /// - Parameter response: Resposta da escolha do usuário.
-    func handleNotificationResponse(response: UNNotificationResponse) {
-        if response.notification.request.content.categoryIdentifier == "myCategory" {
-            
-            if response.actionIdentifier == "adiar" {
-                print("Adiou")
-                print("PQ???????")
-            } else if response.actionIdentifier == "vamos" {
-                print("Iniciar O app")
-            } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
-                print("Não especificou a action")
-            } else if response.actionIdentifier == UNNotificationDismissActionIdentifier {
-                print("Dismiss Action: Specify A Dismiss Action")
-            }
-        } else if response.notification.request.content.categoryIdentifier.isEmpty {
-            print("Deu ruim")
-        }
-    }
-    
-   
-    /// Função que efetivamente cria a notificação.
-    static func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = NSLocalizedString("Realizar", comment: "")
-        content.body = NSLocalizedString("Recomendar", comment: "")
-        content.sound = UNNotificationSound.default
-        content.categoryIdentifier = "myCategory"
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        ExtensionDelegate.notificationCenter.add(request) { (error) in
-            if let error = error {
-                print("Error \(error.localizedDescription)")
-            }
-        }
+        
     }
 }

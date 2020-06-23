@@ -174,7 +174,7 @@
                                         <action selector="valueHoras:" destination="yqy-SJ-pfs" id="bJP-Ue-GYP"/>
                                     </connections>
                                 </picker>
-                                <label width="26" alignment="left" verticalAlignment="center" text=":" textAlignment="center" id="kSL-Ze-n34"/>
+                                <label width="26" alignment="left" verticalAlignment="center" text="-" textAlignment="center" id="kSL-Ze-n34"/>
                                 <picker width="0.40000000000000002" height="100" alignment="right" verticalAlignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="rFh-eF-PcS">
                                     <connections>
                                         <action selector="valueMin:" destination="yqy-SJ-pfs" id="L3l-qS-33T"/>
