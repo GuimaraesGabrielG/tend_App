@@ -632,6 +632,7 @@
 		F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */; };
 		F64FDCAF249D235800E33FE3 /* SetDateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */; };
 		F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */; };
+		F6938C5424A23E6F0012B149 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6938C5324A23E6F0012B149 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -907,6 +908,7 @@
 		F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeInterfaceController.swift; sourceTree = "<group>"; };
 		F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateInterfaceController.swift; sourceTree = "<group>"; };
 		F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoInterfaceController.swift; sourceTree = "<group>"; };
+		F6938C5324A23E6F0012B149 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1023,6 +1025,7 @@
 				6EFC0D9F249D17DB0045BBC0 /* Languages */,
 				F64FDCA6249D228200E33FE3 /* Week List */,
 				6E4D4DF724997735002E980E /* Delegates */,
+				F6938C5724A2A6C30012B149 /* Notification */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1294,6 +1297,14 @@
 				F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F6938C5724A2A6C30012B149 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F6938C5324A23E6F0012B149 /* Notification.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2041,6 +2052,7 @@
 				7F1B0E9A249D382400E17D04 /* StretchingHand.swift in Sources */,
 				6E4D4DDB2499769A002E980E /* ExtensionDelegate.swift in Sources */,
 				F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */,
+				F6938C5424A23E6F0012B149 /* Notification.swift in Sources */,
 				7F1B0E97249D37D000E17D04 /* StretchingStrategy.swift in Sources */,
 				6E4D4DD92499769A002E980E /* InterfaceController.swift in Sources */,
 				7F2AF8DE24A17AF100FF17B3 /* Animation.swift in Sources */,

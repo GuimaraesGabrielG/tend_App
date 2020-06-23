@@ -13,11 +13,14 @@ import Foundation
 public class SetTimeInterfaceController: WKInterfaceController {
     @IBOutlet var horas: WKInterfacePicker!
     @IBOutlet var min: WKInterfacePicker!
+<<<<<<< Updated upstream
+=======
     var persistentData = PersistentData()
     var dic: [String.Element : String.Element]!
     var horasSel: Int!
     var minSel:Int!
     var intervalNotification:[Int] = []
+>>>>>>> Stashed changes
     
     override init() {
         super.init()
