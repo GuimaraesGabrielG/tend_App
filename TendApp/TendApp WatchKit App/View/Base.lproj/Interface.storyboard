@@ -192,7 +192,11 @@
             <point key="canvasLocation" x="552" y="-81"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Blue"/>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="110"/>
+        <namedColor name="Blue">
+            <color red="0.2630000114440918" green="0.40400001406669617" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
