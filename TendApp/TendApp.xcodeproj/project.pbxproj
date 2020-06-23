@@ -2206,13 +2206,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
 				INFOPLIST_FILE = "TendApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -2228,13 +2230,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
 				INFOPLIST_FILE = "TendApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -2251,9 +2255,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
 				IBSC_MODULE = TendApp_WatchKit_Extension;
 				INFOPLIST_FILE = "TendApp WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2270,9 +2276,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
 				IBSC_MODULE = TendApp_WatchKit_Extension;
 				INFOPLIST_FILE = "TendApp WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2287,9 +2295,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
-				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -2300,9 +2308,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4T6N4R5QKK;
-				MARKETING_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = Z27F7H4265;
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mateusferreira.TendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
