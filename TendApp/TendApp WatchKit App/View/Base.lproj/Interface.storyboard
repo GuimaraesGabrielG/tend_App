@@ -69,7 +69,6 @@
                                     <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                 </label>
                                 <imageView width="1" height="1" alignment="center" verticalAlignment="center" id="bsi-Ou-mTz"/>
-                                <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="o1x-D3-Kwv"/>
                             </items>
                         </group>
                     </items>
@@ -79,7 +78,6 @@
                         <outlet property="instructionLabel" destination="ndC-b1-LiL" id="JFV-4X-Q0X"/>
                         <outlet property="labelTimerBeforeStartStretching" destination="teL-ch-vlW" id="hdb-wc-OTY"/>
                         <outlet property="ringImage" destination="h7p-OP-4xR" id="29x-kJ-jzP"/>
-                        <outlet property="ringImage2" destination="o1x-D3-Kwv" id="bFx-Cd-6sq"/>
                         <outlet property="stretchingImage" destination="lDH-sw-2ZC" id="AXf-aO-HtR"/>
                     </connections>
                 </controller>

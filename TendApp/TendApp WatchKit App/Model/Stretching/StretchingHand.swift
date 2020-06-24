@@ -31,9 +31,7 @@ public class StretchingHand: StretchingStrategy, Animation{
                 WKInterfaceDevice.current().play(.start)
                 self.exchangeObjects(ringHidden: true, imageName: "alongamento_12", stretchingController: stretchingController)
                 self.animateWithDuration(duration: 16, animations: {
-                    stretchingController.ringImage.setImage(nil)
-                    stretchingController.ringImage.setHidden(true)
-                    self.createAnimatedImages(image: stretchingController.ringImage2, total: 200, imagePrefix: "single", count: 0, duration: 14.5)
+                    self.createAnimatedImages(image: stretchingController.ringImage, total: 200, imagePrefix: "single", count: 0, duration: 14.5)
                 }, completion: {
                     WKInterfaceDevice.current().play(.success)
                     self.showAllert(stretchingController: stretchingController)

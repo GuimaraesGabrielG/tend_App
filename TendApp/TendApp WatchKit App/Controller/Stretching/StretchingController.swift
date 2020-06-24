@@ -8,9 +8,7 @@
 
 import UIKit
 import WatchKit
-public class StretchingController: WKInterfaceController {
-
-    
+public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessionDelegate {
     
     /// label que aparecera ao final de cada parte do alongamento
     @IBOutlet weak var finalLabel: WKInterfaceLabel!
@@ -18,7 +16,6 @@ public class StretchingController: WKInterfaceController {
     @IBOutlet weak var instructionLabel: WKInterfaceLabel!
     /// imagem do anel animado
     @IBOutlet weak var ringImage: WKInterfaceImage!
-    @IBOutlet weak var ringImage2: WKInterfaceImage!
     /// imagem do alongamento
     @IBOutlet weak var stretchingImage: WKInterfaceImage!
     //MARK:-   Váriaveis
@@ -37,15 +34,23 @@ public class StretchingController: WKInterfaceController {
     /// Classe que controla qual alongamento será executado
     var stretchingEnforcer: StretchingEnforcer?
     
+    /// Objeto de sessao (serve para continuar executando o app mesmo quando a tela entrar em descanso)
+    let session = WKExtendedRuntimeSession()
+    
     public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        // Assign the delegate.
+        session.delegate = self
         //  Chama a função que mostra a animação de como fazer o alongamento
         startAnimationStretching()
         stretchingEnforcer = StretchingEnforcer()
+        // começa a sessao extendida
+        session.start()
 
     }
     
     public override func willDisappear() {
+        session.invalidate()
         stretchingEnforcer?.stop = true
         stretchingEnforcer = nil
         timerBeforeStartStretching?.invalidate()
@@ -53,7 +58,6 @@ public class StretchingController: WKInterfaceController {
         finalLabel.setText(nil)
         instructionLabel.setText(nil)
         ringImage.setImage(nil)
-        ringImage2.setImage(nil)
         stretchingImage.setImage(nil)
         labelTimerBeforeStartStretching.setText(nil)
         animatedImage.setImage(nil)
@@ -108,5 +112,14 @@ public class StretchingController: WKInterfaceController {
             animatedImage.setHidden(true)
             startTimerBeforeStretching()
         }
+    }
+    
+    public func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
+    }
+    
+    public func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
+    }
+    
+    public func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
     }
 }
