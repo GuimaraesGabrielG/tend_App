@@ -80,7 +80,6 @@ public class StretchingController: WKInterfaceController {
             // animaçao alongamento (na pasta model em StrenchingStrategy)
             self.stretchingEnforcer?.runStretching(stretchingStrategy: StretchingHand(), stretchingController: self)
             //
-            WKInterfaceDevice.current().play(.start)
             myTimer.invalidate()
             labelTimerBeforeStartStretching.setHidden(true)
         }
