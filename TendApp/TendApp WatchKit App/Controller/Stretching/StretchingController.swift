@@ -18,6 +18,7 @@ public class StretchingController: WKInterfaceController {
     @IBOutlet weak var instructionLabel: WKInterfaceLabel!
     /// imagem do anel animado
     @IBOutlet weak var ringImage: WKInterfaceImage!
+    @IBOutlet weak var ringImage2: WKInterfaceImage!
     /// imagem do alongamento
     @IBOutlet weak var stretchingImage: WKInterfaceImage!
     //MARK:-   Váriaveis
@@ -52,6 +53,7 @@ public class StretchingController: WKInterfaceController {
         finalLabel.setText(nil)
         instructionLabel.setText(nil)
         ringImage.setImage(nil)
+        ringImage2.setImage(nil)
         stretchingImage.setImage(nil)
         labelTimerBeforeStartStretching.setText(nil)
         animatedImage.setImage(nil)

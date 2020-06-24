@@ -47,6 +47,7 @@ extension StretchingStrategy{
     */
     func showAllert(stretchingController: StretchingController){
         let finalAlertAction = WKAlertAction(title: "OK", style: .default) {
+            stretchingController.willDisappear()
             stretchingController.popToRootController()
         }
         stretchingController.presentAlert(withTitle: NSLocalizedString("TituloFinal", comment: ""), message: NSLocalizedString("MensagemFinal", comment: ""), preferredStyle: .alert, actions: [finalAlertAction])
