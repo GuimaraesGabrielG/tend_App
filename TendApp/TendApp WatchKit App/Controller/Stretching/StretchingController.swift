@@ -50,7 +50,6 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
     }
     
     public override func willDisappear() {
-        session.invalidate()
         stretchingEnforcer?.stop = true
         stretchingEnforcer = nil
         timerBeforeStartStretching?.invalidate()
@@ -61,6 +60,7 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
         stretchingImage.setImage(nil)
         labelTimerBeforeStartStretching.setText(nil)
         animatedImage.setImage(nil)
+        session.invalidate()
     }
     
     public override func willActivate() {
