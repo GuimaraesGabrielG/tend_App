@@ -44,4 +44,4 @@
 
 //Alertas
 "TituloFinal" = "Exercício Finalizado!";
-"MensagemFinal" = "\nNós avisaserom quando um novo \nexercício estiver \ndisponível.";
+"MensagemFinal" = "\nNós vamsos notificar quando um novo \nexercício estiver \ndisponível.";
