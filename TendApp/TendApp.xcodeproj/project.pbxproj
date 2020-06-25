@@ -230,11 +230,7 @@
 		7FCECAB424A29D2E0017C9D5 /* alongamento_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FCECAB024A29D2D0017C9D5 /* alongamento_3.png */; };
 		7FCECAB524A29D2E0017C9D5 /* alongamento_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FCECAB124A29D2E0017C9D5 /* alongamento_12.png */; };
 		EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */; };
-		F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */; };
-		F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */; };
-		F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */; };
 		F64FDCAF249D235800E33FE3 /* SetDateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */; };
-		F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */; };
 		F6938C5424A23E6F0012B149 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6938C5324A23E6F0012B149 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
@@ -511,11 +507,7 @@
 		7FCECAB024A29D2D0017C9D5 /* alongamento_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_3.png; sourceTree = "<group>"; };
 		7FCECAB124A29D2E0017C9D5 /* alongamento_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_12.png; sourceTree = "<group>"; };
 		EF5BBC3F249A8F8700CC3F0C /* StretchingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingController.swift; sourceTree = "<group>"; };
-		F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSemana.swift; sourceTree = "<group>"; };
-		F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleItens.swift; sourceTree = "<group>"; };
-		F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeInterfaceController.swift; sourceTree = "<group>"; };
 		F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateInterfaceController.swift; sourceTree = "<group>"; };
-		F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoInterfaceController.swift; sourceTree = "<group>"; };
 		F6938C5324A23E6F0012B149 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -632,7 +624,6 @@
 				7F1B0E95249D379600E17D04 /* Protocols */,
 				6EFC0DA7249D1D0C0045BBC0 /* UserDefaults */,
 				6EFC0D9F249D17DB0045BBC0 /* Languages */,
-				F64FDCA6249D228200E33FE3 /* Week List */,
 				6E4D4DF724997735002E980E /* Delegates */,
 				F6938C5724A2A6C30012B149 /* Notification */,
 			);
@@ -917,21 +908,10 @@
 			path = StretchingImage;
 			sourceTree = "<group>";
 		};
-		F64FDCA6249D228200E33FE3 /* Week List */ = {
-			isa = PBXGroup;
-			children = (
-				F64FDCA7249D22BD00E33FE3 /* TitleSemana.swift */,
-				F64FDCA9249D22DD00E33FE3 /* TitleItens.swift */,
-			);
-			path = "Week List";
-			sourceTree = "<group>";
-		};
 		F64FDCAB249D231700E33FE3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F64FDCAC249D233900E33FE3 /* SetTimeInterfaceController.swift */,
 				F64FDCAE249D235800E33FE3 /* SetDateInterfaceController.swift */,
-				F64FDCB0249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1281,17 +1261,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */,
-				F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */,
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
-				F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */,
 				6EC9141324A4138600B5E458 /* WeekController.swift in Sources */,
 				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
 				7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */,
 				6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */,
-				F64FDCAA249D22DD00E33FE3 /* TitleItens.swift in Sources */,
 				7F1B0E9A249D382400E17D04 /* StretchingHand.swift in Sources */,
 				6E4D4DDB2499769A002E980E /* ExtensionDelegate.swift in Sources */,
-				F64FDCAD249D233900E33FE3 /* SetTimeInterfaceController.swift in Sources */,
 				F6938C5424A23E6F0012B149 /* Notification.swift in Sources */,
 				7F1B0E97249D37D000E17D04 /* StretchingStrategy.swift in Sources */,
 				6E4D4DD92499769A002E980E /* InterfaceController.swift in Sources */,

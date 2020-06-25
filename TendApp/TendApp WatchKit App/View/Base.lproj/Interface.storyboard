@@ -106,33 +106,6 @@
             </objects>
             <point key="canvasLocation" x="-84" y="-269"/>
         </scene>
-        <!--Horário-->
-        <scene sceneID="paR-Rx-sbY">
-            <objects>
-                <controller title="Horário" id="n2o-Bu-oRe" customClass="ConfiguracaoInterfaceController" customModule="TendApp_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="JXW-uE-bqM">
-                            <items>
-                                <tableRow identifier="ItensTitle" id="gR5-6Q-5d9" customClass="TitleItens" customModule="TendApp_WatchKit_App" customModuleProvider="target">
-                                    <group key="rootItem" width="1" height="45" alignment="left" id="q8X-sW-vCD">
-                                        <items>
-                                            <label alignment="left" verticalAlignment="center" text="Title" id="s4P-75-I5m"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="titleName" destination="s4P-75-I5m" id="cXv-UZ-Pls"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="configHoraDia" destination="JXW-uE-bqM" id="7Jj-f9-PKZ"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="299" y="-715"/>
-        </scene>
         <!--Cronograma-->
         <scene sceneID="GLq-pT-JGb">
             <objects>
@@ -141,33 +114,33 @@
                         <label alignment="left" text="Dias da Semana" id="CS1-c0-FOV">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
                         </label>
-                        <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
+                        <group width="134" height="0.25" alignment="center" id="2fr-tq-gUo">
                             <items>
-                                <button width="0.14000000000000001" height="0.5" alignment="center" verticalAlignment="center" title="S" backgroundImage="imagem3" id="Mud-jf-uXl">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="contornoArredondado" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14000000000000001" height="0.5" alignment="center" verticalAlignment="center" title="T" backgroundImage="imagem3" id="ULH-h1-Mnh">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="ULH-h1-Mnh">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14199999999999999" height="0.5" alignment="center" verticalAlignment="center" title="Q" backgroundImage="imagem3" id="qo4-IN-qXO">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="T" backgroundImage="contornoArredondado" id="qo4-IN-qXO">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14199999999999999" height="0.5" alignment="center" verticalAlignment="center" alpha="0.5" title="Q" backgroundImage="imagem3" id="r7p-EP-tdY">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="r7p-EP-tdY">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14000000000000001" height="0.5" alignment="center" verticalAlignment="center" title="S" backgroundImage="imagem3" id="cpg-se-m4i">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="cpg-se-m4i">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14000000000000001" height="0.5" alignment="center" verticalAlignment="center" alpha="0.5" title="S" backgroundImage="imagem3" id="D2a-Jf-Je0">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="D2a-Jf-Je0">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
-                                <button width="0.14199999999999999" height="0.5" alignment="center" verticalAlignment="center" alpha="0.5" title="D" backgroundImage="imagem3" id="kAN-LZ-cdV">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="kAN-LZ-cdV">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                 </button>
@@ -178,12 +151,12 @@
                         </label>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="06:00-12:00" backgroundImage="imagem1" id="3lX-G7-OrT">
+                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.29999999999999999" title="06:00-12:00" backgroundImage="imagem1" id="3lX-G7-OrT">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                 </button>
-                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.5" title="12:00-18:00" backgroundImage="imagem2" id="fQK-xz-0W8">
+                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.34999999999999998" title="12:00-18:00" backgroundImage="imagem2" id="fQK-xz-0W8">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -192,12 +165,12 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
                             <items>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="18:00-00:00" backgroundImage="imagem3" id="797-fu-q7P">
+                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.29999999999999999" title="18:00-00:00" backgroundImage="imagem3" id="797-fu-q7P">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                 </button>
-                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.5" title="00:00-06:00" backgroundImage="imagem4" id="DX2-1L-XI7">
+                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.29999999999999999" title="00:00-06:00" backgroundImage="imagem4" id="DX2-1L-XI7">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -205,72 +178,30 @@
                             </items>
                         </group>
                     </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="201" y="-283.5"/>
-        </scene>
-        <!--Dia-->
-        <scene sceneID="Kgv-BA-7bF">
-            <objects>
-                <controller identifier="setDia" title="Dia" id="56F-lS-w5x" customClass="SetDateInterfaceController" customModule="TendApp_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="Id9-Hz-Qam">
-                            <items>
-                                <tableRow identifier="ItensSemana" id="x4U-vO-J73" customClass="TitleSemana" customModule="TendApp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="VEs-PD-FsS">
-                                        <items>
-                                            <label width="96" height="44" alignment="left" text="Semana" minimumScaleFactor="0.5" id="Qb3-YG-tLb"/>
-                                            <imageView width="19" alignment="right" verticalAlignment="center" hidden="YES" image="checkmark" catalog="system" contentMode="scaleAspectFit" id="rXl-i2-urv"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="iconCheck" destination="rXl-i2-urv" id="NEl-lz-pJb"/>
-                                        <outlet property="titleSemana" destination="Qb3-YG-tLb" id="PRy-a7-PsQ"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
                     <connections>
-                        <outlet property="tableDiaSemana" destination="Id9-Hz-Qam" id="hC6-0G-x5b"/>
+                        <outlet property="afternoonButton" destination="fQK-xz-0W8" id="QG1-jO-cTJ"/>
+                        <outlet property="dawnButton" destination="DX2-1L-XI7" id="qQ2-MP-a3M"/>
+                        <outlet property="fridayButton" destination="D2a-Jf-Je0" id="IGV-nH-iJM"/>
+                        <outlet property="groupDays" destination="2fr-tq-gUo" id="rij-EB-7we"/>
+                        <outlet property="groupFirstPeriod" destination="A78-VU-GLf" id="bTx-5X-dpA"/>
+                        <outlet property="groupSecondPeriod" destination="wpF-nY-bYl" id="xHf-4T-QhY"/>
+                        <outlet property="mondayButton" destination="ULH-h1-Mnh" id="0f2-ae-D5g"/>
+                        <outlet property="morningButton" destination="3lX-G7-OrT" id="OcO-Oj-5oc"/>
+                        <outlet property="nightButton" destination="797-fu-q7P" id="AEb-Cy-qqF"/>
+                        <outlet property="saturdayButton" destination="kAN-LZ-cdV" id="Kbe-27-mOL"/>
+                        <outlet property="sundayButton" destination="Mud-jf-uXl" id="c0C-bx-HRd"/>
+                        <outlet property="thursdayButton" destination="cpg-se-m4i" id="3wj-uW-xgG"/>
+                        <outlet property="tuesdayButton" destination="qo4-IN-qXO" id="X0X-vv-DQU"/>
+                        <outlet property="wednesdayButton" destination="r7p-EP-tdY" id="9O8-jp-2f7"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="571" y="-905"/>
-        </scene>
-        <!--Hora-->
-        <scene sceneID="HKa-WH-ee6">
-            <objects>
-                <controller identifier="setHora" title="Hora" id="yqy-SJ-pfs" customClass="SetTimeInterfaceController" customModule="TendApp_WatchKit_Extension">
-                    <items>
-                        <group width="1" height="1" alignment="left" id="Box-9S-ooQ">
-                            <items>
-                                <picker width="0.40000000000000002" height="100" alignment="left" verticalAlignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="1CP-aX-yEG">
-                                    <connections>
-                                        <action selector="valueHoras:" destination="yqy-SJ-pfs" id="bJP-Ue-GYP"/>
-                                    </connections>
-                                </picker>
-                                <label width="26" alignment="left" verticalAlignment="center" text="-" textAlignment="center" id="kSL-Ze-n34"/>
-                                <picker width="0.40000000000000002" height="100" alignment="right" verticalAlignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="rFh-eF-PcS">
-                                    <connections>
-                                        <action selector="valueMin:" destination="yqy-SJ-pfs" id="L3l-qS-33T"/>
-                                    </connections>
-                                </picker>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="horas" destination="1CP-aX-yEG" id="3s5-EZ-PPx"/>
-                        <outlet property="min" destination="rFh-eF-PcS" id="L0w-qL-cEK"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="560" y="-576"/>
+            <point key="canvasLocation" x="203" y="-269"/>
         </scene>
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="110"/>
+        <image name="contornoArredondado" width="107" height="107"/>
         <image name="imagem1" width="149" height="100"/>
         <image name="imagem2" width="149" height="100"/>
         <image name="imagem3" width="149" height="100"/>

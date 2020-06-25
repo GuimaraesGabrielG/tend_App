@@ -18,15 +18,17 @@ public class PersistentData {
     //MARK: - Attributes
     static let persistentData = PersistentData()
     private var _days: [Bool] = []
-    private var _week = UserDefaults.standard
+    private var _daysPersistentData = UserDefaults.standard
+    private var _period: [Bool] = []
+    private var _periodPersistentData = UserDefaults.standard
     
     //MARK: - Getters and Setters
-    var week: UserDefaults{
+    var daysPersistentData: UserDefaults{
         get{
-            return self._week
+            return self._daysPersistentData
         }
         set(newValue){
-            self._week = newValue
+            self._daysPersistentData = newValue
         }
     }
     
@@ -40,4 +42,51 @@ public class PersistentData {
             self._days = newValue
         }
     }
+    
+    var period: [Bool]{
+        get{
+            return self._period
+        }
+        set(newValue){
+            self._period = newValue
+        }
+    }
+    
+    var periodPersistentData: UserDefaults{
+        get{
+            return self._periodPersistentData
+        }
+        set(newValue){
+            self._periodPersistentData = newValue
+        }
+    }
+    
+    
+    
+    func retrieveDays() -> [Bool] {
+        return daysPersistentData.array(forKey: "daysPersistentData") as? [Bool] ?? []
+    }
+    
+    func daysSetTrue(){
+        self.daysPersistentData.set(true, forKey: "daysPersistentData")
+    }
+    
+    func daysSetFalse(){
+        self.daysPersistentData.set(false, forKey: "daysPersistentData")
+    }
+    
+    
+    func retrievePeriod() -> [Bool] {
+        return daysPersistentData.array(forKey: "periodPersistentData") as? [Bool] ?? []
+    }
+    
+    func periodSetTrue(){
+        self.daysPersistentData.set(true, forKey: "periodPersistentData")
+    }
+    
+    func periodSetFalse(){
+        self.daysPersistentData.set(false, forKey: "periodPersistentData")
+    }
+    
+    
 }
