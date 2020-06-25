@@ -16,6 +16,7 @@
 		6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4DDC2499769A002E980E /* NotificationController.swift */; };
 		6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4DDE2499769A002E980E /* ComplicationController.swift */; };
 		6E4D4DE12499769C002E980E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D4DE02499769C002E980E /* Assets.xcassets */; };
+		6EC9141324A4138600B5E458 /* WeekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC9141224A4138600B5E458 /* WeekController.swift */; };
 		6EFC0DA2249D18280045BBC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA4249D18280045BBC0 /* Localizable.strings */; };
 		6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA8249D1D480045BBC0 /* PersistentData.swift */; };
 		7F1B0E97249D37D000E17D04 /* StretchingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B0E96249D37D000E17D04 /* StretchingStrategy.swift */; };
@@ -293,6 +294,7 @@
 		6E4D4DE02499769C002E980E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4D4DE22499769C002E980E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D4DE32499769C002E980E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		6EC9141224A4138600B5E458 /* WeekController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekController.swift; sourceTree = "<group>"; };
 		6EFC0D9D249D179E0045BBC0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Interface.strings"; sourceTree = "<group>"; };
 		6EFC0D9E249D17B50045BBC0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		6EFC0DA3249D18280045BBC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -581,6 +583,7 @@
 		6E4D4DF1249976D3002E980E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6EC9141124A4136F00B5E458 /* Week */,
 				6E312105249E8FDA00AA066C /* Stretching */,
 				F64FDCAB249D231700E33FE3 /* Settings */,
 				6E4D4DF4249976F3002E980E /* Interface */,
@@ -642,6 +645,14 @@
 				6E4D4DDA2499769A002E980E /* ExtensionDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6EC9141124A4136F00B5E458 /* Week */ = {
+			isa = PBXGroup;
+			children = (
+				6EC9141224A4138600B5E458 /* WeekController.swift */,
+			);
+			path = Week;
 			sourceTree = "<group>";
 		};
 		6EFC0D9F249D17DB0045BBC0 /* Languages */ = {
@@ -1273,6 +1284,7 @@
 				F64FDCB1249D236F00E33FE3 /* ConfiguracaoInterfaceController.swift in Sources */,
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
 				F64FDCA8249D22BD00E33FE3 /* TitleSemana.swift in Sources */,
+				6EC9141324A4138600B5E458 /* WeekController.swift in Sources */,
 				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
 				7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */,
 				6E4D4DDF2499769A002E980E /* ComplicationController.swift in Sources */,
