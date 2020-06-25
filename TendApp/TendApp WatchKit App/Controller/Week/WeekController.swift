@@ -14,7 +14,6 @@ import WatchKit
 public class WeekController: WKInterfaceController{
     
     //MARK: - Attributes
-    
     /// Periods
     var days = [false,false,false,false,false,false,false]
     var periods = [false,false,false,false]
@@ -39,13 +38,11 @@ public class WeekController: WKInterfaceController{
     @IBOutlet weak var nightButton: WKInterfaceButton!
     @IBOutlet weak var dawnButton: WKInterfaceButton!
     
-    
     /// Collections
     var collectionDays = [WKInterfaceButton]()
     var collectionPeriods = [WKInterfaceButton]()
     
-    var toggled = false
-    
+    //MARK: - Init
     /// init
     override init() {
         super.init()
@@ -63,6 +60,7 @@ public class WeekController: WKInterfaceController{
             self.verificationPeriods()
         }
     }
+    
     
     /// deinit()
     deinit {
@@ -168,7 +166,6 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    
     /// Clear Memory
     func clear(){
         self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
@@ -183,11 +180,6 @@ public class WeekController: WKInterfaceController{
         self.nightButton = nil
         self.dawnButton = nil
         
-        self.mondayButton.setBackgroundColor(nil)
-        self.afternoonButton.setBackgroundColor(nil)
-        self.nightButton.setBackgroundColor(nil)
-        self.dawnButton.setBackgroundColor(nil)
-        
         self.sundayButton = nil
         self.mondayButton = nil
         self.tuesdayButton = nil
@@ -195,15 +187,7 @@ public class WeekController: WKInterfaceController{
         self.thursdayButton = nil
         self.fridayButton = nil
         self.saturdayButton = nil
-        
-        self.sundayButton.setBackgroundColor(nil)
-        self.mondayButton.setBackgroundColor(nil)
-        self.tuesdayButton.setBackgroundColor(nil)
-        self.wednesdayButton.setBackgroundColor(nil)
-        self.thursdayButton.setBackgroundColor(nil)
-        self.fridayButton.setBackgroundColor(nil)
-        self.saturdayButton.setBackgroundColor(nil)
-        
+    
         self.collectionPeriods = []
         self.collectionDays = []
     }

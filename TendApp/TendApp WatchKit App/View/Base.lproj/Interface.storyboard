@@ -114,7 +114,7 @@
                         <label alignment="left" text="Dias da Semana" id="CS1-c0-FOV">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
                         </label>
-                        <group width="134" height="0.25" alignment="center" id="2fr-tq-gUo">
+                        <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
                             <items>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="contornoArredondado" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
