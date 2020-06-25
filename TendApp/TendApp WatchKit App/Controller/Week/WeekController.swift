@@ -46,9 +46,7 @@ public class WeekController: WKInterfaceController{
     /// init
     override init() {
         super.init()
-        
-        self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
-        self.collectionPeriods = [morningButton,afternoonButton,nightButton,dawnButton]
+        self.activateArrays()
         
         //Verify if First Time in App and save in UserDefaults.
         if(!UserDefaults.standard.bool(forKey: "firstTime")){
@@ -62,13 +60,13 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    /// deinit()
-    deinit {
-        self.clear()
+    /// Called when Controller is active.
+    public override func willActivate() {
+        self.activateArrays()
     }
     
     
-    /// willDisappear()
+    /// Called when Controller is offscreen.
     public override func willDisappear() {
         self.clear()
     }
@@ -97,7 +95,6 @@ public class WeekController: WKInterfaceController{
         }
     }
     
-    
     /// Set Days
     /// - Parameter day: Day of Week
     func setDays(day:Int){
@@ -125,7 +122,6 @@ public class WeekController: WKInterfaceController{
             PersistentData.persistentData.periodsPersistentData.set(periods, forKey: "periodPersistentData")
         }
     }
-    
     
     //MARK: - Days Button
     @IBAction func activateSunday() {
@@ -165,32 +161,18 @@ public class WeekController: WKInterfaceController{
         setPeriods(period: 3)
     }
     
-    
     /// Clear Memory
     func clear(){
-        self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
-        self.collectionPeriods = [morningButton,afternoonButton,nightButton,dawnButton]
-        
-        self.groupDays = nil
-        self.groupFirstPeriod = nil
-        self.groupSecondPeriod = nil
-        
-        self.morningButton = nil
-        self.afternoonButton = nil
-        self.nightButton = nil
-        self.dawnButton = nil
-        
-        self.sundayButton = nil
-        self.mondayButton = nil
-        self.tuesdayButton = nil
-        self.wednesdayButton = nil
-        self.thursdayButton = nil
-        self.fridayButton = nil
-        self.saturdayButton = nil
-    
+        self.periods = []
+        self.days = []
         self.collectionPeriods = []
         self.collectionDays = []
     }
+    
+    func activateArrays(){
+        self.days = [false,false,false,false,false,false,false]
+        self.periods = [false,false,false,false]
+        self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
+        self.collectionPeriods = [morningButton,afternoonButton,nightButton,dawnButton]
+    }
 }
-
-
