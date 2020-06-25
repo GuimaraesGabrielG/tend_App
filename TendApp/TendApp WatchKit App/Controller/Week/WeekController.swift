@@ -108,7 +108,7 @@ public class WeekController: WKInterfaceController{
             days[day] = true
             PersistentData.persistentData.daysPersistentData.set(days, forKey: "daysPersistentData")
         }else{
-            collectionDays[0].setAlpha(0.3)
+            collectionDays[day].setAlpha(0.3)
             days[day] = false
             PersistentData.persistentData.daysPersistentData.set(days, forKey: "daysPersistentData")
         }
