@@ -119,30 +119,51 @@
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="contornoArredondado" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateSunday" destination="9an-iz-hG1" id="fQx-JD-2ae"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="ULH-h1-Mnh">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateMonday" destination="9an-iz-hG1" id="Igf-lV-HAs"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="T" backgroundImage="contornoArredondado" id="qo4-IN-qXO">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateTuesday" destination="9an-iz-hG1" id="M96-Dr-3Nm"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="r7p-EP-tdY">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateWednesday" destination="9an-iz-hG1" id="6Th-wO-et8"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="cpg-se-m4i">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateThursday" destination="9an-iz-hG1" id="xPk-5G-fgn"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="D2a-Jf-Je0">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateFriday" destination="9an-iz-hG1" id="7N0-Sh-eZS"/>
+                                    </connections>
                                 </button>
                                 <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="kAN-LZ-cdV">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
+                                    <connections>
+                                        <action selector="activateSaturday" destination="9an-iz-hG1" id="e0m-a0-RtC"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
@@ -155,11 +176,17 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <connections>
+                                        <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
+                                    </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.34999999999999998" title="12:00-18:00" backgroundImage="imagem2" id="fQK-xz-0W8">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <connections>
+                                        <action selector="activateAfternoon" destination="9an-iz-hG1" id="uiQ-PM-LOq"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
@@ -169,11 +196,17 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <connections>
+                                        <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
+                                    </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.29999999999999999" title="00:00-06:00" backgroundImage="imagem4" id="DX2-1L-XI7">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <connections>
+                                        <action selector="activateDawn" destination="9an-iz-hG1" id="ESj-ub-Chj"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>

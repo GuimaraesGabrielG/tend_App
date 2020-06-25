@@ -19,8 +19,8 @@ public class PersistentData {
     static let persistentData = PersistentData()
     private var _days: [Bool] = []
     private var _daysPersistentData = UserDefaults.standard
-    private var _period: [Bool] = []
-    private var _periodPersistentData = UserDefaults.standard
+    private var _periods: [Bool] = []
+    private var _periodsPersistentData = UserDefaults.standard
     
     //MARK: - Getters and Setters
     var daysPersistentData: UserDefaults{
@@ -43,21 +43,21 @@ public class PersistentData {
         }
     }
     
-    var period: [Bool]{
+    var periods: [Bool]{
         get{
-            return self._period
+            return self._periods
         }
         set(newValue){
-            self._period = newValue
+            self._periods = newValue
         }
     }
     
-    var periodPersistentData: UserDefaults{
+    var periodsPersistentData: UserDefaults{
         get{
-            return self._periodPersistentData
+            return self._periodsPersistentData
         }
         set(newValue){
-            self._periodPersistentData = newValue
+            self._periodsPersistentData = newValue
         }
     }
     
@@ -66,27 +66,8 @@ public class PersistentData {
     func retrieveDays() -> [Bool] {
         return daysPersistentData.array(forKey: "daysPersistentData") as? [Bool] ?? []
     }
-    
-    func daysSetTrue(){
-        self.daysPersistentData.set(true, forKey: "daysPersistentData")
-    }
-    
-    func daysSetFalse(){
-        self.daysPersistentData.set(false, forKey: "daysPersistentData")
-    }
-    
-    
+
     func retrievePeriod() -> [Bool] {
-        return daysPersistentData.array(forKey: "periodPersistentData") as? [Bool] ?? []
+        return periodsPersistentData.array(forKey: "periodPersistentData") as? [Bool] ?? []
     }
-    
-    func periodSetTrue(){
-        self.daysPersistentData.set(true, forKey: "periodPersistentData")
-    }
-    
-    func periodSetFalse(){
-        self.daysPersistentData.set(false, forKey: "periodPersistentData")
-    }
-    
-    
 }
