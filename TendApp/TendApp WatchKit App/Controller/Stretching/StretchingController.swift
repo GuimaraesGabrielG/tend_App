@@ -43,7 +43,8 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
         // Assign the delegate.
         session.delegate = self
         //  Chama a função que mostra a animação de como fazer o alongamento
-        startAnimationStretching()
+        startTimerBeforeStretching()
+//        startAnimationStretching()
         stretchingEnforcer = StretchingEnforcer()
         // começa a sessao extendida
         session.start()

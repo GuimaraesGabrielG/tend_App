@@ -35,8 +35,8 @@
 
 //Mensagem das Views
 "Mensagem" = "\nPrevina-se de lesões nas mãos e nos dedos com o TEND!\n";
-"Instrucao" = "Observe e Repita.";
-"Outra" = "Agora, Faça com a outra mão.";
+"Instrucao" = "Observe\ne Repita.";
+"Outra" = "Agora,\nfaça com\na outra mão";
 
 //Label Botao
 "Comecar" = "Começar";

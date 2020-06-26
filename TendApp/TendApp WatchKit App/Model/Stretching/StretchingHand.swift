@@ -17,24 +17,35 @@ public class StretchingHand: StretchingStrategy, Animation{
     var stop: Bool = false
     
     func performStretching(stretchingController: StretchingController) {
+        
+        stretchingController.ringImage.setHidden(false)
+        self.createAnimatedImages(image: stretchingController.ringImage, total: 26, imagePrefix: "single", count: 0, duration: 1, repeatCount: -1)
         stretchingController.finalLabel.setText(NSLocalizedString("Outra", comment: ""))
         stretchingController.instructionLabel.setText(NSLocalizedString("Instrucao", comment: ""))
-        self.exchangeObjects(ringHidden: true, imageName: "alongamento_1", stretchingController: stretchingController)
-        WKInterfaceDevice.current().play(.start)
-        self.animateWithDuration(duration: 16, animations: {
-            self.createAnimatedImages(image: stretchingController.ringImage, total: 200, imagePrefix: "single", count: 0, duration: 14.5)
+        
+        animateWithDuration(duration: 3, animations: {
+            stretchingController.instructionLabel.setHidden(false)
         }, completion: {
-            WKInterfaceDevice.current().play(.stop)
-            self.exchangeObjects(ringHidden: false, imageName: "none", stretchingController: stretchingController)
-            self.animateWithDuration(duration: 3, animations: {
-            }, completion: {
+            self.animateWithDuration(duration: 16, animations: {
                 WKInterfaceDevice.current().play(.start)
-                self.exchangeObjects(ringHidden: true, imageName: "alongamento_12", stretchingController: stretchingController)
-                self.animateWithDuration(duration: 16, animations: {
-                    self.createAnimatedImages(image: stretchingController.ringImage, total: 200, imagePrefix: "single", count: 0, duration: 14.5)
+                self.setImage(image: stretchingController.stretchingImage, nameImage: "alongamento_1")
+                stretchingController.stretchingImage.setHidden(false)
+                stretchingController.instructionLabel.setHidden(true)
+            }, completion: {
+                WKInterfaceDevice.current().play(.stop)
+                stretchingController.finalLabel.setHidden(false)
+                stretchingController.stretchingImage.setHidden(true)
+                self.animateWithDuration(duration: 3, animations: {
                 }, completion: {
-                    WKInterfaceDevice.current().play(.success)
-                    self.showAllert(stretchingController: stretchingController)
+                    WKInterfaceDevice.current().play(.start)
+                    self.setImage(image: stretchingController.stretchingImage, nameImage: "alongamento_12")
+                    stretchingController.stretchingImage.setHidden(false)
+                    stretchingController.finalLabel.setHidden(true)
+                    self.animateWithDuration(duration: 16, animations: {
+                    }, completion: {
+                        WKInterfaceDevice.current().play(.success)
+                        self.showAllert(stretchingController: stretchingController)
+                    })
                 })
             })
         })

@@ -54,20 +54,26 @@ extension Animation{
      - parameter count: numero da primeira imagem
      - parameter duration: suraçao da animaçao
     */
-    func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval){
+    func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval, repeatCount: Int){
         animateWithDuration(duration: duration/Double(total), animations: {
-            image.setImage(nil)
-            let imageName = "\(imagePrefix)\(count)"
-            if let imagePath = Bundle.main.path(forResource: imageName,
-                ofType: "png"){
-                image.setImage(UIImage(contentsOfFile: imagePath))
-            }
+            let imageName = count<10 ? "\(imagePrefix)000\(count)" : "\(imagePrefix)00\(count)"
+            self.setImage(image: image, nameImage: imageName)
         }, completion: {
             if count < total{
-                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: count+1, duration: duration)
+                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: count+1, duration: duration, repeatCount: repeatCount)
+            }else if repeatCount != 0{
+                self.createAnimatedImages(image: image, total: total, imagePrefix: imagePrefix, count: 1, duration: duration, repeatCount: repeatCount-1)
             }
         })
 
+    }
+    
+    func setImage(image: WKInterfaceImage, nameImage: String){
+        image.setImage(nil)
+        if let imagePath = Bundle.main.path(forResource: nameImage,
+            ofType: "png"){
+            image.setImage(UIImage(contentsOfFile: imagePath))
+        }
     }
     
 }
