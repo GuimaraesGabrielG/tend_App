@@ -33,6 +33,8 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
     public var timerShowAnimation: Timer!
     /// Classe que controla qual alongamento será executado
     var stretchingEnforcer: StretchingEnforcer?
+    /// Array de estrategias de alongamento
+    let stretchingStrategyArray: [StretchingStrategy] = [StretchingHand(),StretchingWrist()]
     
     /// Objeto de sessao (serve para continuar executando o app mesmo quando a tela entrar em descanso)
     let session = WKExtendedRuntimeSession()
@@ -84,7 +86,7 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
         //  Verifica se o timer chegou a 0, e caso tenha chegado, ele some para que o usuário possa começar o seu alongamento.
         if countTimerBeforeStretching <= 0 {
             // animaçao alongamento (na pasta model em StrenchingStrategy)
-            self.stretchingEnforcer?.runStretching(stretchingStrategy: StretchingHand(), stretchingController: self)
+            self.stretchingEnforcer?.runStretching(stretchingStrategy: stretchingStrategyArray[Int.random(in: 0...1)], stretchingController: self)
             //
             myTimer.invalidate()
             labelTimerBeforeStartStretching.setHidden(true)

@@ -24,6 +24,8 @@
 		7F2AF8DE24A17AF100FF17B3 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AF8DD24A17AF100FF17B3 /* Animation.swift */; };
 		7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AF8DF24A17B0700FF17B3 /* StretchingEnforcer.swift */; };
 		7F4D4A8F249ECD2B00A7312C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0DA4249D18280045BBC0 /* Localizable.strings */; };
+		7FC6691B24A6B183008D1D49 /* StretchingWrist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6691A24A6B183008D1D49 /* StretchingWrist.swift */; };
+		7FC6691D24A6B1EC008D1D49 /* alongamento_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC6691C24A6B1EC008D1D49 /* alongamento_22.png */; };
 		7FCECAB224A29D2E0017C9D5 /* alongamento_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FCECAAE24A29D2D0017C9D5 /* alongamento_1.png */; };
 		7FCECAB324A29D2E0017C9D5 /* alongamento_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FCECAAF24A29D2D0017C9D5 /* alongamento_2.png */; };
 		7FCECAB424A29D2E0017C9D5 /* alongamento_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FCECAB024A29D2D0017C9D5 /* alongamento_3.png */; };
@@ -125,6 +127,8 @@
 		7F1B0E99249D382400E17D04 /* StretchingHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingHand.swift; sourceTree = "<group>"; };
 		7F2AF8DD24A17AF100FF17B3 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		7F2AF8DF24A17B0700FF17B3 /* StretchingEnforcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingEnforcer.swift; sourceTree = "<group>"; };
+		7FC6691A24A6B183008D1D49 /* StretchingWrist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingWrist.swift; sourceTree = "<group>"; };
+		7FC6691C24A6B1EC008D1D49 /* alongamento_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_22.png; sourceTree = "<group>"; };
 		7FCECAAE24A29D2D0017C9D5 /* alongamento_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_1.png; sourceTree = "<group>"; };
 		7FCECAAF24A29D2D0017C9D5 /* alongamento_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_2.png; sourceTree = "<group>"; };
 		7FCECAB024A29D2D0017C9D5 /* alongamento_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alongamento_3.png; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				7F1B0E99249D382400E17D04 /* StretchingHand.swift */,
+				7FC6691A24A6B183008D1D49 /* StretchingWrist.swift */,
 			);
 			path = Stretching;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				7FCECAAE24A29D2D0017C9D5 /* alongamento_1.png */,
+				7FC6691C24A6B1EC008D1D49 /* alongamento_22.png */,
 				7FCECAAF24A29D2D0017C9D5 /* alongamento_2.png */,
 				7FCECAB024A29D2D0017C9D5 /* alongamento_3.png */,
 				7FCECAB124A29D2E0017C9D5 /* alongamento_12.png */,
@@ -519,6 +525,7 @@
 				6E4D4DE12499769C002E980E /* Assets.xcassets in Resources */,
 				7FF06F9624A68FAF00C01CC8 /* single0012.png in Resources */,
 				7FF06FA824A68FAF00C01CC8 /* single0026.png in Resources */,
+				7FC6691D24A6B1EC008D1D49 /* alongamento_22.png in Resources */,
 				7FF06F9A24A68FAF00C01CC8 /* single0022.png in Resources */,
 				7FCECAB224A29D2E0017C9D5 /* alongamento_1.png in Resources */,
 				7F4D4A8F249ECD2B00A7312C /* Localizable.strings in Resources */,
@@ -551,6 +558,7 @@
 			files = (
 				6EFC0DA9249D1D480045BBC0 /* PersistentData.swift in Sources */,
 				6E4D4DDD2499769A002E980E /* NotificationController.swift in Sources */,
+				7FC6691B24A6B183008D1D49 /* StretchingWrist.swift in Sources */,
 				6EC9141324A4138600B5E458 /* WeekController.swift in Sources */,
 				EF5BBC40249A8F8700CC3F0C /* StretchingController.swift in Sources */,
 				7F2AF8E024A17B0700FF17B3 /* StretchingEnforcer.swift in Sources */,
