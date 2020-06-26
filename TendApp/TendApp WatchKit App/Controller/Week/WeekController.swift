@@ -17,6 +17,8 @@ public class WeekController: WKInterfaceController{
     /// Periods
     var days = [false,false,false,false,false,false,false]
     var periods = [false,false,false,false]
+    var arrayDaysNotification:[Int] = []
+    var arrayTimeNotification:[Int] = []
     
     /// Groups
     @IBOutlet weak var groupDays: WKInterfaceGroup!
@@ -67,10 +69,33 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    
-    deinit {
-        self.clear()
-    }    
+     /// Called when Controller is active.
+     public override func willActivate() {
+         self.activateArrays()
+        print("entrou da tela")
+
+        // manda a notificação
+            if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
+                if let _ = UserDefaults.standard.array(forKey: "diasNotificacao"){
+                    LocalNotificationHandler.shared.sendNotification()
+                }
+            }
+        
+     }
+     
+     
+     /// Called when Controller is offscreen.
+     public override func willDisappear() {
+         self.clear()
+        print("Saiu da tela")
+        // manda a notificação
+            if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
+                if let _ = UserDefaults.standard.array(forKey: "diasNotificacao"){
+                    LocalNotificationHandler.shared.sendNotification()
+                }
+            }
+     }
+     
     
     // Validation Days
     func verificationDays(){
@@ -101,10 +126,20 @@ public class WeekController: WKInterfaceController{
         if(PersistentData.persistentData.retrieveDays()[day]==false){
             collectionDays[day].setAlpha(1)
             days[day] = true
+            self.arrayDaysNotification.append(day+1)
             PersistentData.persistentData.daysPersistentData.set(days, forKey: "daysPersistentData")
+            UserDefaults.standard.set(self.arrayDaysNotification, forKey: "diasNotificacao")
+
         }else{
+            for (i,j) in self.arrayDaysNotification.enumerated(){
+                if(j == day+1){
+                    self.arrayDaysNotification.remove(at: i)
+                    break
+                }
+            }
             collectionDays[day].setAlpha(0.3)
             days[day] = false
+            UserDefaults.standard.set(self.arrayDaysNotification, forKey: "diasNotificacao")
             PersistentData.persistentData.daysPersistentData.set(days, forKey: "daysPersistentData")
         }
     }
@@ -116,12 +151,26 @@ public class WeekController: WKInterfaceController{
             collectionPeriods[period].setAlpha(1)
             periods[period] = true
             PersistentData.persistentData.periodsPersistentData.set(periods, forKey: "periodPersistentData")
+            self.arrayTimeNotification.append(period+1)
+
+            UserDefaults.standard.set(self.arrayTimeNotification, forKey: "horasNotificacao")
+
         }else{
+            for (i,j) in self.arrayTimeNotification.enumerated(){
+                if(j == period+1){
+                    self.arrayTimeNotification.remove(at: i)
+                    break
+                }
+            }
+            UserDefaults.standard.set(self.arrayTimeNotification, forKey: "horasNotificacao")
+
             collectionPeriods[period].setAlpha(0.3)
             periods[period] = false
             PersistentData.persistentData.periodsPersistentData.set(periods, forKey: "periodPersistentData")
         }
     }
+    
+    
     
     //MARK: - Days Button
     @IBAction func activateSunday() {
@@ -170,8 +219,21 @@ public class WeekController: WKInterfaceController{
     }
     
     func activateArrays(){
-        self.days = [false,false,false,false,false,false,false]
-        self.periods = [false,false,false,false]
+        if(!PersistentData.persistentData.retrieveDays().isEmpty){
+            self.days = PersistentData.persistentData.retrieveDays()
+        }
+        if(!PersistentData.persistentData.retrievePeriod().isEmpty){
+            self.periods = PersistentData.persistentData.retrievePeriod()
+        }
+        
+        if let arrayNoticacao = UserDefaults.standard.array(forKey: "diasNotificacao"){
+            self.arrayDaysNotification = arrayNoticacao as! [Int]
+        }
+        
+        if let arrayNoticacao = UserDefaults.standard.array(forKey: "horasNotificacao"){
+            self.arrayTimeNotification = arrayNoticacao as! [Int]
+        }
+      
         self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
         self.collectionPeriods = [morningButton,afternoonButton,nightButton,dawnButton]
     }

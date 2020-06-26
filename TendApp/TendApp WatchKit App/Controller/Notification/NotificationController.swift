@@ -16,6 +16,7 @@ public class NotificationController: WKUserNotificationInterfaceController {
     @IBOutlet var alertTitle: WKInterfaceLabel!
     @IBOutlet var body: WKInterfaceLabel!
     
+    
     override init() {
         super.init()
         

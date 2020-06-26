@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="276" y="904"/>
         </scene>
-        <!--Notification Controller-->
+        <!--imagem2-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
+                <controller backgroundImage="imagem2" contentMode="scaleAspectFill" id="eXb-UN-Cd0" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Title" textAlignment="center" numberOfLines="0" id="LT0-q3-aKq">
                             <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
