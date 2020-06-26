@@ -68,6 +68,11 @@ extension Animation{
 
     }
     
+    /**
+     Método que adiciona uma imagem à um WKInterfaceImage sem armazenar mais memoria no cache
+     - parameter image: imagem que recebera a imagem
+     - parameter nameImage: nome da imagem
+    */
     func setImage(image: WKInterfaceImage, nameImage: String){
         image.setImage(nil)
         if let imagePath = Bundle.main.path(forResource: nameImage,
