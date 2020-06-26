@@ -214,6 +214,7 @@
                     <connections>
                         <outlet property="afternoonButton" destination="fQK-xz-0W8" id="QG1-jO-cTJ"/>
                         <outlet property="dawnButton" destination="DX2-1L-XI7" id="qQ2-MP-a3M"/>
+                        <outlet property="daysWeekLabel" destination="CS1-c0-FOV" id="YRm-Km-uld"/>
                         <outlet property="fridayButton" destination="D2a-Jf-Je0" id="IGV-nH-iJM"/>
                         <outlet property="groupDays" destination="2fr-tq-gUo" id="rij-EB-7we"/>
                         <outlet property="groupFirstPeriod" destination="A78-VU-GLf" id="bTx-5X-dpA"/>
@@ -221,6 +222,7 @@
                         <outlet property="mondayButton" destination="ULH-h1-Mnh" id="0f2-ae-D5g"/>
                         <outlet property="morningButton" destination="3lX-G7-OrT" id="OcO-Oj-5oc"/>
                         <outlet property="nightButton" destination="797-fu-q7P" id="AEb-Cy-qqF"/>
+                        <outlet property="periodsLabel" destination="cWS-fU-5gV" id="YcE-4n-Aka"/>
                         <outlet property="saturdayButton" destination="kAN-LZ-cdV" id="Kbe-27-mOL"/>
                         <outlet property="sundayButton" destination="Mud-jf-uXl" id="c0C-bx-HRd"/>
                         <outlet property="thursdayButton" destination="cpg-se-m4i" id="3wj-uW-xgG"/>

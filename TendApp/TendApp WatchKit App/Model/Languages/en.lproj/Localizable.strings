@@ -29,6 +29,10 @@
 "Configuracoes" = "Settings";
 "Finalizado" = "Exercise finished! \n\n We will notify you for the next exercise.";
 
+//Labels
+"DiaDaSemana" = "Days of Week";
+"Periodos" = "Periods";
+"Cronograma" = "Schedule";
 
 //Mensagem das Views
 "Mensagem" = "\nPrevent hands and fingers injuries with TEND!\n";

@@ -23,6 +23,11 @@
 "Dia" = "Day";
 "Horario" = "Horário";
 
+//Labels
+"DiaDaSemana" = "Dias da Semana";
+"Periodos" = "Períodos";
+"Cronograma" = "Cronograma";
+
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Configurações";

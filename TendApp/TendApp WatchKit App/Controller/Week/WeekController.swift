@@ -42,12 +42,19 @@ public class WeekController: WKInterfaceController{
     var collectionDays = [WKInterfaceButton]()
     var collectionPeriods = [WKInterfaceButton]()
     
+    
+    /// Labels
+    @IBOutlet weak var daysWeekLabel: WKInterfaceLabel!
+    @IBOutlet weak var periodsLabel: WKInterfaceLabel!
+    
     //MARK: - Init
     /// init
     override init() {
         super.init()
+        self.setTitle(NSLocalizedString("Cronograma", comment: ""))
+        self.daysWeekLabel.setText(NSLocalizedString("DiaDaSemana", comment: ""))
+        self.periodsLabel.setText(NSLocalizedString("Periodos", comment: ""))
         self.activateArrays()
-        
         //Verify if First Time in App and save in UserDefaults.
         if(!UserDefaults.standard.bool(forKey: "firstTime")){
             UserDefaults.standard.set(true, forKey: "firstTime")
