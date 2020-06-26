@@ -67,17 +67,10 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    /// Called when Controller is active.
-    public override func willActivate() {
-        self.activateArrays()
-    }
     
-    
-    /// Called when Controller is offscreen.
-    public override func willDisappear() {
+    deinit {
         self.clear()
-    }
-    
+    }    
     
     // Validation Days
     func verificationDays(){
