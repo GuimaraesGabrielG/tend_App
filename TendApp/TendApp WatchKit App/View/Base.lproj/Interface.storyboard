@@ -89,13 +89,32 @@
             <objects>
                 <controller title="Inicial" id="Zxo-4p-zLI" customClass="InterfaceController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Previna pequenas lesões fazendo alongamento" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ"/>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Começar" id="j2N-3w-V6P">
-                            <color key="backgroundColor" red="0.2627450980392157" green="0.40392156862745099" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="5Jj-93-4Lh" kind="push" identifier="" id="xDB-jw-iif"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="nut-8g-ddJ">
+                            <items>
+                                <label width="1" height="0.59999999999999998" alignment="center" textAlignment="center" numberOfLines="5" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ">
+                                    <string key="text">¡Prevenga
+lesiones de
+manos y dedos</string>
+                                    <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                                    <variation key="device=watch40mm">
+                                        <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                                    </variation>
+                                    <variation key="device=watch44mm">
+                                        <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    </variation>
+                                </label>
+                                <button width="1" height="0.40000000000000002" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
+                                    <color key="backgroundColor" red="0.2627450980392157" green="0.40392156862745099" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                                    <connections>
+                                        <segue destination="5Jj-93-4Lh" kind="push" identifier="" id="xDB-jw-iif"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="message" destination="IdQ-5w-7GQ" id="ESG-bN-JWx"/>
@@ -112,7 +131,7 @@
                 <controller title="Cronograma" contentMode="scaleAspectFill" id="9an-iz-hG1" customClass="WeekController" customModule="TendApp_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Dias da Semana" id="CS1-c0-FOV">
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
                             <items>
@@ -168,7 +187,7 @@
                             </items>
                         </group>
                         <label alignment="left" text="Períodos" id="cWS-fU-5gV">
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
                         </label>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
