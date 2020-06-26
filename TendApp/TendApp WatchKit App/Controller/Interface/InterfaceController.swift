@@ -20,21 +20,7 @@ public class InterfaceController: WKInterfaceController {
         self.setTitle(NSLocalizedString("TEND", comment: ""))
         self.message.setText(NSLocalizedString("Mensagem", comment: ""))
         self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
-        
-//        let dias = UserDefaults.standard.array(forKey: "diasNotificacao")! as! [String]
-//               let horas = UserDefaults.standard.array(forKey: "horasNotificacao")! as! [Int]
-//
-//               for i in dias{
-//                   let dicPartitionPrepareArray = Dictionary(uniqueKeysWithValues: zip( Array(arrayLiteral: i), Array(arrayLiteral: horas)))
-//
-//                   let key = Array(dicPartitionPrepareArray)[0].key
-//                   let value = Array(dicPartitionPrepareArray)[0].value
-//
-//                   for i in value{
-//                       LocalNotificationHandler.shared.scheduleNotification(trigger: LocalNotificationHandler.shared.scheduleNotificationNormal(components: DateComponents(calendar: Calendar.current, hour: i,weekday: Int(key)!)))
-//                   }
-//
-//               }
+    
     }
 
     public override func awake(withContext context: Any?) {

@@ -96,6 +96,12 @@ public class WeekController: WKInterfaceController{
                     LocalNotificationHandler.shared.sendNotification()
                 }
             }
+        
+        if(UserDefaults.standard.array(forKey: "horasNotificacao")!.isEmpty && UserDefaults.standard.array(forKey: "diasNotificacao")!.isEmpty){
+            LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
+            LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
+
+        }
      }
      
     
