@@ -83,10 +83,12 @@ public class WeekController: WKInterfaceController{
         
      }
      
-     
+    deinit {
+        print("saiu")
+    }
      /// Called when Controller is offscreen.
      public override func willDisappear() {
-         self.clear()
+        self.clear()
         print("Saiu da tela")
         // manda a notificação
             if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
@@ -123,6 +125,7 @@ public class WeekController: WKInterfaceController{
     /// Set Days
     /// - Parameter day: Day of Week
     func setDays(day:Int){
+        activateArrays()
         if(PersistentData.persistentData.retrieveDays()[day]==false){
             collectionDays[day].setAlpha(1)
             days[day] = true
@@ -147,6 +150,7 @@ public class WeekController: WKInterfaceController{
     /// Set Periods
     /// - Parameter period: Period of Day
     func setPeriods(period: Int){
+        activateArrays()
         if(PersistentData.persistentData.retrievePeriod()[period]==false){
             collectionPeriods[period].setAlpha(1)
             periods[period] = true
