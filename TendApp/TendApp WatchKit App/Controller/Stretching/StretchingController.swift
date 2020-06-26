@@ -39,6 +39,13 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
     
     public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        // manda a notificação
+        
+        if(!UserDefaults.standard.array(forKey: "diasNotificacao")!.isEmpty && !UserDefaults.standard.array(forKey: "horasNotificacao")!.isEmpty){
+            
+            LocalNotificationHandler.shared.sendNotification()
+
+        }
         // Assign the delegate.
         session.delegate = self
         //  Chama a função que mostra a animação de como fazer o alongamento
