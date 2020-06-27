@@ -16,14 +16,6 @@
 "Sabado" = "Sábado";
 "Domingo" = "Domingo";
 
-//Horas e Minutos
-"Horas" = "Horas";
-"Minutos" = "Minutos";
-
-//Dia e Horario
-"Dia" = "Día";
-"Horario" = "Horario";
-
 //Labels
 "DiaDaSemana" = "Días de la Semana";
 "Periodos" = "Períodos";
@@ -38,11 +30,10 @@
 //Mensagem das Views
 "Mensagem" = "¡Prevenga\nlesiones de\nmanos y dedos";
 "Instrucao" = "Observar y Repetir.";
-"Outra" = "Ahora, Hazlo con tu otra mano.";
+"Outra" = "Ahora, \nhazlo con\n tu otra mano.";
 
 //Label Botao
 "Comecar" = "Empezar";
-
 
 //Notifications
 "Realizar" =  "Hora de hacer tu estiramiento!";

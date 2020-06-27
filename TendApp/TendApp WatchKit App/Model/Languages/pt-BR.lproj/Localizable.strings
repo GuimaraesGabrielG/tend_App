@@ -15,14 +15,6 @@
 "Sabado" = "Sábado";
 "Domingo" = "Domingo";
 
-//Horas e Minutos
-"Horas" = "Horas";
-"Minutos" = "Minutos";
-
-//Dia e Horario
-"Dia" = "Day";
-"Horario" = "Horário";
-
 //Labels
 "DiaDaSemana" = "Dias da Semana";
 "Periodos" = "Períodos";
