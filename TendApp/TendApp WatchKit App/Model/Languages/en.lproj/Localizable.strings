@@ -6,7 +6,6 @@
   Copyright © 2020 Mateus Augusto M Ferreira. All rights reserved.
 */
 
-
 //Dias da Semana
 "Segunda-Feira" = "Monday";
 "Terca-Feira" = "Tuesday";
@@ -16,18 +15,10 @@
 "Sabado" = "Saturday";
 "Domingo" = "Sunday";
 
-//Horas e Minutos
-"Horas" = "Hours";
-"Minutos" = "Minutes";
-
-//Dia e Horario
-"Dia" = "Day";
-"Horario" = "Time";
 
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Settings";
-"Finalizado" = "Exercise finished! \nWe will notify you for the next exercise.";
 
 //Labels
 "DiaDaSemana" = "Days of Week";
