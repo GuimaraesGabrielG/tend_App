@@ -27,7 +27,7 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Settings";
-"Finalizado" = "Exercise finished! \n\n We will notify you for the next exercise.";
+"Finalizado" = "Exercise finished! \nWe will notify you for the next exercise.";
 
 //Labels
 "DiaDaSemana" = "Days of Week";
@@ -50,5 +50,5 @@
 
 //Alertas
 "TituloFinal" = "Exercise finished!";
-"MensagemFinal" = "\nWe will notify you when a new \nexercise is \navailable.";
+"MensagemFinal" = "We will notify you when a new exercise is available.";
 

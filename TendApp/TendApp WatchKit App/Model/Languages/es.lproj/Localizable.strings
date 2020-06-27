@@ -52,4 +52,4 @@
 
 //Alertas
 "TituloFinal" = "¡Ejercicio terminado!";
-"MensagemFinal" = "\nLe notificaremos cuando haya un nuevo ejercicio \ndisponible.";
+"MensagemFinal" = "Le notificaremos cuando haya un nuevo ejercicio disponible.";
