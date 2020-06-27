@@ -26,9 +26,9 @@
 "Finalizado" = "Exercício finalizado! \n\n Nós vamos notifica-lo para o proximo exercicio.";
 
 //Mensagem das Views
-"Mensagem" = "Previna-se de\nlesões nas mãos\ne nos dedos";
+"Mensagem" = "Previna-se de\nlesões nas mãos\ne nos dedos.";
 "Instrucao" = "Observe\ne Repita.";
-"Outra" = "Agora,\nfaça com\na outra mão";
+"Outra" = "Agora,\nfaça com\na outra mão.";
 
 //Label Botao
 "Comecar" = "Começar";

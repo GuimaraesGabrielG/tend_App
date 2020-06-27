@@ -27,9 +27,9 @@
 "Cronograma" = "Schedule";
 
 //Mensagem das Views
-"Mensagem" = "Prevent hands\nand fingers\ninjuries";
+"Mensagem" = "Prevent hands\nand fingers\ninjuries.";
 "Instrucao" = "Observe\nand Repeat.";
-"Outra" = "Now, Do it\nwith your\nother hand";
+"Outra" = "Now, Do it\nwith your\nother hand.";
 
 //Label Botao
 "Comecar" = "Start";

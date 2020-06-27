@@ -91,10 +91,7 @@
                     <items>
                         <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="nut-8g-ddJ">
                             <items>
-                                <label width="1" height="0.59999999999999998" alignment="center" textAlignment="center" numberOfLines="5" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ">
-                                    <string key="text">¡Prevenga
-lesiones de
-manos y dedos</string>
+                                <label width="1" height="0.59999999999999998" alignment="center" text="Previna-se de lesões nas mãos e nos dedos." textAlignment="center" numberOfLines="5" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ">
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <variation key="device=watch40mm">
                                         <fontDescription key="font" type="system" pointSize="17"/>
