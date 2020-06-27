@@ -95,20 +95,20 @@
                                     <string key="text">¡Prevenga
 lesiones de
 manos y dedos</string>
-                                    <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
                                     <variation key="device=watch40mm">
-                                        <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="font" type="system" pointSize="17"/>
                                     </variation>
                                     <variation key="device=watch42mm">
-                                        <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                                        <fontDescription key="font" type="system" pointSize="18"/>
                                     </variation>
                                     <variation key="device=watch44mm">
-                                        <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                        <fontDescription key="font" type="system" pointSize="20"/>
                                     </variation>
                                 </label>
-                                <button width="1" height="0.40000000000000002" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
+                                <button width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
                                     <color key="backgroundColor" red="0.2627450980392157" green="0.40392156862745099" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                     <connections>
                                         <segue destination="5Jj-93-4Lh" kind="push" identifier="" id="xDB-jw-iif"/>
                                     </connections>

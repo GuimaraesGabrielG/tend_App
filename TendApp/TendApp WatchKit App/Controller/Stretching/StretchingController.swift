@@ -8,7 +8,7 @@
 
 import UIKit
 import WatchKit
-public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessionDelegate {
+public class StretchingController: WKInterfaceController {
     
     /// label que aparecera ao final de cada parte do alongamento
     @IBOutlet weak var finalLabel: WKInterfaceLabel!
@@ -36,20 +36,13 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
     /// Array de estrategias de alongamento
     let stretchingStrategyArray: [StretchingStrategy] = [StretchingHand(),StretchingWrist()]
     
-    /// Objeto de sessao (serve para continuar executando o app mesmo quando a tela entrar em descanso)
-    let session = WKExtendedRuntimeSession()
-    
     public override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Assign the delegate.
-        session.delegate = self
         //  Chama a função que mostra a animação de como fazer o alongamento
         startTimerBeforeStretching()
 //        startAnimationStretching()
         stretchingEnforcer = StretchingEnforcer()
-        // começa a sessao extendida
-        session.start()
 
     }
     
@@ -64,7 +57,6 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
         stretchingImage.setImage(nil)
         labelTimerBeforeStartStretching.setText(nil)
         animatedImage.setImage(nil)
-        session.invalidate()
     }
     
     public override func willActivate() {
@@ -116,14 +108,5 @@ public class StretchingController: WKInterfaceController, WKExtendedRuntimeSessi
             animatedImage.setHidden(true)
             startTimerBeforeStretching()
         }
-    }
-    
-    public func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
-    }
-    
-    public func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-    }
-    
-    public func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
     }
 }
