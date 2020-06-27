@@ -7,13 +7,14 @@
 */
 
 //Dias da Semana
-"Segunda-Feira" = "Monday";
-"Terca-Feira" = "Tuesday";
-"Quarta-Feira" = "Wednesday";
-"Quinta-Feira" = "Thursday";
-"Sexta-Feira" = "Friday";
-"Sabado" = "Saturday";
-"Domingo" = "Sunday";
+"Domingo" = "S";
+"Segunda-Feira" = "M";
+"Terca-Feira" = "T";
+"Quarta-Feira" = "W";
+"Quinta-Feira" = "T";
+"Sexta-Feira" = "F";
+"Sabado" = "S";
+
 
 
 //Titulos das Views

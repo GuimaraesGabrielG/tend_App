@@ -8,13 +8,13 @@
 
 
 //Dias da Semana
-"Segunda-Feira" = "Lunes";
-"Terca-Feira" = "Martes";
-"Quarta-Feira" = "Miércoles";
-"Quinta-Feira" = "Jueves";
-"Sexta-Feira" = "Viernes";
-"Sabado" = "Sábado";
-"Domingo" = "Domingo";
+"Segunda-Feira" = "L";
+"Terca-Feira" = "M";
+"Quarta-Feira" = "M";
+"Quinta-Feira" = "J";
+"Sexta-Feira" = "V";
+"Sabado" = "S";
+"Domingo" = "D";
 
 //Labels
 "DiaDaSemana" = "Días de la Semana";

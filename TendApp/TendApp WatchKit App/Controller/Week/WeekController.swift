@@ -53,9 +53,20 @@ public class WeekController: WKInterfaceController{
     /// init
     override init() {
         super.init()
+        
+    
+        //Localized
         self.setTitle(NSLocalizedString("Cronograma", comment: ""))
         self.daysWeekLabel.setText(NSLocalizedString("DiaDaSemana", comment: ""))
         self.periodsLabel.setText(NSLocalizedString("Periodos", comment: ""))
+        self.sundayButton.setTitle(NSLocalizedString("Domingo", comment: ""))
+        self.mondayButton.setTitle(NSLocalizedString("Segunda-Feira", comment: ""))
+        self.tuesdayButton.setTitle(NSLocalizedString("Terca-Feira", comment: ""))
+        self.wednesdayButton.setTitle(NSLocalizedString("Quarta-Feira", comment: ""))
+        self.thursdayButton.setTitle(NSLocalizedString("Quinta-Feira", comment: ""))
+        self.fridayButton.setTitle(NSLocalizedString("Sexta-Feira", comment: ""))
+        self.saturdayButton.setTitle(NSLocalizedString("Sabado", comment: ""))
+        //Activate Arrays
         self.activateArrays()
         //Verify if First Time in App and save in UserDefaults.
         if(!UserDefaults.standard.bool(forKey: "firstTime")){
@@ -82,9 +93,6 @@ public class WeekController: WKInterfaceController{
         
      }
      
-    deinit {
-        print("saiu")
-    }
      /// Called when Controller is offscreen.
      public override func willDisappear() {
         self.clear()
@@ -174,7 +182,6 @@ public class WeekController: WKInterfaceController{
                 }
             }
             UserDefaults.standard.set(self.arrayTimeNotification, forKey: "horasNotificacao")
-
             collectionPeriods[period].setAlpha(0.3)
             periods[period] = false
             PersistentData.persistentData.periodsPersistentData.set(periods, forKey: "periodPersistentData")
