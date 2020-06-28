@@ -40,7 +40,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="266" y="440"/>
+            <point key="canvasLocation" x="203" y="440"/>
         </scene>
         <!--Stretching Controller-->
         <scene sceneID="ykQ-mL-Id6">
@@ -181,16 +181,16 @@
                         </label>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.29999999999999999" title="06:00-12:00" backgroundImage="imagem1" id="3lX-G7-OrT">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="6am - 12pm" backgroundImage="morning" id="3lX-G7-OrT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                     <connections>
                                         <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.34999999999999998" title="12:00-18:00" backgroundImage="imagem2" id="fQK-xz-0W8">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="12pm - 6pm" backgroundImage="afternoon" id="fQK-xz-0W8">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                     <connections>
@@ -201,16 +201,16 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
                             <items>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="center" alpha="0.29999999999999999" title="18:00-00:00" backgroundImage="imagem3" id="797-fu-q7P">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="6pm - 12am" backgroundImage="night" id="797-fu-q7P">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                     <connections>
                                         <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="right" verticalAlignment="center" alpha="0.29999999999999999" title="00:00-06:00" backgroundImage="imagem4" id="DX2-1L-XI7">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="12am - 6am" backgroundImage="dawn" id="DX2-1L-XI7">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
                                     <connections>
@@ -245,11 +245,11 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
+        <image name="afternoon" width="385" height="201"/>
         <image name="contornoArredondado" width="107" height="107"/>
-        <image name="imagem1" width="149" height="100"/>
-        <image name="imagem2" width="149" height="100"/>
-        <image name="imagem3" width="149" height="100"/>
-        <image name="imagem4" width="149" height="100"/>
+        <image name="dawn" width="384" height="201"/>
+        <image name="morning" width="385" height="201"/>
+        <image name="night" width="384" height="201"/>
         <image name="notification" width="543" height="378"/>
         <namedColor name="Blue">
             <color red="0.29600000381469727" green="0.47600001096725464" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
