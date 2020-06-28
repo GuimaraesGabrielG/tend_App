@@ -46,7 +46,6 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
             if((Error != nil)){
             }
             
-            print("deu certo")
         }
         
         
@@ -87,24 +86,20 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
             switch i {
             case 1:
                 for multipleOfTwo in stride(from: 6, through: 12, by: 2) {
-                    print(multipleOfTwo)
                     arrayIntervalNotification.append(multipleOfTwo)
                 }
             case 2:
                 for multipleOfTwo in stride(from: 12, through: 18, by: 2) {
-                    print(multipleOfTwo)
                     
                     arrayIntervalNotification.append(multipleOfTwo)
                 }
             case 3:
                 for multipleOfTwo in stride(from: 18, through: 24, by: 2) {
-                    print(multipleOfTwo)
                     
                     arrayIntervalNotification.append(multipleOfTwo)
                 }
             case 4:
                 for multipleOfTwo in stride(from: 0, through: 6, by: 2) {
-                    print(multipleOfTwo)
                     
                     arrayIntervalNotification.append(multipleOfTwo)
                 }

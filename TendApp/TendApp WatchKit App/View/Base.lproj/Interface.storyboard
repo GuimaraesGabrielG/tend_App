@@ -16,24 +16,16 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
                         <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="-84" y="598"/>
         </scene>
-        <!--Dynamic Notification Interface Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art"/>
-            </objects>
-            <point key="canvasLocation" x="276" y="904"/>
-        </scene>
-        <!--imagem2-->
+        <!--notification-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller backgroundImage="imagem2" contentMode="scaleAspectFill" id="eXb-UN-Cd0" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
+                <controller backgroundImage="notification" contentMode="scaleAspectFill" id="eXb-UN-Cd0" customClass="NotificationController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Title" textAlignment="center" numberOfLines="0" id="LT0-q3-aKq">
                             <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
@@ -258,8 +250,9 @@
         <image name="imagem2" width="149" height="100"/>
         <image name="imagem3" width="149" height="100"/>
         <image name="imagem4" width="149" height="100"/>
+        <image name="notification" width="543" height="378"/>
         <namedColor name="Blue">
-            <color red="0.29559859630000002" green="0.47577404979999999" blue="0.91768980030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.29600000381469727" green="0.47600001096725464" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
