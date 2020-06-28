@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Static Notification Interface Controller-->
@@ -106,7 +105,7 @@
                                 </label>
                                 <button width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" name="Blue"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                                     <connections>
                                         <segue destination="5Jj-93-4Lh" kind="push" identifier="" id="xDB-jw-iif"/>
@@ -260,7 +259,7 @@
         <image name="imagem3" width="149" height="100"/>
         <image name="imagem4" width="149" height="100"/>
         <namedColor name="Blue">
-            <color red="0.36078431372549019" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.29559859630000002" green="0.47577404979999999" blue="0.91768980030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
