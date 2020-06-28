@@ -1,25 +1,25 @@
 {
   "images" : [
     {
-      "filename" : "2048@2x-2_26@2x.png",
+      "filename" : "TendLogo_26@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
-      "filename" : "2048@2x-2_29@2x.png",
+      "filename" : "TendLogo_29@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
-      "filename" : "2048@2x-2_29@2x-1.png",
+      "filename" : "TendLogo_29@2x-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
-      "filename" : "2048@2x-2_32@2x.png",
+      "filename" : "TendLogo_32@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
