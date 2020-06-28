@@ -1,25 +1,25 @@
 {
   "images" : [
     {
-      "filename" : "Logo2.png",
+      "filename" : "rectangular.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
-      "filename" : "Logo2-1.png",
+      "filename" : "rectangular-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
-      "filename" : "Logo2-2.png",
+      "filename" : "rectangular-2.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
-      "filename" : "Logo2_2.png",
+      "filename" : "rectangular2.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
