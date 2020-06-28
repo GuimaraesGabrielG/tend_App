@@ -181,7 +181,7 @@
                         </label>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="6am - 12pm" backgroundImage="morning" id="3lX-G7-OrT">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6am - 12pm" backgroundImage="morning" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -189,7 +189,7 @@
                                         <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="12pm - 6pm" backgroundImage="afternoon" id="fQK-xz-0W8">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12pm - 6pm" backgroundImage="afternoon" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -201,7 +201,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="6pm - 12am" backgroundImage="night" id="797-fu-q7P">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6pm - 12am" backgroundImage="night" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -209,7 +209,7 @@
                                         <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" title="12am - 6am" backgroundImage="dawn" id="DX2-1L-XI7">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12am - 6am" backgroundImage="dawn" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
