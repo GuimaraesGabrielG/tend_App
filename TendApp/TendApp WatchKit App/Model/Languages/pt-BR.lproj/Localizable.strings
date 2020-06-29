@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   TendApp
 
@@ -7,13 +7,13 @@
 */
 
 //Dias da Semana
-"Segunda-Feira" = "Segunda-Feira";
-"Terca-Feira" = "Terça-Feira";
-"Quarta-Feira" = "Quarta-Feira";
-"Quinta-Feira" = "Quinta-Feira";
-"Sexta-Feira" = "Sexta-Feira";
-"Sabado" = "Sábado";
-"Domingo" = "Domingo";
+"Segunda-Feira" = "S";
+"Terca-Feira" = "T";
+"Quarta-Feira" = "Q";
+"Quinta-Feira" = "Q";
+"Sexta-Feira" = "S";
+"Sabado" = "S";
+"Domingo" = "D";
 
 //Labels
 "DiaDaSemana" = "Dias da Semana";
@@ -23,7 +23,7 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Configurações";
-"Finalizado" = "Exercício finalizado! \n\n Nós vamos notifica-lo para o proximo exercicio.";
+"Finalizado" = "Exercício finalizado! \n\n Nós vamos notific'-lo para o pÓoximo exercício.";
 
 //Mensagem das Views
 "Mensagem" = "Previna-se de\nlesões nas mãos\ne nos dedos.";
@@ -41,4 +41,4 @@
 
 //Alertas
 "TituloFinal" = "Exercício Finalizado!";
-"MensagemFinal" = "Nós vamos notificá-lo quando um novo exercício estiver disponível.";
+"MensagemFinal" = "Nós vamos \nnotificá-lo para o próximo exercício disponível.";
