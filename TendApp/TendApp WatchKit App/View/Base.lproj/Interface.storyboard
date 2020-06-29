@@ -126,49 +126,49 @@
                         </label>
                         <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
                             <items>
-                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="contornoArredondado" id="Mud-jf-uXl">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="rectangle_new" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateSunday" destination="9an-iz-hG1" id="fQx-JD-2ae"/>
                                     </connections>
                                 </button>
-                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="ULH-h1-Mnh">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="rectangle_new" id="ULH-h1-Mnh">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateMonday" destination="9an-iz-hG1" id="Igf-lV-HAs"/>
                                     </connections>
                                 </button>
-                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="T" backgroundImage="contornoArredondado" id="qo4-IN-qXO">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="T" backgroundImage="rectangle_new" id="qo4-IN-qXO">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateTuesday" destination="9an-iz-hG1" id="M96-Dr-3Nm"/>
                                     </connections>
                                 </button>
-                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="r7p-EP-tdY">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="rectangle_new" id="r7p-EP-tdY">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateWednesday" destination="9an-iz-hG1" id="6Th-wO-et8"/>
                                     </connections>
                                 </button>
-                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="contornoArredondado" id="cpg-se-m4i">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="Q" backgroundImage="rectangle_new" id="cpg-se-m4i">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateThursday" destination="9an-iz-hG1" id="xPk-5G-fgn"/>
                                     </connections>
                                 </button>
-                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="D2a-Jf-Je0">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="rectangle_new" id="D2a-Jf-Je0">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
                                         <action selector="activateFriday" destination="9an-iz-hG1" id="7N0-Sh-eZS"/>
                                     </connections>
                                 </button>
-                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="contornoArredondado" id="kAN-LZ-cdV">
+                                <button width="0.14099999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="S" backgroundImage="rectangle_new" id="kAN-LZ-cdV">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
@@ -182,7 +182,7 @@
                         </label>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6am - 12pm" backgroundImage="morning" id="3lX-G7-OrT">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6am - 12pm" backgroundImage="morning_new" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -190,7 +190,7 @@
                                         <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12pm - 6pm" backgroundImage="afternoon" id="fQK-xz-0W8">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12pm - 6pm" backgroundImage="afternoon_new" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -202,7 +202,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6pm - 12am" backgroundImage="night" id="797-fu-q7P">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="6pm - 12am" backgroundImage="night_new" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -210,7 +210,7 @@
                                         <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12am - 6am" backgroundImage="dawn" id="DX2-1L-XI7">
+                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="12am - 6am" backgroundImage="dawn_new" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
@@ -246,12 +246,12 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
-        <image name="afternoon" width="385" height="201"/>
-        <image name="contornoArredondado" width="107" height="107"/>
-        <image name="dawn" width="384" height="201"/>
-        <image name="morning" width="385" height="201"/>
-        <image name="night" width="384" height="201"/>
+        <image name="afternoon_new" width="381" height="201"/>
+        <image name="dawn_new" width="381" height="200"/>
+        <image name="morning_new" width="381" height="201"/>
+        <image name="night_new" width="381" height="206"/>
         <image name="notification" width="543" height="378"/>
+        <image name="rectangle_new" width="105" height="105"/>
         <namedColor name="Blue">
             <color red="0.082352941176470587" green="0.70196078431372544" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
