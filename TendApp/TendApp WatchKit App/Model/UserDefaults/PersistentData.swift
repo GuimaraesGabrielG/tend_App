@@ -63,10 +63,14 @@ public class PersistentData {
     
     
     
+    /// Busca no UserDefaults, os dias da semana e retorna true se estiverem ativados, e false se estiverem desativados.
+    /// - Returns: Retorna o array de booleans que informa os dias da semana ativados e desativados.
     func retrieveDays() -> [Bool] {
         return daysPersistentData.array(forKey: "daysPersistentData") as? [Bool] ?? []
     }
-
+    
+    /// Busca no UserDefaults, os períodos e retorna true se estiverem ativados, e false se estiverem desativados.
+    /// - Returns: Retorna o array de booleans que informa os períodos ativados e desativados.
     func retrievePeriod() -> [Bool] {
         return periodsPersistentData.array(forKey: "periodPersistentData") as? [Bool] ?? []
     }

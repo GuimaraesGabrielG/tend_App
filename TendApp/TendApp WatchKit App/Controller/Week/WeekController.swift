@@ -113,7 +113,8 @@ public class WeekController: WKInterfaceController{
      }
      
     
-    // Validation Days
+    
+    /// Deixa o alpha do botão do dia = 1, se ele estiver ativado, e = 0 se não estiver
     func verificationDays(){
         for i in 0...6{
             if(PersistentData.persistentData.retrieveDays()[i]==true){
@@ -125,7 +126,7 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    /// Verifcation Periods
+    /// Deixa o alpha do botão do período = 1, se ele estiver ativado, e = 0 se não estiver
     func verificationPeriods(){
         for i in 0...3{
             if(PersistentData.persistentData.retrievePeriod()[i]==true){
@@ -243,15 +244,18 @@ public class WeekController: WKInterfaceController{
             self.periods = PersistentData.persistentData.retrievePeriod()
         }
         
+        /// Salva os dias registrados no UserDefaults que o usuário deseja receber notificação
         if let arrayNoticacao = UserDefaults.standard.array(forKey: "diasNotificacao"){
             self.arrayDaysNotification = arrayNoticacao as! [Int]
         }
         
+        /// Salva os períodos registrados no UserDefaults que o usuário deseja receber notificação
         if let arrayNoticacao = UserDefaults.standard.array(forKey: "horasNotificacao"){
             self.arrayTimeNotification = arrayNoticacao as! [Int]
         }
-      
+      //    Salva todos os WKInterfaceButton de dias no array de [WKInterfaceButton]
         self.collectionDays = [sundayButton,mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton]
+        //  Salva todos os WKInterfaceButton de períodos no array de [WKInterfaceButton]
         self.collectionPeriods = [morningButton,afternoonButton,nightButton,dawnButton]
     }
     
