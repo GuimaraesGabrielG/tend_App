@@ -29,11 +29,28 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     
     /// Função que reinicia qualquer tarefa, após a interrupção da aplicação.
     func applicationDidBecomeActive() {
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
     
     /// Função que envia quando a aplicação está prestes de mudar o estado de inativo para ativo.
     func applicationWillResignActive() {
+        
+        // manda a notificação
+        if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
+            if let _ = UserDefaults.standard.array(forKey: "diasNotificacao"){
+                LocalNotificationHandler.shared.sendNotification()
+            }
+        }
+        
+        if let not = UserDefaults.standard.array(forKey: "horasNotificacao"){
+            if let not2 = UserDefaults.standard.array(forKey: "diasNotificacao"){
+                if not.isEmpty && not2.isEmpty{
+                    LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
+                    LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
+                }
+            }
+        }
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, etc.
     }
@@ -80,7 +97,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         completionHandler([UNNotificationPresentationOptions.sound])
     }
     
-
+    
     /// Solicita ao delegado que processe a resposta do usuário a uma notificação entregue.
     /// - Parameters:
     ///   - center: O objeto do centro de notificação do usuário compartilhado que recebeu a notificação.
