@@ -52,7 +52,8 @@ extension Animation{
      - parameter total: total de imagens
      - parameter imagePrefix: nome da imagem sem os numeros
      - parameter count: numero da primeira imagem
-     - parameter duration: suraçao da animaçao
+     - parameter duration: duraçao da animaçao
+     - parameter repeatCount: número de repetiçoes (números negativos repitem infinitamente)
     */
     func createAnimatedImages(image: WKInterfaceImage, total: Int, imagePrefix: String, count: Int, duration: TimeInterval, repeatCount: Int){
         animateWithDuration(duration: duration/Double(total), animations: {
