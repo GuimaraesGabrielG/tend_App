@@ -24,11 +24,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
     
     //MARK: Schedule Notification
     func scheduleNotification(trigger: UNCalendarNotificationTrigger) {
-        center.removeAllDeliveredNotifications()
-        center.removeAllPendingNotificationRequests()
-        /// Remove Previous Displayed Notification in case if you need
-        //        center.removeAllPendingNotificationRequests()
-        let categoryIdentifire = "myCategory"
+        let categoryIdentifier = "myCategory"
         
         let content = UNMutableNotificationContent()
         //adding title, subtitle, body and badge
@@ -36,7 +32,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         content.body =  NSLocalizedString("Recomendar", comment: "")
         content.sound = UNNotificationSound.default
         
-        content.categoryIdentifier = categoryIdentifire
+        content.categoryIdentifier = categoryIdentifier
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
@@ -44,12 +40,9 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         //adding the notification to notification center
         center.add(request) { (Error) in
             if((Error != nil)){
+                print("Deu erro")
             }
-            
         }
-        
-        
-        
     }
     
     
@@ -63,7 +56,6 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
                 self.scheduleNotification(trigger: self.scheduleNotificationDelay())
             } else if response.actionIdentifier == "vamos" {
                 print("OK!")
-                
             } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
                 print("Não especificou a action")
             } else if response.actionIdentifier == UNNotificationDismissActionIdentifier {
@@ -117,6 +109,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
     
     /// Manda a notificação nos periodos e datas estabelecidas
     func sendNotification(){
+        self.deletarNotificacoes()
         self.converterHorasforInterval(num: UserDefaults.standard.array(forKey: "horasNotificacao") as! [Int])
         let dias = UserDefaults.standard.array(forKey: "diasNotificacao")! as! [Int]
         let horas = self.arrayIntervalNotification
@@ -132,6 +125,23 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
             
         }
     }
+    
+    /// Ativa as notificação para o usuário
+    func ativarNotificacao(){
+        LocalNotificationHandler.shared.center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                print("User gave permissions for local notifications")
+            }else{
+                
+            }
+        }
+    }
+    
+    /// Remove as notificações 
+    func deletarNotificacoes(){
+        LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
+        LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
+    }
 }
 
 extension LocalNotificationHandler: ComponentsType {
@@ -145,6 +155,7 @@ extension LocalNotificationHandler: ComponentsType {
         
         information.hour = components.hour
         information.weekday = components.weekday
+
         
         return UNCalendarNotificationTrigger(dateMatching: information, repeats: true)
     }

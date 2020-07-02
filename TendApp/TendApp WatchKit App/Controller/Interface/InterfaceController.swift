@@ -10,6 +10,7 @@ import WatchKit
 import Foundation
 import UserNotifications
 
+var Noticar = false
 public class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var message: WKInterfaceLabel!
@@ -20,19 +21,21 @@ public class InterfaceController: WKInterfaceController {
         self.setTitle(NSLocalizedString("TEND", comment: ""))
         self.message.setText(NSLocalizedString("Mensagem", comment: ""))
         self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
-    
+        
     }
-
+    
     public override func awake(withContext context: Any?) {
         // Configure interface objects here.
         super.awake(withContext: context)
+        
     }
     
     public override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+       
     }
-    
+
     public override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

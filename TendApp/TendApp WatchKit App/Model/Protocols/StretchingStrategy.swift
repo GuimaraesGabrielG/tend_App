@@ -11,7 +11,7 @@ import WatchKit
 
 /**
  Protocolo com o método do alongamento, onde cada classe fica responsável por definir a estratégia de alongamento.
-*/
+ */
 protocol StretchingStrategy{
     
     /// Método que executa a açao de alongamento.
@@ -24,12 +24,19 @@ extension StretchingStrategy{
     /**
      Método que que mostra um alerta ao final do exercicio
      - Parameters:
-        - stretchingController: controller da tela de alongamento
-    */
+     - stretchingController: controller da tela de alongamento
+     */
     func showAllert(stretchingController: StretchingController){
         let finalAlertAction = WKAlertAction(title: "OK", style: .default) {
+            LocalNotificationHandler.shared.ativarNotificacao()
             stretchingController.popToRootController()
+            
         }
+
         stretchingController.presentAlert(withTitle: NSLocalizedString("TituloFinal", comment: ""), message: NSLocalizedString("MensagemFinal", comment: ""), preferredStyle: .alert, actions: [finalAlertAction])
+
     }
+    
+    
+    
 }

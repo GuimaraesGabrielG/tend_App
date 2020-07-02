@@ -82,14 +82,8 @@ public class WeekController: WKInterfaceController{
      /// Called when Controller is active.
      public override func willActivate() {
          self.activateArrays()
-
-        // manda a notificação
-            if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
-                if let _ = UserDefaults.standard.array(forKey: "diasNotificacao"){
-                    LocalNotificationHandler.shared.sendNotification()
-                }
-            }
-        
+        //Ativa a notificação
+        LocalNotificationHandler.shared.ativarNotificacao()
      }
      
      /// Called when Controller is offscreen.
@@ -105,8 +99,7 @@ public class WeekController: WKInterfaceController{
         if let not = UserDefaults.standard.array(forKey: "horasNotificacao"){
             if let not2 = UserDefaults.standard.array(forKey: "diasNotificacao"){
                 if not.isEmpty && not2.isEmpty{
-                    LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
-                    LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
+                    LocalNotificationHandler.shared.deletarNotificacoes()
                 }
             }
         }

@@ -15,16 +15,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     static let notificationCenter = UNUserNotificationCenter.current()
     
     
-    /// Função que gera permissão de envio de notificações
     func applicationDidFinishLaunching() {
+        /// Função que gera permissão de envio de notificações
         LocalNotificationHandler.shared.center.delegate = self
-        let options: UNAuthorizationOptions = [.alert, .sound]
-        LocalNotificationHandler.shared.center.requestAuthorization(options: options) {
-            (didAllow, error) in
-            if !didAllow {
-                print("User has declined notifications")
-            }
-        }
+        
     }
     
     /// Função que reinicia qualquer tarefa, após a interrupção da aplicação.
@@ -46,8 +40,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
         if let not = UserDefaults.standard.array(forKey: "horasNotificacao"){
             if let not2 = UserDefaults.standard.array(forKey: "diasNotificacao"){
                 if not.isEmpty && not2.isEmpty{
-                    LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
-                    LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
+                    LocalNotificationHandler.shared.deletarNotificacoes()
                 }
             }
         }
@@ -106,6 +99,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         LocalNotificationHandler.shared.handleNotificationResponse(response: response)
         completionHandler()
+        
         
     }
 }
