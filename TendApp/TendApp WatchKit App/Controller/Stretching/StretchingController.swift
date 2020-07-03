@@ -12,29 +12,29 @@ import WatchKit
 /// Classe WKInterfaceController.
 public class StretchingController: WKInterfaceController {
     
-    // label que aparecera ao final de cada parte do alongamento.
+    /// label que aparecera ao final de cada parte do alongamento.
     @IBOutlet weak var finalLabel: WKInterfaceLabel!
-    // label com a instruçao do alongamento.
+    /// label com a instruçao do alongamento.
     @IBOutlet weak var instructionLabel: WKInterfaceLabel!
-    // imagem do anel animado.
+    /// imagem do anel animado.
     @IBOutlet weak var ringImage: WKInterfaceImage!
-    // imagem do alongamento.
+    /// imagem do alongamento.
     @IBOutlet weak var stretchingImage: WKInterfaceImage!
-    //  Timer que faz a contagem antes de começar o alongamento.
+    /// Timer que faz a contagem antes de começar o alongamento.
     public var timerBeforeStartStretching: Timer!
-    //  Mostra o valor atual do timer.
+    ///  Mostra o valor atual do timer.
     @IBOutlet weak var labelTimerBeforeStartStretching: WKInterfaceLabel!
-    //  Utilizada para representar o timer, sempre a função do mesmo é chamada.
+    ///  Utilizada para representar o timer, sempre a função do mesmo é chamada.
     private var countTimerBeforeStretching = Int()
-    //  Utilizada para identificar quando a animação de alongamento terminou.
+    ///  Utilizada para identificar quando a animação de alongamento terminou.
     private var countAnimationDuration = Int()
-    //  Mostra a animação que ensina o usuário a fazer o alongamento.
+    ///  Mostra a animação que ensina o usuário a fazer o alongamento.
     @IBOutlet weak var animatedImage: WKInterfaceImage!
-    // Classe Timer.
+    /// Classe Timer.
     public var timerShowAnimation: Timer!
-    // Classe que controla qual alongamento será executado.
+    /// Classe que controla qual alongamento será executado.
     var stretchingEnforcer: StretchingEnforcer?
-    // Array de estrategias de alongamento.
+    /// Array de estrategias de alongamento.
     let stretchingStrategyArray: [StretchingStrategy] = [StretchingHand(),StretchingWrist()]
     
     
