@@ -41,6 +41,6 @@
 "Executar" = "Do";
 
 //Alertas
-"TituloFinal" = "Exercise finished!";
-"MensagemFinal" = "We will notify you when a new exercise is available.";
+"TituloFinal" = "Finished Stretching!";
+"MensagemFinal" = "We will notify you when you need to stretch again.";
 

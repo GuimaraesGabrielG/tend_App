@@ -23,7 +23,7 @@
 //Titulos das Views
 "TEND" = "TEND";
 "Configuracoes" = "Configurações";
-"Finalizado" = "Exercício finalizado! \n\n Nós vamos notific'-lo para o pÓoximo exercício.";
+"Finalizado" = "Exercício finalizado! \nVamos te notificar quando precisar alongar novamente.";
 
 //Mensagem das Views
 "Mensagem" = "Previna-se de\nlesões nas mãos\ne nos dedos.";
@@ -40,5 +40,5 @@
 "Executar" = "Fazer";
 
 //Alertas
-"TituloFinal" = "Exercício Finalizado!";
-"MensagemFinal" = "Nós vamos \nnotificá-lo para o próximo exercício disponível.";
+"TituloFinal" = "Alongamento Finalizado!";
+"MensagemFinal" = "Vamos te notificar quando precisar alongar novamente.";
