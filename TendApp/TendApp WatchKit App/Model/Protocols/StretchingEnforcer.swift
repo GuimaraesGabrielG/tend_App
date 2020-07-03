@@ -11,9 +11,9 @@ import WatchKit
 
 /// Classe que controla qual alongamento será executado.
 public class StretchingEnforcer {
-    /// estrategia de alongamento atual
+    /// Variável de alongamento atual.
     var currentStretchingStrategy: StretchingStrategy?
-    /// variavel que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param)
+    /// Variável que controla se o alongamento deve continuar (ao se tornar true todas as animaçoes param).
     var stop: Bool = false{
         didSet{
             if stop{
@@ -24,7 +24,7 @@ public class StretchingEnforcer {
             }
         }
     }
-    /// Método que que executa a estratégia de alongamento.
+    /// Função que que executa a estratégia de alongamento.
     /// - Parameters:
     ///   - stretchingStrategy: Objeto com a estratégia de alongamento.
     ///   - stretchingController: Interface controller de alongamento.
