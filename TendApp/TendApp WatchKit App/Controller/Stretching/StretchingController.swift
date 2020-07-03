@@ -65,6 +65,13 @@ public class StretchingController: WKInterfaceController {
         animatedImage.setImage(nil)
     }
     
+    public override func willActivate() {
+        WKExtension.shared().isAutorotating = true
+    }
+    
+    public override func didDeactivate() {
+        WKExtension.shared().isAutorotating = false
+    }
     /// Função chamada para mostrar um timer que da um intervalo entre a animação do alongamento e o momento do usuário fazer esse mesmo alongamento.
     func startTimerBeforeStretching() {
         countTimerBeforeStretching = 3
