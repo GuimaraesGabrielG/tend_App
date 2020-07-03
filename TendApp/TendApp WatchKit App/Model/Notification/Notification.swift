@@ -10,34 +10,29 @@ import Foundation
 import UIKit
 import UserNotifications
 
-/// Triggers diferentes para mandar notificação
+/// Protocolo de triggers diferentes para mandar notificações.
 protocol ComponentsType: class {
-    
     func scheduleNotificationNormal(components: DateComponents) -> UNCalendarNotificationTrigger
     func scheduleNotificationDelay() -> UNCalendarNotificationTrigger
 }
 
+/// Classe de notificação local.
 class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
     static var shared = LocalNotificationHandler()
     let center = UNUserNotificationCenter.current()
     var arrayIntervalNotification:[Int] = []
     
-    //MARK: Schedule Notification
+    
+    /// Função que cronograma a notificação.
+    /// - Parameter trigger: Trigger da notificação.
     func scheduleNotification(trigger: UNCalendarNotificationTrigger) {
         let categoryIdentifier = "myCategory"
-        
         let content = UNMutableNotificationContent()
-        //adding title, subtitle, body and badge
         content.title = NSLocalizedString("Realizar", comment: "")
         content.body =  NSLocalizedString("Recomendar", comment: "")
         content.sound = UNNotificationSound.default
-        
         content.categoryIdentifier = categoryIdentifier
-        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        
-        //adding the notification to notification center
         center.add(request) { (Error) in
             if((Error != nil)){
                 print("Deu erro")
@@ -45,8 +40,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         }
     }
     
-    
-    /// Método para responder o que o usuário clica nas action
+    /// Função para responder o que o usuário clica nas actions.
     /// - Parameter response: notificação solicitada ao userNotificationCenter(didReceive)
     func handleNotificationResponse(response: UNNotificationResponse) {
         if response.notification.request.content.categoryIdentifier == "myCategory" {
@@ -69,9 +63,8 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         }
     }
     
-    
-    /// Converter o item selecionado na notificação em intervalos de tempo
-    /// - Parameter num: O periodo selecionado na tela de notificações
+    /// Função que converte o item selecionado na notificação em intervalos de tempo.
+    /// - Parameter num: O periodo selecionado na tela de notificações.
     func converterHorasforInterval(num:[Int]){
         self.arrayIntervalNotification = []
         for i in num{
@@ -99,15 +92,11 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
                 print("Default")
             }
         }
-        
-        
         let orderedSet : NSOrderedSet = NSOrderedSet(array: self.arrayIntervalNotification)
-        
         arrayIntervalNotification = (orderedSet.array as NSArray) as! [Int]
-        
     }
     
-    /// Manda a notificação nos periodos e datas estabelecidas
+    /// Função que manda a notificação nos periodos e datas estabelecidas.
     func sendNotification(){
         self.deletarNotificacoes()
         self.converterHorasforInterval(num: UserDefaults.standard.array(forKey: "horasNotificacao") as! [Int])
@@ -116,7 +105,6 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         
         for i in dias{
             let dicPartitionPrepareArray = Dictionary(uniqueKeysWithValues: zip( Array(arrayLiteral: i), Array(arrayLiteral: horas)))
-            
             let key = Array(dicPartitionPrepareArray)[0].key
             let value = Array(dicPartitionPrepareArray)[0].value
             for i in value{
@@ -126,7 +114,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         }
     }
     
-    /// Ativa as notificação para o usuário
+    /// Função que ativa as notificações para o usuário.
     func ativarNotificacao(){
         LocalNotificationHandler.shared.center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             if granted {
@@ -137,39 +125,33 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
         }
     }
     
-    /// Remove as notificações 
+    /// Função que remove as notificações.
     func deletarNotificacoes(){
         LocalNotificationHandler.shared.center.removeAllDeliveredNotifications()
         LocalNotificationHandler.shared.center.removeAllPendingNotificationRequests()
     }
 }
 
+
 extension LocalNotificationHandler: ComponentsType {
     
-    ///
-    /// - Parameter components: é a composição da data para mandar na hora e no dia da semana exato
-    /// - Returns: retorna o trigger
+    /// Função que efetua o cronograma exato do período e dia da semana.
+    /// - Parameter components: Composição da data para mandar na hora e no dia da semana exato.
+    /// - Returns: Retorna o trigger.
     func scheduleNotificationNormal(components: DateComponents) -> UNCalendarNotificationTrigger {
-        
         var information = DateComponents()
-        
         information.hour = components.hour
         information.weekday = components.weekday
-
-        
         return UNCalendarNotificationTrigger(dateMatching: information, repeats: true)
     }
     
-    /// Método para adiar a notificação
-    /// - Returns: retorna a trigger de adiamento da notificação
+    /// Função para adiar a notificação.
+    /// - Returns: Retorna a trigger de adiamento da notificação.
     func scheduleNotificationDelay() -> UNCalendarNotificationTrigger {
         let newDate = Date(timeInterval: 20*60, since: Date())
-        
         let information = Calendar(identifier: .gregorian).dateComponents(in: .current, from: newDate)
-        
         var info = DateComponents()
         info.minute = information.minute
-        
         return UNCalendarNotificationTrigger(dateMatching: info, repeats: false)
     }
 }

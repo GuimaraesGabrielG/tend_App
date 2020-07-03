@@ -14,8 +14,11 @@ import WatchKit
 ///Classe que define a estratégia de alongamento do punho.
 public class StretchingWrist: StretchingStrategy, Animation{
     
+    //MARK: -Attributes
     var stop: Bool = false
     
+    /// Função que efetua o alongamento do punho.
+    /// - Parameter stretchingController: Objeto do tipo Stretching Controller.
     func performStretching(stretchingController: StretchingController) {
         
         stretchingController.ringImage.setHidden(false)

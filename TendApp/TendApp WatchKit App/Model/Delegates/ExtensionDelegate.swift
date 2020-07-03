@@ -10,13 +10,14 @@ import WatchKit
 import UserNotifications
 
 
-/// Uma coleção de métodos que gerenciam o comportamento no nível do aplicativo de uma extensão do WatchKit.
+/// Classe de coleção de métodos que gerenciam o comportamento no nível do aplicativo de uma extensão do WatchKit.
 class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
     static let notificationCenter = UNUserNotificationCenter.current()
     
     
+    /// Função que gera permissão de envio de notificações.
     func applicationDidFinishLaunching() {
-        /// Função que gera permissão de envio de notificações
+        
         LocalNotificationHandler.shared.center.delegate = self
         
     }
@@ -30,7 +31,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
     /// Função que envia quando a aplicação está prestes de mudar o estado de inativo para ativo.
     func applicationWillResignActive() {
         
-        // manda a notificação
+        // Envia a notificação.
         if let _ = UserDefaults.standard.array(forKey: "horasNotificacao"){
             if let _ = UserDefaults.standard.array(forKey: "diasNotificacao"){
                 LocalNotificationHandler.shared.sendNotification()
@@ -44,8 +45,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
                 }
             }
         }
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, etc.
     }
     
     
