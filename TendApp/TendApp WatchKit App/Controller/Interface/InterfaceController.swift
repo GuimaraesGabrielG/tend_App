@@ -16,7 +16,6 @@ public class InterfaceController: WKInterfaceController {
     @IBOutlet weak var message: WKInterfaceLabel!
     @IBOutlet weak var startButton: WKInterfaceButton!
     
-    
     /// init
     override init() {
         super.init()
@@ -39,6 +38,7 @@ public class InterfaceController: WKInterfaceController {
     public override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
         
     }
     
