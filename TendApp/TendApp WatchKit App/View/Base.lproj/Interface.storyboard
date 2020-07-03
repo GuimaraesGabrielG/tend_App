@@ -157,7 +157,7 @@
                                         <action selector="activateTuesday" destination="9an-iz-hG1" id="M96-Dr-3Nm"/>
                                     </connections>
                                 </button>
-                                <button width="18" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.5" title="Q" backgroundImage="rectangle_new" id="r7p-EP-tdY">
+                                <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.5" title="Q" backgroundImage="rectangle_new" id="r7p-EP-tdY">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="8.5"/>
                                     <connections>
