@@ -22,14 +22,25 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
     let center = UNUserNotificationCenter.current()
     var arrayIntervalNotification:[Int] = []
     
+    var notificarMsg:[String:String] = [
+        "1-Título": "1-Corpo",
+        "2-Título": "2-Corpo",
+        "3-Título": "3-Corpo",
+        "4-Título": "4-Corpo",
+        "5-Título": "5-Corpo"
+    ]
+    
     
     /// Função que cronograma a notificação.
     /// - Parameter trigger: Trigger da notificação.
     func scheduleNotification(trigger: UNCalendarNotificationTrigger) {
+        //Gera notificação diferente
+        let index: Int = Int(arc4random_uniform(UInt32(notificarMsg.count)))
+
         let categoryIdentifier = "myCategory"
         let content = UNMutableNotificationContent()
-        content.title = NSLocalizedString("Realizar", comment: "")
-        content.body =  NSLocalizedString("Recomendar", comment: "")
+        content.title = NSLocalizedString("\(Array(notificarMsg)[index].key)", comment: "")
+        content.body =  NSLocalizedString("\(Array(notificarMsg)[index].value)", comment: "")
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = categoryIdentifier
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -109,6 +120,7 @@ class LocalNotificationHandler: NSObject, UNUserNotificationCenterDelegate{
             let value = Array(dicPartitionPrepareArray)[0].value
             for i in value{
                 self.scheduleNotification(trigger: LocalNotificationHandler.shared.scheduleNotificationNormal(components: DateComponents(calendar: Calendar.current, hour: i,weekday: key)))
+
             }
             
         }
@@ -148,7 +160,7 @@ extension LocalNotificationHandler: ComponentsType {
     /// Função para adiar a notificação.
     /// - Returns: Retorna a trigger de adiamento da notificação.
     func scheduleNotificationDelay() -> UNCalendarNotificationTrigger {
-        let newDate = Date(timeInterval: 20*60, since: Date())
+        let newDate = Date(timeInterval: 60, since: Date())
         let information = Calendar(identifier: .gregorian).dateComponents(in: .current, from: newDate)
         var info = DateComponents()
         info.minute = information.minute

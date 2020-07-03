@@ -19,7 +19,7 @@
 //Labels
 "DiaDaSemana" = "Días de la Semana";
 "Periodos" = "Períodos";
-"Cronograma" = "Calendario";
+"Notificação" = "Notificación";
 
 
 //Titulos das Views
@@ -36,10 +36,25 @@
 "Comecar" = "Empezar";
 
 //Notifications
-"Realizar" =  "Hora de hacer tu estiramiento!";
-"Recomendar" = "Se recomienda descansar durante un período de su actividad.";
 "Adiar" = "Después";
 "Executar" = "Hacer";
+
+
+//Mensagens aleatórias
+"1-Título" = "Cuidado!";
+"1-Corpo" = "La actividad repetitiva puede causar lesiones. Detente y relájate un poco";
+
+"2-Título" = "Extensión!";
+"2-Corpo" = "¿Haciendo los mismos movimientos durante mucho tiempo? Estirando el tiempo!";
+
+"3-Título" = "Eres un robot?";
+"3-Corpo" = "¡Oye! Tómese un momento para relajarse y estirar las manos.";
+
+"4-Título" = "Ah los patrones ...";
+"4-Corpo" = "¿Has notado que te avisamos cada 2 horas? Nada es por acaso.";
+
+"5-Título" = "¡Relajarse!";
+"5-Corpo" = "Tómese unos minutos para relajarse y descansar las manos.";
 
 //Alertas
 "TituloFinal" = "¡Estiramiento Terminado!";

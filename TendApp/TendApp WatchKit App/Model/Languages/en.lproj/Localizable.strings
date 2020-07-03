@@ -24,7 +24,7 @@
 //Labels
 "DiaDaSemana" = "Days of Week";
 "Periodos" = "Periods";
-"Cronograma" = "Schedule";
+"Notificação" = "Notification";
 
 //Mensagem das Views
 "Mensagem" = "Prevent hands\nand fingers\ninjuries.";
@@ -35,10 +35,24 @@
 "Comecar" = "Start";
 
 //Notifications
-"Realizar" =  "Time to do your stretch!";
-"Recomendar" = "It is recommended to rest for a period of your activity.";
 "Adiar" = "After";
 "Executar" = "Do";
+
+//Mensagens aleatórias
+"1-Título" = "Care!";
+"1-Corpo" = "Repetitive activity can cause injuries. Stop and relax a little";
+
+"2-Título" = "Stretching!";
+"2-Corpo" = "Doing the same movements for a long time? Stretching time!";
+
+"3-Título" = "Are you a robot?";
+"3-Corpo" = "Hey! take a moment to relax and stretch your hands.";
+
+"4-Título" = "Ah the patterns ...";
+"4-Corpo" = "Have you noticed that we notify you every 2 hours? Nothing is by chance.";
+
+"5-Título" = "Relax!";
+"5-Corpo" = "Take a few minutes to relax and give your hands a break.";
 
 //Alertas
 "TituloFinal" = "Finished Stretching!";

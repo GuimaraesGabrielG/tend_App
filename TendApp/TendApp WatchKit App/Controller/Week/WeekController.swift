@@ -53,7 +53,7 @@ public class WeekController: WKInterfaceController{
     /// init
     override init() {
         super.init()
-        self.setTitle(NSLocalizedString("Cronograma", comment: ""))
+        self.setTitle(NSLocalizedString("Notificação", comment: ""))
         self.daysWeekLabel.setText(NSLocalizedString("DiaDaSemana", comment: ""))
         self.periodsLabel.setText(NSLocalizedString("Periodos", comment: ""))
         self.sundayButton.setTitle(NSLocalizedString("Domingo", comment: ""))
