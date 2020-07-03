@@ -121,9 +121,19 @@
             <objects>
                 <controller title="Cronograma" contentMode="scaleAspectFill" id="9an-iz-hG1" customClass="WeekController" customModule="TendApp_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Dias da Semana" id="CS1-c0-FOV">
-                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
-                        </label>
+                        <group width="1" height="0.0" alignment="left" layout="overlap" id="tVC-ds-EC3">
+                            <items>
+                                <button width="0.20000000000000001" height="1" alignment="right" title="?" id="AUf-ky-cbT">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                    <connections>
+                                        <action selector="about" destination="9an-iz-hG1" id="9ve-WD-e1x"/>
+                                    </connections>
+                                </button>
+                                <label alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
+                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
                         <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
                             <items>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.29999999999999999" title="D" backgroundImage="rectangle_new" id="Mud-jf-uXl">

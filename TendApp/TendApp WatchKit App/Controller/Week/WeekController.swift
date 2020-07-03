@@ -127,6 +127,13 @@ public class WeekController: WKInterfaceController{
         }
     }
     
+    /// método que mostra um alerta que explica as funcionalidades da tela
+    @IBAction func about() {
+        let explanationAlertAction = WKAlertAction(title: "OK", style: .cancel) {
+        }
+        self.presentAlert(withTitle: "Selecione os dias e períodos das suas atividades repetitivas para receber notificações para pausar e fazer alguns alongamentos", message: nil, preferredStyle: .actionSheet, actions: [explanationAlertAction])
+    }
+    
     /// Função que seleciona os dias.
     /// - Parameter day: Dia da semana.
     func setDays(day:Int){
