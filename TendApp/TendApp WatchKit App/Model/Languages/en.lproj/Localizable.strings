@@ -57,4 +57,5 @@
 //Alertas
 "TituloFinal" = "Finished Stretching!";
 "MensagemFinal" = "We will notify you when you need to stretch again.";
+"Duvida" = "Select the days and periods of your repetitive activities to receive notifications to pause and do some stretching.";
 

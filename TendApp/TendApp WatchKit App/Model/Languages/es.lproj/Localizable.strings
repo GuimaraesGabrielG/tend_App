@@ -59,3 +59,6 @@
 //Alertas
 "TituloFinal" = "¡Estiramiento Terminado!";
 "MensagemFinal" = "Le notificaremos cuando necesite estirarse nuevamente.";
+"Duvida" = "Seleccione los días y períodos de sus actividades repetitivas para recibir notificaciones para pausar y hacer algunos estiramientos.";
+
+
