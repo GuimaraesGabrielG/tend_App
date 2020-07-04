@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   TendApp
 
@@ -24,21 +24,16 @@
 
 //Titulos das Views
 "TEND" = "TEND";
-"Configuracoes" = "Ajustes";
 "Finalizado" = "¡Ejercicio terminado! \n\n Le notificaremos para el próximo ejercicio.";
 
 //Mensagem das Views
-"Mensagem" = "¡Prevenga\nlesiones de\nmanos y dedos.";
+"Start" = "Empezar";
 "Instrucao" = "Observar y Repetir.";
 "Outra" = "Ahora, \nhazlo con\n tu otra mano.";
-
-//Label Botao
-"Comecar" = "Empezar";
 
 //Notifications
 "Adiar" = "Después";
 "Executar" = "Hacer";
-
 
 //Mensagens aleatórias
 "1-Título" = "Cuidado!";
@@ -58,7 +53,7 @@
 
 //Alertas
 "TituloFinal" = "¡Estiramiento Terminado!";
-"MensagemFinal" = "Le notificaremos cuando necesite estirarse nuevamente.";
+"MensagemFinal" = "Le notificaremos cuando necesite \nestirarse \nnuevamente.";
 "Duvida" = "Seleccione los días y períodos de sus actividades repetitivas para recibir notificaciones para pausar y hacer algunos estiramientos.";
 
 

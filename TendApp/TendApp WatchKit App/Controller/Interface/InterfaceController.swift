@@ -22,8 +22,8 @@ public class InterfaceController: WKInterfaceController, Animation {
     override init() {
         super.init()
         self.setTitle(NSLocalizedString("TEND", comment: ""))
-        self.message.setText(NSLocalizedString("Mensagem", comment: ""))
-//        self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
+//        self.message.setText(NSLocalizedString("Start", comment: ""))
+        self.startButton.setTitle(NSLocalizedString("Start", comment: ""))
         
     }
     

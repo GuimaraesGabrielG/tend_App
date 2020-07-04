@@ -15,11 +15,8 @@
 "Sexta-Feira" = "F";
 "Sabado" = "S";
 
-
-
 //Titulos das Views
 "TEND" = "TEND";
-"Configuracoes" = "Settings";
 
 //Labels
 "DiaDaSemana" = "Days of Week";
@@ -27,12 +24,9 @@
 "Notificação" = "Notification";
 
 //Mensagem das Views
-"Mensagem" = "Prevent hands\nand fingers\ninjuries.";
+"Start" = "Start";
 "Instrucao" = "Observe\nand Repeat.";
 "Outra" = "Now, Do it\nwith your\nother hand.";
-
-//Label Botao
-"Comecar" = "Start";
 
 //Notifications
 "Adiar" = "After";
