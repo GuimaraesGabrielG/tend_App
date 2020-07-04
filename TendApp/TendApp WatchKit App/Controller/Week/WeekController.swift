@@ -102,9 +102,7 @@ public class WeekController: WKInterfaceController{
         }
     }
     
-    
-    
-    /// Função que muda o valor do alpha quando selecionado.
+    /// Função que muda o valor do alpha dos dias quando selecionados.
     func verificationDays(){
         for i in 0...6{
             if(PersistentData.persistentData.retrieveDays()[i]==true){
@@ -116,7 +114,7 @@ public class WeekController: WKInterfaceController{
     }
     
     
-    /// Deixa o alpha do botão do período = 1, se ele estiver ativado, e = 0 se não estiver
+    /// Função que muda o valor do alpha dos períodos quando selecionados.
     func verificationPeriods(){
         for i in 0...3{
             if(PersistentData.persistentData.retrievePeriod()[i]==true){
@@ -126,14 +124,12 @@ public class WeekController: WKInterfaceController{
             }
         }
     }
-    
-    /// método que mostra um alerta que explica as funcionalidades da tela
+
+    /// Função que mostra um alerta que explica as funcionalidades da tela.
     @IBAction func about() {
         let explanationAlertAction = WKAlertAction(title: "OK", style: .cancel) {
         }
         self.presentAlert(withTitle: NSLocalizedString("Duvida", comment: "") , message: nil, preferredStyle: .actionSheet, actions: [explanationAlertAction])
-        
-        
     }
     
     /// Função que seleciona os dias.
