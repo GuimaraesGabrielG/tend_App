@@ -11,8 +11,10 @@ import Foundation
 import UserNotifications
 
 var Noticar = false
-public class InterfaceController: WKInterfaceController {
+public class InterfaceController: WKInterfaceController, Animation {
     
+    var stop = false
+    @IBOutlet weak var goImage: WKInterfaceImage!
     @IBOutlet weak var message: WKInterfaceLabel!
     @IBOutlet weak var startButton: WKInterfaceButton!
     
@@ -21,7 +23,7 @@ public class InterfaceController: WKInterfaceController {
         super.init()
         self.setTitle(NSLocalizedString("TEND", comment: ""))
         self.message.setText(NSLocalizedString("Mensagem", comment: ""))
-        self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
+//        self.startButton.setTitle(NSLocalizedString("Comecar", comment: ""))
         
     }
     
@@ -38,7 +40,8 @@ public class InterfaceController: WKInterfaceController {
     public override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+        self.stop = false
+        createAnimatedImages(image: goImage, total: 90, imagePrefix: "initialButton", count: 0, duration: 3.7, repeatCount: -1)
         
     }
     
@@ -46,6 +49,7 @@ public class InterfaceController: WKInterfaceController {
     public override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        self.stop = true
     }
 }
 
