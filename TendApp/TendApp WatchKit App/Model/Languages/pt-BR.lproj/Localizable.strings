@@ -18,7 +18,7 @@
 //Labels
 "DiaDaSemana" = "Dias da Semana";
 "Periodos" = "Períodos";
-"Cronograma" = "Cronograma";
+"Notificação" = "Notificação";
 
 //Titulos das Views
 "TEND" = "TEND";
@@ -34,10 +34,24 @@
 "Comecar" = "Começar";
 
 //Notifications
-"Realizar" =  "Hora de realizar o seu alongamento!";
-"Recomendar" = "É recomendável o descanso por um período de sua atividade.";
 "Adiar" = "Depois";
 "Executar" = "Fazer";
+
+//Mensagens aleatórias
+"1-Título" = "Cuidado!";
+"1-Corpo" = "Atividade repetitivas podem causar lesões. Pare e relaxe um pouco";
+
+"2-Título" = "Alongamento";
+"2-Corpo" = "Fazendo os mesmos movimentos a muito tempo? Hora do alongamento!";
+
+"3-Título" = "Você é um robo?";
+"3-Corpo" = "Ei! pare um pouco para relaxar e alongar suas mãos.";
+
+"4-Título" = "Ah os padrões...";
+"4-Corpo" = "Já percebeu que notificamos a cada 2 horas? Nada é por acaso.";
+
+"5-Título" = "Relaxa!";
+"5-Corpo" = "Tire alguns minutos para relaxar e dar um descanso para suas mãos.";
 
 //Alertas
 "TituloFinal" = "Alongamento Finalizado!";
