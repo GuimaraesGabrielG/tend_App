@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--notification-->
@@ -77,14 +76,15 @@
             </objects>
             <point key="canvasLocation" x="-84" y="141"/>
         </scene>
-        <!--Inicial-->
+        <!--Interface Controller-->
         <scene sceneID="dVd-Tp-Q40">
             <objects>
-                <controller title="Inicial" id="Zxo-4p-zLI" customClass="InterfaceController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
+                <controller id="Zxo-4p-zLI" customClass="InterfaceController" customModule="TendApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="nut-8g-ddJ">
+                        <group width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="overlap" id="nut-8g-ddJ">
                             <items>
-                                <label width="1" height="0.59999999999999998" alignment="center" text="Previna-se de lesões nas mãos e nos dedos." textAlignment="center" numberOfLines="5" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ">
+                                <imageView width="1" height="1" alignment="center" verticalAlignment="center" image="initialButton0001" contentMode="scaleAspectFill" id="mqV-7w-BEF"/>
+                                <label width="1" alignment="center" hidden="YES" text="Previna-se de lesões nas mãos e nos dedos." textAlignment="center" numberOfLines="5" minimumScaleFactor="0.90000000000000002" id="IdQ-5w-7GQ">
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <variation key="device=watch40mm">
                                         <fontDescription key="font" type="system" pointSize="17"/>
@@ -96,10 +96,22 @@
                                         <fontDescription key="font" type="system" pointSize="20"/>
                                     </variation>
                                 </label>
-                                <button width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" title="Começar" id="j2N-3w-V6P">
+                                <button width="0.69999999999999996" height="0.59999999999999998" alignment="center" verticalAlignment="center" title="GO!" id="j2N-3w-V6P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" name="Blue"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="34"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" weight="semibold" pointSize="27"/>
+                                    </variation>
+                                    <variation key="device=watch40mm">
+                                        <fontDescription key="font" type="system" weight="semibold" pointSize="34"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" type="system" weight="semibold" pointSize="32"/>
+                                    </variation>
+                                    <variation key="device=watch44mm">
+                                        <fontDescription key="font" type="system" weight="semibold" pointSize="40"/>
+                                    </variation>
                                     <connections>
                                         <segue destination="5Jj-93-4Lh" kind="push" identifier="" id="xDB-jw-iif"/>
                                     </connections>
@@ -108,6 +120,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="goImage" destination="mqV-7w-BEF" id="8wM-rC-JQd"/>
                         <outlet property="message" destination="IdQ-5w-7GQ" id="ESG-bN-JWx"/>
                         <outlet property="startButton" destination="j2N-3w-V6P" id="uTg-GB-Q6M"/>
                         <segue destination="9an-iz-hG1" kind="relationship" relationship="nextPage" id="89o-Mc-ozW"/>
@@ -258,6 +271,7 @@
     <resources>
         <image name="afternoon_new" width="381" height="201"/>
         <image name="dawn_new" width="381" height="200"/>
+        <image name="initialButton0001" width="300" height="300"/>
         <image name="morning_new" width="381" height="201"/>
         <image name="night_new" width="381" height="206"/>
         <image name="notification" width="543" height="378"/>
