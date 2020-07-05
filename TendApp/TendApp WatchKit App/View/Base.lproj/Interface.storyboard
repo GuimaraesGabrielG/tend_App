@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--notification-->
@@ -134,20 +135,22 @@
             <objects>
                 <controller title="Cronograma" contentMode="scaleAspectFill" id="9an-iz-hG1" customClass="WeekController" customModule="TendApp_WatchKit_Extension">
                     <items>
-                        <group width="1" height="0.0" alignment="left" layout="overlap" id="tVC-ds-EC3">
+                        <group width="1" height="0.12" alignment="center" layout="overlap" id="tVC-ds-EC3">
                             <items>
-                                <button width="0.14099999999999999" height="1" alignment="right" verticalAlignment="bottom" backgroundImage="information" id="AUf-ky-cbT">
-                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                <label width="1" height="1" alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
+                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
+                                </label>
+                                <button width="0.14999999999999999" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
+                                    <color key="titleColor" name="Blue"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                     <connections>
                                         <action selector="about" destination="9an-iz-hG1" id="9ve-WD-e1x"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
-                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
-                                </label>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="center" id="2fr-tq-gUo">
+                        <group width="1" height="0.17999999999999999" alignment="center" id="2fr-tq-gUo">
                             <items>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.5" title="D" backgroundImage="rectangle_new" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,43 +203,55 @@
                                 </button>
                             </items>
                         </group>
-                        <label alignment="left" text="Períodos" id="cWS-fU-5gV">
-                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
-                        </label>
+                        <group width="1" height="0.12" alignment="center" layout="overlap" id="Qr2-KH-E8m">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Períodos" id="cWS-fU-5gV">
+                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="manhaFinal" id="3lX-G7-OrT">
+                                <button width="1" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="manhaTeste" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                     <connections>
                                         <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="tardeFinal" id="fQK-xz-0W8">
+                            </items>
+                        </group>
+                        <group width="1" height="0.25" alignment="left" id="sKt-Y1-aur">
+                            <items>
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="manhaTeste" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                     <connections>
                                         <action selector="activateAfternoon" destination="9an-iz-hG1" id="uiQ-PM-LOq"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
+                        <group width="1" height="0.25" alignment="left" id="5Xn-iw-XRN">
                             <items>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="noiteFinal" id="797-fu-q7P">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="manhaTeste" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                     <connections>
                                         <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
                                     </connections>
                                 </button>
-                                <button width="0.5" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="madrugadaFinal" id="DX2-1L-XI7">
+                            </items>
+                        </group>
+                        <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
+                            <items>
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="manhaTeste" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="8.3999996185302734"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
                                     <connections>
                                         <action selector="activateDawn" destination="9an-iz-hG1" id="ESj-ub-Chj"/>
                                     </connections>
@@ -269,14 +284,11 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
-        <image name="information" width="111" height="111"/>
+        <image name="information" width="105" height="105"/>
         <image name="initialButton0001" width="300" height="300"/>
-        <image name="madrugadaFinal" width="384" height="201"/>
-        <image name="manhaFinal" width="384" height="201"/>
-        <image name="noiteFinal" width="384" height="201"/>
+        <image name="manhaTeste" width="500" height="120"/>
         <image name="notification" width="1086" height="636"/>
         <image name="rectangle_new" width="105" height="105"/>
-        <image name="tardeFinal" width="384" height="201"/>
         <namedColor name="Blue">
             <color red="0.082352941176470587" green="0.70196078431372544" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
