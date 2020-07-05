@@ -212,7 +212,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="1" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="manhaTeste" id="3lX-G7-OrT">
+                                <button width="1" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="morningFinal" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
@@ -224,7 +224,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="left" id="sKt-Y1-aur">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="manhaTeste" id="fQK-xz-0W8">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="afternoonFinal" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
@@ -236,7 +236,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="left" id="5Xn-iw-XRN">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="manhaTeste" id="797-fu-q7P">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="nightFinal" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
@@ -248,7 +248,7 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="manhaTeste" id="DX2-1L-XI7">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="dawnFinal" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
@@ -284,9 +284,12 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
+        <image name="afternoonFinal" width="1001" height="301"/>
+        <image name="dawnFinal" width="1001" height="301"/>
         <image name="information" width="105" height="86"/>
         <image name="initialButton0001" width="300" height="300"/>
-        <image name="manhaTeste" width="500" height="120"/>
+        <image name="morningFinal" width="1001" height="301"/>
+        <image name="nightFinal" width="1001" height="301"/>
         <image name="notification" width="1086" height="636"/>
         <image name="rectangle_new" width="105" height="105"/>
         <namedColor name="Blue">
