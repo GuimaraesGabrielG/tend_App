@@ -37,7 +37,6 @@ public class StretchingController: WKInterfaceController {
     /// Array de estrategias de alongamento.
     let stretchingStrategyArray: [StretchingStrategy] = [StretchingHand(),StretchingWrist()]
     
-    
     /// Inicializa o controlador de interface com os dados de contexto especificados.
     /// - Parameter context: O objeto de contexto (se houver) fornecido pelo controlador de interface anterior. Este parâmetro pode ser nulo. Se não for nulo, você será responsável por salvar uma referência ao objeto fornecido e usá-lo para configurar seu controlador de interface.
     public override func awake(withContext context: Any?) {

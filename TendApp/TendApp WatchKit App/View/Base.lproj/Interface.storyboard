@@ -140,7 +140,7 @@
                                 <label width="1" height="1" alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
                                     <fontDescription key="font" type="boldSystem" pointSize="12"/>
                                 </label>
-                                <button width="0.20000000000000001" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
+                                <button width="0.19500000000000001" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
                                     <color key="titleColor" name="Blue"/>
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
