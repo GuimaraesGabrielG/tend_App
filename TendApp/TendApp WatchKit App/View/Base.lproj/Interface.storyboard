@@ -140,7 +140,7 @@
                                 <label width="1" height="1" alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
                                     <fontDescription key="font" type="boldSystem" pointSize="12"/>
                                 </label>
-                                <button width="0.19500000000000001" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
+                                <button width="0.14099999999999999" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
                                     <color key="titleColor" name="Blue"/>
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
@@ -212,10 +212,13 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="A78-VU-GLf">
                             <items>
-                                <button width="1" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="morningFinal" id="3lX-G7-OrT">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="manha38" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                    <variation key="device=watch40mm" backgroundImage="manha40"/>
+                                    <variation key="device=watch42mm" backgroundImage="manha42"/>
+                                    <variation key="device=watch44mm" backgroundImage="manha44"/>
                                     <connections>
                                         <action selector="activateMorning" destination="9an-iz-hG1" id="rxT-Kf-DbH"/>
                                     </connections>
@@ -224,10 +227,13 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="sKt-Y1-aur" userLabel="Group Second Period">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="afternoonFinal" id="fQK-xz-0W8">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="tarde38" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                    <variation key="device=watch40mm" backgroundImage="tarde40"/>
+                                    <variation key="device=watch42mm" backgroundImage="tarde42"/>
+                                    <variation key="device=watch44mm" backgroundImage="tarde44"/>
                                     <connections>
                                         <action selector="activateAfternoon" destination="9an-iz-hG1" id="uiQ-PM-LOq"/>
                                     </connections>
@@ -236,10 +242,13 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="5Xn-iw-XRN" userLabel="Group Third Period">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="nightFinal" id="797-fu-q7P">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="noite38" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                    <variation key="device=watch40mm" backgroundImage="noite40"/>
+                                    <variation key="device=watch42mm" backgroundImage="noite42"/>
+                                    <variation key="device=watch44mm" backgroundImage="noite44"/>
                                     <connections>
                                         <action selector="activateNight" destination="9an-iz-hG1" id="X8O-YI-SOj"/>
                                     </connections>
@@ -248,10 +257,13 @@
                         </group>
                         <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="wpF-nY-bYl" userLabel="Group Fourth Period">
                             <items>
-                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="dawnFinal" id="DX2-1L-XI7">
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="madrugada38" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="14"/>
+                                    <variation key="device=watch40mm" backgroundImage="madrugada40"/>
+                                    <variation key="device=watch42mm" backgroundImage="madrugada42"/>
+                                    <variation key="device=watch44mm" backgroundImage="madrugada44"/>
                                     <connections>
                                         <action selector="activateDawn" destination="9an-iz-hG1" id="ESj-ub-Chj"/>
                                     </connections>
@@ -284,14 +296,26 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
-        <image name="afternoonFinal" width="1001" height="301"/>
-        <image name="dawnFinal" width="1001" height="301"/>
         <image name="information" width="105" height="86"/>
         <image name="initialButton0001" width="300" height="300"/>
-        <image name="morningFinal" width="1001" height="301"/>
-        <image name="nightFinal" width="1001" height="301"/>
+        <image name="madrugada38" width="272" height="82"/>
+        <image name="madrugada40" width="324" height="98"/>
+        <image name="madrugada42" width="312" height="95"/>
+        <image name="madrugada44" width="368" height="111"/>
+        <image name="manha38" width="272" height="82"/>
+        <image name="manha40" width="324" height="98"/>
+        <image name="manha42" width="312" height="94"/>
+        <image name="manha44" width="368" height="111"/>
+        <image name="noite38" width="272" height="82"/>
+        <image name="noite40" width="324" height="98"/>
+        <image name="noite42" width="312" height="94"/>
+        <image name="noite44" width="368" height="111"/>
         <image name="notification" width="1086" height="636"/>
         <image name="rectangle_new" width="105" height="105"/>
+        <image name="tarde38" width="272" height="82"/>
+        <image name="tarde40" width="324" height="98"/>
+        <image name="tarde42" width="312" height="94"/>
+        <image name="tarde44" width="368" height="111"/>
         <namedColor name="Blue">
             <color red="0.082352941176470587" green="0.70196078431372544" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

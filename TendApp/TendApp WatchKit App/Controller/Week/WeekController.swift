@@ -108,7 +108,7 @@ public class WeekController: WKInterfaceController{
             if(PersistentData.persistentData.retrieveDays()[i]==true){
                 self.collectionDays[i].setAlpha(1)
             }else{
-                self.collectionDays[i].setAlpha(0.3)
+                self.collectionDays[i].setAlpha(0.5)
             }
         }
     }
@@ -120,7 +120,7 @@ public class WeekController: WKInterfaceController{
             if(PersistentData.persistentData.retrievePeriod()[i]==true){
                 self.collectionPeriods[i].setAlpha(1)
             }else{
-                self.collectionPeriods[i].setAlpha(0.3)
+                self.collectionPeriods[i].setAlpha(0.5)
             }
         }
     }
@@ -150,7 +150,7 @@ public class WeekController: WKInterfaceController{
                     break
                 }
             }
-            collectionDays[day].setAlpha(0.3)
+            collectionDays[day].setAlpha(0.5)
             days[day] = false
             UserDefaults.standard.set(self.arrayDaysNotification, forKey: "diasNotificacao")
             PersistentData.persistentData.daysPersistentData.set(days, forKey: "daysPersistentData")
@@ -177,7 +177,7 @@ public class WeekController: WKInterfaceController{
                 }
             }
             UserDefaults.standard.set(self.arrayTimeNotification, forKey: "horasNotificacao")
-            collectionPeriods[period].setAlpha(0.3)
+            collectionPeriods[period].setAlpha(0.5)
             periods[period] = false
             PersistentData.persistentData.periodsPersistentData.set(periods, forKey: "periodPersistentData")
         }
