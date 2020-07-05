@@ -210,7 +210,7 @@
                                 </label>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="center" id="A78-VU-GLf">
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="A78-VU-GLf">
                             <items>
                                 <button width="1" height="1" alignment="left" verticalAlignment="center" alpha="0.5" title="6am - 12pm" backgroundImage="morningFinal" id="3lX-G7-OrT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,7 +222,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="left" id="sKt-Y1-aur">
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="sKt-Y1-aur" userLabel="Group Second Period">
                             <items>
                                 <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12pm - 6pm" backgroundImage="afternoonFinal" id="fQK-xz-0W8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,7 +234,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="left" id="5Xn-iw-XRN">
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="5Xn-iw-XRN" userLabel="Group Third Period">
                             <items>
                                 <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="6pm - 12am" backgroundImage="nightFinal" id="797-fu-q7P">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -246,7 +246,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.25" alignment="center" id="wpF-nY-bYl">
+                        <group width="1" height="0.25" alignment="center" verticalAlignment="center" id="wpF-nY-bYl" userLabel="Group Fourth Period">
                             <items>
                                 <button width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.5" title="12am - 6am" backgroundImage="dawnFinal" id="DX2-1L-XI7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
