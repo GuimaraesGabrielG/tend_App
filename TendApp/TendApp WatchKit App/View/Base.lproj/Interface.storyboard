@@ -140,7 +140,7 @@
                                 <label width="1" height="1" alignment="left" verticalAlignment="center" text="Dias da Semana" id="CS1-c0-FOV">
                                     <fontDescription key="font" type="boldSystem" pointSize="12"/>
                                 </label>
-                                <button width="0.14999999999999999" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
+                                <button width="0.20000000000000001" height="1" alignment="right" verticalAlignment="center" backgroundImage="information" id="AUf-ky-cbT">
                                     <color key="titleColor" name="Blue"/>
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
@@ -150,7 +150,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" height="0.17999999999999999" alignment="center" id="2fr-tq-gUo">
+                        <group width="1" height="0.20000000000000001" alignment="center" id="2fr-tq-gUo">
                             <items>
                                 <button width="0.14199999999999999" height="0.84999999999999998" alignment="center" verticalAlignment="center" alpha="0.5" title="D" backgroundImage="rectangle_new" id="Mud-jf-uXl">
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,7 +284,7 @@
     </scenes>
     <color key="tintColor" name="Blue"/>
     <resources>
-        <image name="information" width="105" height="105"/>
+        <image name="information" width="105" height="86"/>
         <image name="initialButton0001" width="300" height="300"/>
         <image name="manhaTeste" width="500" height="120"/>
         <image name="notification" width="1086" height="636"/>
