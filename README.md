@@ -1,5 +1,18 @@
 # Tend - Apple Watch
 
+### Authors:
+
+- Gabriel Gonçalves - GuimaraesGabrielG
+- Jose Deyvid - JoseDeyvid 
+- Lucas Siqueira - SiqueiraLucas
+- Mateus Ferreira - mateusmais 
+
+---
+### Documentation - Jazzy:
+
+https://guimaraesgabrielg.github.io/tend_App/docs/
+
+---
 ### Description:
 
 Tendonitis prevention
@@ -8,6 +21,8 @@ Tendonitis prevention
 [x] - WatchKit
 
 [x] - Notification
+
+[x] - Documentation - Jazzy
 
 ---
 # Screen
