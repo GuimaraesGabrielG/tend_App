@@ -1,0 +1,383 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Interface/InterfaceController.swift",
+      "line": 13,
+      "symbol": "Noticar",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Interface/InterfaceController.swift",
+      "line": 14,
+      "symbol": "InterfaceController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Interface/InterfaceController.swift",
+      "line": 17,
+      "symbol": "InterfaceController.goImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Interface/InterfaceController.swift",
+      "line": 18,
+      "symbol": "InterfaceController.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Interface/InterfaceController.swift",
+      "line": 19,
+      "symbol": "InterfaceController.startButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Notification/NotificationController.swift",
+      "line": 17,
+      "symbol": "NotificationController.alertTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Notification/NotificationController.swift",
+      "line": 18,
+      "symbol": "NotificationController.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Stretching/StretchingController.swift",
+      "line": 67,
+      "symbol": "StretchingController.willActivate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Stretching/StretchingController.swift",
+      "line": 71,
+      "symbol": "StretchingController.didDeactivate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 19,
+      "symbol": "WeekController.periods",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 20,
+      "symbol": "WeekController.arrayDaysNotification",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 21,
+      "symbol": "WeekController.arrayTimeNotification",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 25,
+      "symbol": "WeekController.groupFirstPeriod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 26,
+      "symbol": "WeekController.groupSecondPeriod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 30,
+      "symbol": "WeekController.mondayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 31,
+      "symbol": "WeekController.tuesdayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 32,
+      "symbol": "WeekController.wednesdayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 33,
+      "symbol": "WeekController.thursdayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 34,
+      "symbol": "WeekController.fridayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 35,
+      "symbol": "WeekController.saturdayButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 39,
+      "symbol": "WeekController.afternoonButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 40,
+      "symbol": "WeekController.nightButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 41,
+      "symbol": "WeekController.dawnButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 45,
+      "symbol": "WeekController.collectionPeriods",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 50,
+      "symbol": "WeekController.periodsLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 189,
+      "symbol": "WeekController.activateSunday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 193,
+      "symbol": "WeekController.activateMonday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 196,
+      "symbol": "WeekController.activateTuesday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 199,
+      "symbol": "WeekController.activateWednesday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 202,
+      "symbol": "WeekController.activateThursday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 205,
+      "symbol": "WeekController.activateFriday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 208,
+      "symbol": "WeekController.activateSaturday()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 213,
+      "symbol": "WeekController.activateMorning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 216,
+      "symbol": "WeekController.activateAfternoon()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 219,
+      "symbol": "WeekController.activateNight()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Controller/Week/WeekController.swift",
+      "line": 222,
+      "symbol": "WeekController.activateDawn()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Delegates/ExtensionDelegate.swift",
+      "line": 15,
+      "symbol": "ExtensionDelegate.notificationCenter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 15,
+      "symbol": "ComponentsType.scheduleNotificationNormal(components:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 16,
+      "symbol": "ComponentsType.scheduleNotificationDelay()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 21,
+      "symbol": "LocalNotificationHandler.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 22,
+      "symbol": "LocalNotificationHandler.center",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 23,
+      "symbol": "LocalNotificationHandler.arrayIntervalNotification",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Notification/Notification.swift",
+      "line": 25,
+      "symbol": "LocalNotificationHandler.notificarMsg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Protocols/Animation.swift",
+      "line": 12,
+      "symbol": "Animation",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/Protocols/Animation.swift",
+      "line": 23,
+      "symbol": "Animation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 19,
+      "symbol": "PersistentData.persistentData",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 20,
+      "symbol": "PersistentData._days",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 21,
+      "symbol": "PersistentData._daysPersistentData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 22,
+      "symbol": "PersistentData._periods",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 23,
+      "symbol": "PersistentData._periodsPersistentData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 26,
+      "symbol": "PersistentData.daysPersistentData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 35,
+      "symbol": "PersistentData.days",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 46,
+      "symbol": "PersistentData.periods",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp/TendApp WatchKit App/Model/UserDefaults/PersistentData.swift",
+      "line": 55,
+      "symbol": "PersistentData.periodsPersistentData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/gabrielgg/Desktop/untitled folder 4/tend_App/TendApp"
+}

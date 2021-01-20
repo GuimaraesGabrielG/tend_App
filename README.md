@@ -1,5 +1,13 @@
 # Tend - Apple Watch
 
+### Authors:
+
+- Gabriel Gonçalves - GuimaraesGabrielG
+- Jose Deyvid - JoseDeyvid 
+- Lucas Siqueira - SiqueiraLucas
+- Mateus Ferreira - mateusmais 
+
+---
 ### Description:
 
 Tendonitis prevention
